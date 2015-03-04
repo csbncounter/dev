@@ -4,12 +4,11 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+/* modified body CSS to match N-Counter branding specs */
 body {
     overflow-x: hidden;
-    font-family: "Bebas Neue";
-    /*
-    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-    */
+    font-family: "Source Sans Pro";
+    font-size: 12px;
 }
 
 .text-muted {
@@ -48,6 +47,7 @@ a.active {
     color: #fec503;
 }
 
+/*Modified header CSS to match N-Counter branding Specs */
 h1,
 h2,
 h3,
@@ -55,8 +55,10 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: "Bebas Neue";
+    color: #334259;
+    line-height:14.4px;
+    font-weight: bold;
 }
 
 .img-centered {
