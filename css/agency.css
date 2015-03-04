@@ -37,7 +37,7 @@ a.active {
 }
 
 a {
-    color: #fed136;
+    color: #f0644b;
 }
 
 a:hover,
@@ -114,12 +114,12 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    border-color: #fed136;
-    background-color: #fed136;
+    border-color: #d85a43;
+    background-color: #d85a43;
 }
 
 .btn-primary .badge {
-    color: #fed136;
+    color: #f0644b;
     background-color: #fff;
 }
 
@@ -171,7 +171,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .btn-xl .badge {
-    color: #fed136;
+    color: #f0644b;
     background-color: #fff;
 }
 
@@ -182,14 +182,14 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-brand {
     font-family: "Bebas Neue";
-    color: #fed136;
+    color: #f0644b;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-    color: #f0644b;
+    color: #d85a43;
 }
 
 .navbar-default .navbar-collapse {
@@ -764,7 +764,7 @@ ul.social-buttons li a {
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-    background-color: #fed136;
+    background-color: #f0644b;
 }
 
 .btn:focus,
