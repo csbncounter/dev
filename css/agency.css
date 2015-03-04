@@ -44,7 +44,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-    color: #fec503;
+    color: #d85a43;
 }
 
 /*Modified header CSS to match N-Counter branding Specs */
@@ -75,12 +75,12 @@ h6 {
 }
 
 .btn-primary {
-    border-color: #fed136;
+    border-color: #f0644b;
     text-transform: uppercase;
     font-family: "Bebas Neue";
     font-weight: 700;
     color: #fff;
-    background-color: #fed136;
+    background-color: #f0644b;
 }
 
 .btn-primary:hover,
@@ -88,9 +88,9 @@ h6 {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-    border-color: #f6bf01;
+    border-color: #f0644b;
     color: #fff;
-    background-color: #fec503;
+    background-color: #f0644b;
 }
 
 .btn-primary:active,
@@ -182,14 +182,14 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-brand {
     font-family: "Bebas Neue";
-    color: #f0644b;
+    color: #fff;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-    color: #d85a43;
+    color: #f0644b;
 }
 
 .navbar-default .navbar-collapse {
