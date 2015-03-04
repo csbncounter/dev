@@ -6,7 +6,10 @@
 
 body {
     overflow-x: hidden;
+    font-family: "Bebas Neue";
+    /*
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    */
 }
 
 .text-muted {
