@@ -59,7 +59,6 @@ h6 {
     color: #334259;
     line-height:14.4px;
     font-weight: bold;
-    word-wrap: break-word;
 }
 
 .img-centered {
@@ -265,6 +264,15 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink .navbar-brand {
         font-size: 1.5em;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+	    word-wrap: break-word;
     }
 }
 
