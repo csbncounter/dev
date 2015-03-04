@@ -7,3 +7,15 @@
 .navbar-right{
 	font-size: 16px;
 }
+
+
+/* Allows for mobile devices to have headers span two lines. 
+ * cite: http://danielmall.com/articles/responsive-line-breaks/demo-span/
+ * must be implemented with:  <h1><span class="rwd-line">You don&rsquo;t understand! I coulda had class.</span> <span class="rwd-line">I coulda been a contender.</span></h1>
+ */
+.rwd-line { display: block; }
+        
+@media screen and (min-width: 768px){
+ .rwd-line { display: inline; }
+}
+        
