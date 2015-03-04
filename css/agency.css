@@ -59,6 +59,7 @@ h6 {
     color: #334259;
     line-height:14.4px;
     font-weight: bold;
+    word-wrap: break-word;
 }
 
 .img-centered {
