@@ -1,4 +1,6 @@
 // js to randomly display 'news' landing image. 
+// Author: Ben Deibert, 
+// Credit:  http://codepen.io/grayghostvisuals/pen/KokDB
 
 function randomImages() {
 	var pics = ['/dev/img/indexImgs/frisbee.jpg', '/dev/img/indexImgs/group.jpg', '/dev/img/indexImgs/meteor.jpg', 
