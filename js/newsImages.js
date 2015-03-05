@@ -1,7 +1,8 @@
 // js to randomly display 'news' landing image. 
 
 function randomImages() {
-	var pics = ['/img/indexImgs/frisbee.jpg', '/img/indexImgs/group.jpg', '/img/indexImgs/meteor.jpg', '/img/indexImgs/prayer.jpg', '/img/indexImgs/rifle.jpg' ];
+	var pics = ['/dev/img/indexImgs/frisbee.jpg', '/dev/img/indexImgs/group.jpg', '/dev/img/indexImgs/meteor.jpg', 
+	'/dev/img/indexImgs/prayer.jpg', '/dev/img/indexImgs/rifle.jpg' ];
 	
 	$('header').css({'background' : 'url('+pics[Math.floor(Math.random() * pics.length)] + ') no-repeat', 
 		'background-attachment' : 'scroll',
