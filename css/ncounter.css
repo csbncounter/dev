@@ -34,7 +34,7 @@ header {
 }
 
 .inspired{
-		background-attachment: fixed;
+		background-attachment: scroll;
     background-image: url(/dev/img/inspired.jpg);
     background-position: center center;
     background-repeat: none;
