@@ -32,3 +32,35 @@ header {
   opacity: 0.25;
 }
 
+.inspired{
+		background-attachment: scroll;
+    background-image: url(/dev/img/inspired.jpg);
+    background-position: center center;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.excited{
+		background-attachment: scroll;
+    background-image: url(/dev/img/excited.jpg);
+    background-position: center center;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.involved{
+		background-attachment: scroll;
+    background-image: url(/dev/img/involved.jpg);
+    background-position: center center;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
