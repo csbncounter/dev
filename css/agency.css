@@ -279,7 +279,7 @@ fieldset[disabled] .btn-xl.active {
 header {
     text-align: center;
     color: #fff;
-    background-attachment: scroll;
+   /* background-attachment: scroll;
     background-image: url(/dev/img/index.jpg);
     background-position: center center;
     background-repeat: none;
@@ -287,6 +287,7 @@ header {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    */
 }
 
 header .intro-text {
