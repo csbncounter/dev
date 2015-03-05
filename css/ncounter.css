@@ -19,10 +19,11 @@
  .rwd-line { display: inline; }
 }
         
-/* Header manipulation opacity */
+/* Header manipulation opacity 
 header {
 	background-attachment: fixed;
 }
+*/
 
 .opacity{
 	position: absolute;
@@ -33,7 +34,7 @@ header {
 }
 
 .inspired{
-		background-attachment: scroll;
+		background-attachment: fixed;
     background-image: url(/dev/img/inspired.jpg);
     background-position: center center;
     background-repeat: none;
@@ -44,7 +45,7 @@ header {
 }
 
 .excited{
-		background-attachment: scroll;
+		background-attachment: fixed;
     background-image: url(/dev/img/excited.jpg);
     background-position: center center;
     background-repeat: none;
@@ -55,7 +56,7 @@ header {
 }
 
 .involved{
-		background-attachment: scroll;
+		background-attachment: fixed;
     background-image: url(/dev/img/involved.jpg);
     background-position: center center;
     background-repeat: none;
