@@ -19,4 +19,8 @@
  .rwd-line { display: inline; }
 }
         
-        
+/* Header manipulation opacity */
+header {
+	background-attachment: fixed;
+}
+
