@@ -24,3 +24,11 @@ header {
 	background-attachment: fixed;
 }
 
+.opacity{
+	position: absolute;
+	height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.25;
+}
+
