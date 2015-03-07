@@ -34,7 +34,7 @@ header {
 }
 
 .inspired{
-		background-attachment: scroll;
+		background-attachment: fixed, scroll;
     background-image: url(/dev/img/inspired.jpg);
     background-position: center center;
     background-repeat: none;
@@ -45,7 +45,7 @@ header {
 }
 
 .excited{
-		background-attachment: fixed;
+		background-attachment: fixed, scroll;
     background-image: url(/dev/img/excited.jpg);
     background-position: center center;
     background-repeat: none;
@@ -56,7 +56,7 @@ header {
 }
 
 .involved{
-		background-attachment: fixed;
+		background-attachment: fixed, scroll;
     background-image: url(/dev/img/involved.jpg);
     background-position: center center;
     background-repeat: none;
