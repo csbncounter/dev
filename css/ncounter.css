@@ -65,3 +65,7 @@ header {
     background-size: cover;
     -o-background-size: cover;
 }
+
+.img_thumbnail{
+	box-shadow: 3px 3px 1px #888888
+}
