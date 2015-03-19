@@ -66,6 +66,12 @@ header {
     -o-background-size: cover;
 }
 
+/* Thought of trying to add a drop shadow. Still need to work this out. 
 .img_thumbnail{
 	box-shadow: 3px 3px 1px #888888
+}
+*/
+
+.activePage{
+	color:F0644B;
 }
