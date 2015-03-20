@@ -72,3 +72,20 @@ header {
 .activePage{
 	background-color: #f0644b;
 }
+
+.newsLetter {
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 14px;
+  background: #f0644b;
+  padding: 10px 22px 10px 22px;
+  text-decoration: none;
+}
+
+.newsLetter:hover {
+  background: #d85a43;
+  text-decoration: none;
+}
