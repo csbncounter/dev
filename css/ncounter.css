@@ -124,7 +124,7 @@ header {
 	width:20%;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .footer-distributed .footer-1,
 	.footer-distributed .footer-2,
 	.footer-distributed .footer-3,
