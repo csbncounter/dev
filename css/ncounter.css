@@ -1,7 +1,7 @@
 /* N-Counter CSS file. */
 
 .btn{
-	color:F0644B;
+	color:#F0644B;
 }
 
 .navbar-right{
@@ -74,5 +74,5 @@ header {
 
 .activePage{
 	/*background-color: #f0644b; Square box around text */
-	color: #f0644b;
+	color:#f0644b;
 }
