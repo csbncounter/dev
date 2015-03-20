@@ -90,3 +90,58 @@ header {
   text-decoration: none;
   color: #ffffff;
 }
+
+/* - FOOTER MODIFICATIONS - */
+
+.footer-distributed{
+	background-color: #366B73;
+	box-sizing: border-box;
+	text-align:center;
+	font:"Source Sans Pro";
+}
+
+.footer-distributed .footer-1,
+.footer-distributed .footer-2,
+.footer-distributed .footer-3,
+.footer-distributed .footer-4{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.footer-1{
+	width:25%;
+}
+
+.footer-2{
+	width:25%;
+}
+
+.footer-3{
+	width:25%;
+}
+
+.footer-4{
+	width:25%;
+}
+
+@media (min-width: 768px) {
+  .footer-distributed .footer-1,
+	.footer-distributed .footer-2,
+	.footer-distributed .footer-3,
+	.footer-distributed .footer-4{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}	
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
