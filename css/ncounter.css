@@ -113,21 +113,25 @@ header {
 .footer-1{
 	width:23%;
 	height:70px;
+	position: relative;
 }
 
 .footer-2{
 	width:23%;
 	height:70px;	
+	position: relative;	
 }
 
 .footer-3{
 	width:23%;
 	height:70px;	
+	position: relative;	
 }
 
 .footer-4{
 	width:23%;
 	height:70px;	
+	position: relative;	
 }
 /* - This query is a little large, but keeps the newsletter button on a single line and doesn't break it up. */
 
