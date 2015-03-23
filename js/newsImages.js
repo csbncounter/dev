@@ -14,7 +14,7 @@ function randomImages() {
     '-moz-background-size' : 'cover',
     'background-size' : 'cover',
     '-o-background-size' : 'cover',
-    'background-attachment' : 'fixed',
+    //'background-attachment' : 'fixed',
     });
 }// end script
 
