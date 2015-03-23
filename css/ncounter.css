@@ -112,18 +112,22 @@ header {
 
 .footer-1{
 	width:23%;
+	vertical-align:middle;
 }
 
 .footer-2{
 	width:23%;
+	vertical-align:middle;	
 }
 
 .footer-3{
 	width:23%;
+	vertical-align:middle;	
 }
 
 .footer-4{
 	width:23%;
+	vertical-align:middle;	
 }
 /* - This query is a little large, but keeps the newsletter button on a single line and doesn't break it up. */
 
