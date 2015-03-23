@@ -91,7 +91,9 @@ header {
   color: #ffffff;
 }
 
-/* - FOOTER MODIFICATIONS - */
+/* - FOOTER MODIFICATIONS -
+	 - cite: http://tutorialzine.com/2015/01/freebie-5-responsive-footer-templates/
+ */
 
 .footer-distributed{
 	background-color: #366B73;
@@ -123,6 +125,7 @@ header {
 .footer-4{
 	width:23%;
 }
+/* - This query is a little large, but keeps the newsletter button on a single line and doesn't break it up. */
 
 @media (max-width: 1000px) {
   .footer-distributed .footer-1,
