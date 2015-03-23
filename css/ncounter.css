@@ -107,31 +107,27 @@ header {
 .footer-distributed .footer-3,
 .footer-distributed .footer-4{
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 }
 
 .footer-1{
 	width:23%;
 	height:70px;
-	vertical-align:middle;
 }
 
 .footer-2{
 	width:23%;
 	height:70px;	
-	vertical-align:bottom;	
 }
 
 .footer-3{
 	width:23%;
 	height:70px;	
-	vertical-align:middle;	
 }
 
 .footer-4{
 	width:23%;
 	height:70px;	
-	vertical-align:middle;	
 }
 /* - This query is a little large, but keeps the newsletter button on a single line and doesn't break it up. */
 
