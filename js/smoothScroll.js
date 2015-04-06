@@ -18,12 +18,12 @@ $(function() {
 });
 */
 
-
+// both the target and button need to have rel="relativeanchor" before it will work... 
 $(document).ready(function() {
 	$('a[rel="relativeanchor"]').click(function(){
 	    $('html, body').animate({
 	        scrollTop: $( $.attr(this, 'href') ).offset().top
-	    }, 500);
+	    }, 800);
 	    return false;
 	}); 
 });
