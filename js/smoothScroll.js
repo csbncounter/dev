@@ -1,7 +1,7 @@
 // js to assist in smoothly scrolling through internal page hrefs
 // Author: Ben Deibert
 // Credit: https://css-tricks.com/snippets/jquery/smooth-scrolling/
-
+/*
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -15,4 +15,15 @@ $(function() {
       }
     }
   });
+});
+*/
+
+
+$(document).ready(function() {
+	$('a[rel="relativeanchor"]').click(function(){
+	    $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') ).offset().top
+	    }, 500);
+	    return false;
+	}); 
 });
