@@ -301,7 +301,7 @@ header .intro-text .intro-lead-in {
     font-family: "Bebas Neue";
     font-size: 22px;
     font-style: italic;
-    line-height: 22px;
+    line-height: 120%;
 }
 
 header .intro-text .intro-heading {
@@ -310,7 +310,7 @@ header .intro-text .intro-heading {
     font-family: "Bebas Neue";
     font-size: 50px;
     font-weight: 700;
-    line-height: 50px;
+    line-height: 120%;
 }
 
 @media(min-width:768px) {
@@ -324,7 +324,7 @@ header .intro-text .intro-heading {
         font-family: "Bebas Neue";
         font-size: 40px;
         font-style: italic;
-        line-height: 40px;
+        line-height: 120%;
     }
 
     header .intro-text .intro-heading {
@@ -333,7 +333,7 @@ header .intro-text .intro-heading {
         font-family: "Bebas Neue";
         font-size: 75px;
         font-weight: 700;
-        line-height: 75px;
+        line-height: 120%;
     }
 }
 
