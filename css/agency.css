@@ -6,12 +6,12 @@
 
 @font-face {
 	font-family:"N-Counter Heading";
-	src: url('fonts/BebasNeue.otf') format('OpenType Format');
+	src: url('fonts/BebasNeue.otf') format('OpenType Fonts');
 }
 
 @font-face {
 	font-family:"N-Counter Paragraph";
-	src: url('fonts/SourceSansPro-Regular.otf') format('OpenType Format');
+	src: url('fonts/SourceSansPro-Regular.otf') format('OpenType Fonts');
 }
 
 
