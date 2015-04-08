@@ -21,6 +21,11 @@
 	z-index: 2;
 }
 
+.opacityRaiser{
+	position: relative;
+	z-index:2;
+}
+
 .inspired{
 		background-attachment: /*fixed,*/ scroll;
     background-image: url(/dev/img/inspired.jpg);
