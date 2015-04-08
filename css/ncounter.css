@@ -15,6 +15,12 @@
   z-index : 1;
 }
 
+.landingPageLogo{
+	max-width:100%
+	position: relative;
+	z-index: 2;
+}
+
 .inspired{
 		background-attachment: /*fixed,*/ scroll;
     background-image: url(/dev/img/inspired.jpg);
