@@ -5,12 +5,12 @@
  */
 
 @font-face {
-	font-family: 'Bebas Neue';
+	font-family:"Bebas Neue";
 	src: url(fonts/BebasNeue.otf);
 }
 
 @font-face {
-	font-family: 'Source Sans Pro';
+	font-family:"Source Sans Pro";
 	src: url(fonts/SourceSansPro-Regular.otf);
 }
 
