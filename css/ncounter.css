@@ -4,8 +4,8 @@
 .navbar-right{
 	font-size: 16px;
 }
-        
 
+/* z-index sets the opacity layer behind the other elements */
 .opacity{
 	position: absolute;
 	height: 100%;
@@ -24,6 +24,16 @@
 .opacityRaiser{
 	position: relative;
 	z-index:2;
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url(fonts/BebasNeue.otf);
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url(fonts/SourceSansPro-Regular.otf);
 }
 
 .inspired{
