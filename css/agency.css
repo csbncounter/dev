@@ -10,10 +10,21 @@
 }
 
 @font-face {
-	font-family:"N-Counter Paragraph";
-	src: url('/dev/fonts/SourceSansPro-Regular.otf') format('OpenType Fonts');
+	font-family: "N-Counter Paragraph";
+	font-weight: 400;
+	src: url('/dev/fonts/SourceSansPro-Regular.eot')format('embedded-opentype'), url('/dev/fonts/SourceSansPro-Regular.woff')format('woff'), url('/dev/fonts/SourceSansPro-Regular.ttf')format('truetype');
 }
-
+@font-face {
+	font-family: "N-Counter Paragraph";
+	font-weight: 300;
+	font-style: italic;
+	src: url('/dev/fonts/SourceSansPro-italic.eot')format('embedded-opentype'), url('/dev/fonts/SourceSansPro-italic.woff')format('woff'), url('/dev/fonts/SourceSansPro-italic.ttf')format('truetype');
+}
+@font-face {
+	font-family: "N-Counter Paragraph";
+	font-weight: 500;
+	src: url('/dev/fonts/SourceSansPro-Semibold.eot')format('embedded-opentype'), url('/dev/fonts/SourceSansPro-Semibold.woff')format('woff'), url('/dev/fonts/SourceSansPro-Semibold.ttf')format('truetype');
+}
 
 /* modified body CSS to match N-Counter branding specs */
 body {
