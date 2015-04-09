@@ -75,7 +75,6 @@
   -webkit-border-radius: 4;
   -moz-border-radius: 4;
   border-radius: 4px;
-  font-family: Georgia;
   color: #ffffff;
   font-size: 14px;
   background: #f0644b;
@@ -97,7 +96,7 @@
 	background-color: #366B73;
 	box-sizing: border-box;
 	text-align:center;
-	font:"Source Sans Pro";
+	font:"N-Counter Paragraph";
 }
 
 .footer-distributed .footer-1,
