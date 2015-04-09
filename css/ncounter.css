@@ -36,6 +36,12 @@
   bottom: 150px;
 }
 
+@media (max-width: 1000px) {
+	.exploreButton{
+		bottom:50px;
+	}
+}
+
 .inspired{
 		background-attachment: /*fixed,*/ scroll;
     background-image: url(/dev/img/inspired.jpg);
