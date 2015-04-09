@@ -232,11 +232,15 @@ fieldset[disabled] .btn-xl.active {
     background-color: #f0644b;	
 }
 
+
+
+
+/* Letter Spacing Modified ***** */
 .navbar-default .nav li a {
     text-transform: uppercase;
     font-family: "N-Counter Heading";
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     color: #fff;
 }
 
@@ -278,9 +282,9 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default .navbar-nav>.active>a {
         border-radius: 3px;
     }
-
+/*Testing removing padding......  */
     .navbar-default.navbar-shrink {
-        padding: 10px 0;
+        padding: 0px 0;
         background-color: #344259;
     }
 
