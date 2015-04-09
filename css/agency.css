@@ -6,7 +6,7 @@
 
 @font-face {
 	font-family:"N-Counter Heading";
-	src: url('dev/fonts/BebasNeue.eot')format('embedded-opentype'), url('dev/fonts/BebasNeue.woff')format('woff'), url('dev/fonts/BebasNeue.ttf')format('truetype');
+	src: url('/dev/fonts/BebasNeue.eot')format('embedded-opentype'), url('/dev/fonts/BebasNeue.woff')format('woff'), url('/dev/fonts/BebasNeue.ttf')format('truetype');
 }
 
 @font-face {
