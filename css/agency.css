@@ -240,7 +240,7 @@ fieldset[disabled] .btn-xl.active {
     text-transform: uppercase;
     font-family: "N-Counter Heading";
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: #fff;
 }
 
@@ -283,6 +283,7 @@ fieldset[disabled] .btn-xl.active {
         border-radius: 3px;
     }
 
+/*Issue with Nav Bar May be here..... */
     .navbar-default.navbar-shrink {
         padding: 30px 0;
         background-color: #344259;
