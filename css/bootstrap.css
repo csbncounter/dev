@@ -4160,7 +4160,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
   float: left;
   height: 50px;
-  /*padding: 15px 15px;*/
+  padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
 }
@@ -4199,7 +4199,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-radius: 1px;
 }
 .navbar-toggle .icon-bar + .icon-bar {
-  /*margin-top: 4px;*/
+  margin-top: 4px;
 }
 @media (min-width: 768px) {
   .navbar-toggle {
