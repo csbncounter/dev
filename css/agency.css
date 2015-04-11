@@ -6,7 +6,7 @@
 
 @font-face {
 	font-family:"N-Counter Heading";
-	letter-spacing: 1px;
+	letter-spacing: 3px;
 	src: url('/dev/fonts/BebasNeue.eot')format('embedded-opentype'), url('/dev/fonts/BebasNeue.woff')format('woff'), url('/dev/fonts/BebasNeue.ttf')format('truetype');
 }
 
@@ -43,7 +43,6 @@ body {
 }
 
 p {
-    /*font-size: 14px;*/
     line-height: 1.75;
 }
 
