@@ -6,7 +6,6 @@
 
 @font-face {
 	font-family:"N-Counter Heading";
-	letter-spacing: 3px;
 	src: url('/dev/fonts/BebasNeue.eot')format('embedded-opentype'), url('/dev/fonts/BebasNeue.woff')format('woff'), url('/dev/fonts/BebasNeue.ttf')format('truetype');
 }
 
@@ -81,6 +80,8 @@ h6 {
     color: #334259;
     line-height:120%;
     font-weight: bold;
+    	letter-spacing: 3px;
+
 }
 
 .img-centered {
