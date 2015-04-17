@@ -148,6 +148,18 @@
 	height:70px;	
 	position: relative;	
 }
+
+.socialFooterCentering{
+	margin-top: 15px;
+}
+
+.newsletterFooterCentering{
+	margin-top: 20px;
+}
+
+.thirdFooterCentering{
+	margin-top: 5px;
+}
 /* - This query is a little large, but keeps the newsletter button on a single line and doesn't break it up. */
 
 @media (max-width: 1000px) {
