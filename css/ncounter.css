@@ -29,6 +29,13 @@
 	z-index:2;
 }
 
+/* Keeps the Arrow @ bottom of page*/
+.exploreButton{
+	display: block;
+  position: absolute;
+	bottom:50px;
+}
+
 
 .inspired{
 		background-attachment: /*fixed,*/ scroll;
