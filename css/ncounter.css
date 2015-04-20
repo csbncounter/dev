@@ -28,20 +28,8 @@
 	position: relative;
 	z-index:2;
 }
-/*
-.exploreButton{
-	display: block;
-  position: absolute;
-  width: 100%;
-  bottom: 150px;
-}
 
-@media (max-width: 1000px) {
-	.exploreButton{
-		bottom:50px;
-	}
-}
-*/
+
 .inspired{
 		background-attachment: /*fixed,*/ scroll;
     background-image: url(/dev/img/inspired.jpg);
@@ -100,10 +88,14 @@
 	margin-top: 13px;
 	margin-bottom: 30px;
 }
+
 /* corrects the spacing in the Join Us Campaigns */
 .col-md-3{
 	margin-bottom:25px;
 }
+
+
+
 /* - FOOTER MODIFICATIONS -
 	 - cite: http://tutorialzine.com/2015/01/freebie-5-responsive-footer-templates/
  */
