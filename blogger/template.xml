@@ -17,6 +17,17 @@
         width: 100%;
       }
 
+      h2 {
+        margin-bottom: 60px;
+        text-align: center;
+      }
+
+      .BlogArchive li {
+        display: inline;
+        margin-right: 30px;
+        list-style: none;
+      }
+
       .body-fauxcolumn-outer .cap-top {
         position: absolute;
         z-index: 1;
@@ -29,10 +40,6 @@
 
       /* Columns
       ----------------------------------------------- */
-      .content-inner {
-        padding: 0;
-      }
-
       .header-inner .section {
         margin: 0 16px;
       }
@@ -63,15 +70,6 @@
       ----------------------------------------------- */
       .header-outer {
         margin: 0;
-      }
-
-      .Header h1 {
-      }
-
-      .Header h1 a {
-      }
-
-      .Header .description {
       }
 
       .header-inner .Header .titlewrapper,
@@ -318,7 +316,12 @@
         line-height: 1.4;
       }
 
-      .post-outer h2 {
+      .post-outer {
+        padding-bottom: 50px;
+      }
+
+      .post-outer:last-child {
+        padding-bottom: 0;
       }
 
       .post-footer {
@@ -517,6 +520,11 @@
         _width: $(content.width);
       }
 
+      .region-inner {
+        margin: 0 auto;
+        padding: 80px 0 70px
+      }
+
       .main-inner .columns {
         padding-left: $(main.column.left.width);
         padding-right: $(main.column.right.width);
@@ -563,6 +571,14 @@
         min-width: 0;
         width: auto;
       }
+      .content-footer {
+        padding: 100px;
+      }
+      .content-footer .foot {
+        width: $(content.width);
+        margin: 0 auto;
+        padding: 0 30px;
+      }
       ]]>
     </b:template-skin>
     <b:include data='blog' name='google-analytics'/>
@@ -575,7 +591,7 @@
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header page-scroll">
-        <a class="navbar-brand page-scroll" href="/dev/index.html"><img src='http://csbncounter.org/dev/img/branding/navLogo.png' alt='CSB N-Counter Logo' /></a>
+        <a class="navbar-brand page-scroll" href="http://csbncounter.org/dev/index.html"><img src='http://csbncounter.org/dev/img/branding/navLogo.png' alt='CSB N-Counter Logo' /></a>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -591,7 +607,7 @@
             <a href="#page-top"></a>
           </li>
           <li>
-            <a class="page-scroll activePage" href="http://csbncounter.blogspot.com">News</a>
+            <a class="page-scroll activePage" href="http://news.csbncounter.org">News</a>
           </li>
           <li>
             <a class="page-scroll" href="http://csbncounter.org/dev/inspired.html">Get Inspired</a>
@@ -610,13 +626,10 @@
   </nav>
 
   <div class='content'>
-  <div class='content-outer'>
-  <div class='fauxborder-left content-fauxborder-left'>
-  <div class='content-inner'>
-
     <div class='main-outer'>
     <div class='fauxborder-left main-fauxborder-left'>
     <div class='region-inner main-inner'>
+      <h2 class="section-heading">Latest N-Counter News</h2>
       <div class='columns fauxcolumns'>
         <!-- corrects IE6 width calculation -->
         <div class='columns-inner'>
@@ -1507,21 +1520,9 @@
     <!-- main -->
     </div>
     </div>
-    <div class='main-cap-bottom cap-bottom'>
-      <div class='cap-left'/>
-      <div class='cap-right'/>
-    </div>
     </div>
 
-    <footer>
-    <div class='footer-outer'>
-    <div class='footer-cap-top cap-top'>
-      <div class='cap-left'/>
-      <div class='cap-right'/>
-    </div>
-    <div class='fauxborder-left footer-fauxborder-left'>
-    <div class='fauxborder-right footer-fauxborder-right'/>
-    <div class='region-inner footer-inner'>
+    <div class='content-footer bg-tan'>
       <macro:include id='footer-sections' name='sections'>
         <macro:param default='2' name='num' value='1'/>
         <macro:param default='footer' name='idPrefix'/>
@@ -1529,22 +1530,6 @@
         <macro:param default='false' name='includeBottom'/>
       </macro:include>
     </div>
-    </div>
-    <div class='footer-cap-bottom cap-bottom'>
-      <div class='cap-left'/>
-      <div class='cap-right'/>
-    </div>
-    </div>
-    </footer>
-
-  <!-- content -->
-  </div>
-  </div>
-  <div class='content-cap-bottom cap-bottom'>
-    <div class='cap-left'/>
-    <div class='cap-right'/>
-  </div>
-  </div>
   </div>
 
   <script type='text/javascript'>
@@ -1607,7 +1592,6 @@
     <b:include cond='data:style == &quot;MENU&quot;' data='data' name='menu'/>
   </div>
   </div>
-  <b:include name='quickedit'/>
   </div>
 </b:includable>
     <b:includable id='flat' var='data'>
