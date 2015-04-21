@@ -1,504 +1,505 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
 <html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
-  <head>
+  &lt;head&gt;
     <meta expr:content='data:blog.isMobile         ? &quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0&quot;         : &quot;width=1100&quot;' name='viewport'/>
     <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
     <link rel="stylesheet" href="http://csbncounter.org/dev/blogger/csbncounter.css" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <b:skin><![CDATA[/*
-/* Content
------------------------------------------------ */
-html body .content-outer {
-  min-width: 0;
-  max-width: 100%;
-  width: 100%;
-}
-
-.body-fauxcolumn-outer .cap-top {
-  position: absolute;
-  z-index: 1;
-
-  height: 276px;
-  width: 100%;
-
-  _background-image: none;
-}
-
-/* Columns
------------------------------------------------ */
-.content-inner {
-  padding: 0;
-}
-
-.header-inner .section {
-  margin: 0 16px;
-}
-
-.tabs-inner .section {
-  margin: 0 16px;
-}
-
-.main-inner {
-  padding-top: $(date.space);
-}
-
-.main-inner .column-center-inner,
-.main-inner .column-left-inner,
-.main-inner .column-right-inner {
-  padding: 0 5px;
-}
-
-*+html body .main-inner .column-center-inner {
-  margin-top: -$(date.space);
-}
-
-#layout .main-inner .column-center-inner {
-  margin-top: 0;
-}
-
-/* Header
------------------------------------------------ */
-.header-outer {
-  margin: 0;
-}
-
-.Header h1 {
-}
-
-.Header h1 a {
-}
-
-.Header .description {
-}
-
-.header-inner .Header .titlewrapper,
-.header-inner .Header .descriptionwrapper {
-  padding-left: 0;
-  padding-right: 0;
-  margin-bottom: 0;
-}
-
-.header-inner .Header .titlewrapper {
-}
-
-/* Tabs
------------------------------------------------ */
-.tabs-outer {
-  overflow: hidden;
-  position: relative;
-}
-
-#layout .tabs-outer {
-  overflow: visible;
-}
-
-.tabs-cap-top, .tabs-cap-bottom {
-  position: absolute;
-  width: 100%;
-}
-
-.tabs-cap-bottom {
-  bottom: 0;
-}
-
-.tabs-inner .widget li a {
-  display: inline-block;
-
-  margin: 0;
-  padding: .6em 1.5em;
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+    <b:skin>
+      <![CDATA[/*
+      /* Content
+      ----------------------------------------------- */
+      html body .content-outer {
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .body-fauxcolumn-outer .cap-top {
+        position: absolute;
+        z-index: 1;
+
+        height: 276px;
+        width: 100%;
+
+        _background-image: none;
+      }
+
+      /* Columns
+      ----------------------------------------------- */
+      .content-inner {
+        padding: 0;
+      }
+
+      .header-inner .section {
+        margin: 0 16px;
+      }
+
+      .tabs-inner .section {
+        margin: 0 16px;
+      }
+
+      .main-inner {
+        padding-top: $(date.space);
+      }
+
+      .main-inner .column-center-inner,
+      .main-inner .column-left-inner,
+      .main-inner .column-right-inner {
+        padding: 0 5px;
+      }
+
+      *+html body .main-inner .column-center-inner {
+        margin-top: -$(date.space);
+      }
+
+      #layout .main-inner .column-center-inner {
+        margin-top: 0;
+      }
+
+      /* Header
+      ----------------------------------------------- */
+      .header-outer {
+        margin: 0;
+      }
+
+      .Header h1 {
+      }
+
+      .Header h1 a {
+      }
+
+      .Header .description {
+      }
+
+      .header-inner .Header .titlewrapper,
+      .header-inner .Header .descriptionwrapper {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 0;
+      }
+
+      .header-inner .Header .titlewrapper {
+      }
+
+      /* Tabs
+      ----------------------------------------------- */
+      .tabs-outer {
+        overflow: hidden;
+        position: relative;
+      }
+
+      #layout .tabs-outer {
+        overflow: visible;
+      }
+
+      .tabs-cap-top, .tabs-cap-bottom {
+        position: absolute;
+        width: 100%;
+      }
+
+      .tabs-cap-bottom {
+        bottom: 0;
+      }
+
+      .tabs-inner .widget li a {
+        display: inline-block;
+
+        margin: 0;
+        padding: .6em 1.5em;
 
-  height: 16px;
-  line-height: 16px;
-}
+        height: 16px;
+        line-height: 16px;
+      }
 
-.tabs-inner .widget li:last-child a {
-}
+      .tabs-inner .widget li:last-child a {
+      }
 
-.tabs-inner .widget li.selected a, .tabs-inner .widget li a:hover {
-}
+      .tabs-inner .widget li.selected a, .tabs-inner .widget li a:hover {
+      }
 
-/* Widgets
------------------------------------------------ */
-.main-inner .section {
-  margin: 0 27px;
-  padding: 0;
-}
+      /* Widgets
+      ----------------------------------------------- */
+      .main-inner .section {
+        margin: 0 27px;
+        padding: 0;
+      }
 
-.main-inner .column-left-outer,
-.main-inner .column-right-outer {
-}
+      .main-inner .column-left-outer,
+      .main-inner .column-right-outer {
+      }
 
-#layout .main-inner .column-left-outer,
-#layout .main-inner .column-right-outer {
-  margin-top: 0;
-}
+      #layout .main-inner .column-left-outer,
+      #layout .main-inner .column-right-outer {
+        margin-top: 0;
+      }
 
-.main-inner .column-left-inner,
-.main-inner .column-right-inner {
-}
+      .main-inner .column-left-inner,
+      .main-inner .column-right-inner {
+      }
 
-#layout .main-inner .column-left-inner,
-#layout .main-inner .column-right-inner {
-  margin-top: 0;
-}
+      #layout .main-inner .column-left-inner,
+      #layout .main-inner .column-right-inner {
+        margin-top: 0;
+      }
 
-.sidebar .widget {
-}
+      .sidebar .widget {
+      }
 
-.sidebar .widget a:link {
-}
+      .sidebar .widget a:link {
+      }
 
-.sidebar .widget a:visited {
-}
+      .sidebar .widget a:visited {
+      }
 
-.sidebar .widget a:hover {
-}
+      .sidebar .widget a:hover {
+      }
 
-.sidebar .widget h2 {
-}
+      .sidebar .widget h2 {
+      }
 
-.main-inner .widget {
-  margin: 20px -16px;
-}
+      .main-inner .widget {
+        margin: 20px -16px;
+      }
 
-.main-inner .widget h2 {
-}
+      .main-inner .widget h2 {
+      }
 
-.footer-inner .widget h2 {
-  padding: 0 0 .4em;
-}
+      .footer-inner .widget h2 {
+        padding: 0 0 .4em;
+      }
 
-.main-inner .widget h2 + div, .footer-inner .widget h2 + div {
-}
+      .main-inner .widget h2 + div, .footer-inner .widget h2 + div {
+      }
 
-.main-inner .widget .widget-content {
-}
+      .main-inner .widget .widget-content {
+      }
 
-.main-inner .widget ul, .main-inner .widget #ArchiveList ul.flat {
-  padding: 0;
+      .main-inner .widget ul, .main-inner .widget #ArchiveList ul.flat {
+        padding: 0;
 
-  list-style: none;
-}
+        list-style: none;
+      }
 
-.main-inner .widget #ArchiveList {
-}
+      .main-inner .widget #ArchiveList {
+      }
 
-.main-inner .widget ul li, .main-inner .widget #ArchiveList ul.flat li {
-  padding: .5em 15px;
-  text-indent: 0;
-}
+      .main-inner .widget ul li, .main-inner .widget #ArchiveList ul.flat li {
+        padding: .5em 15px;
+        text-indent: 0;
+      }
 
-.main-inner .widget #ArchiveList ul li {
-  padding-top: .25em;
-  padding-bottom: .25em;
-}
+      .main-inner .widget #ArchiveList ul li {
+        padding-top: .25em;
+        padding-bottom: .25em;
+      }
 
-.main-inner .widget ul li:first-child, .main-inner .widget #ArchiveList ul.flat li:first-child {
-  border-top: none;
-}
+      .main-inner .widget ul li:first-child, .main-inner .widget #ArchiveList ul.flat li:first-child {
+        border-top: none;
+      }
 
-.main-inner .widget ul li:last-child, .main-inner .widget #ArchiveList ul.flat li:last-child {
-  border-bottom: none;
-}
+      .main-inner .widget ul li:last-child, .main-inner .widget #ArchiveList ul.flat li:last-child {
+        border-bottom: none;
+      }
 
-.post-body {
-  position: relative;
-}
+      .post-body {
+        position: relative;
+      }
 
-.main-inner .widget .post-body ul {
-  padding: 0 2.5em;
-  margin: .5em 0;
+      .main-inner .widget .post-body ul {
+        padding: 0 2.5em;
+        margin: .5em 0;
 
-  list-style: disc;
-}
+        list-style: disc;
+      }
 
-.main-inner .widget .post-body ul li {
-  padding: 0.25em 0;
-  margin-bottom: .25em;
+      .main-inner .widget .post-body ul li {
+        padding: 0.25em 0;
+        margin-bottom: .25em;
 
-  border: none;
-}
+        border: none;
+      }
 
-.footer-inner .widget ul {
-  padding: 0;
+      .footer-inner .widget ul {
+        padding: 0;
 
-  list-style: none;
-}
+        list-style: none;
+      }
 
-.widget .zippy {
-}
+      .widget .zippy {
+      }
 
-/* Posts
------------------------------------------------ */
-body .main-inner .Blog {
-  padding: 0;
-  margin-bottom: 1em;
+      /* Posts
+      ----------------------------------------------- */
+      body .main-inner .Blog {
+        padding: 0;
+        margin-bottom: 1em;
 
-  background-color: transparent;
-  border: none;
+        background-color: transparent;
+        border: none;
 
-  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  -goog-ms-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-}
+        -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        -goog-ms-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+      }
 
-.main-inner .section:last-child .Blog:last-child {
-  padding: 0;
-  margin-bottom: 1em;
-}
+      .main-inner .section:last-child .Blog:last-child {
+        padding: 0;
+        margin-bottom: 1em;
+      }
 
-.main-inner .widget h2.date-header {
-  margin: 0 -15px 1px;
-  bottom: 100%;
-}
+      .main-inner .widget h2.date-header {
+        margin: 0 -15px 1px;
+        bottom: 100%;
+      }
 
-.main-inner .widget h2.date-header span {
-  display: block;
-  padding: .5em 15px;
-}
+      .main-inner .widget h2.date-header span {
+        display: block;
+        padding: .5em 15px;
+      }
 
-.date-outer {
-  position: relative;
-  padding: 0 15px;
-}
+      .date-outer {
+        position: relative;
+        padding: 0 15px;
+      }
 
-.date-outer:first-child {
-  margin-top: 0;
-}
+      .date-outer:first-child {
+        margin-top: 0;
+      }
 
-.date-outer:last-child {
-}
+      .date-outer:last-child {
+      }
 
-.date-posts {
-  clear: both;
-}
+      .date-posts {
+        clear: both;
+      }
 
-.post-outer, .inline-ad {
-}
+      .post-outer, .inline-ad {
+      }
 
-.post-outer {
-  padding-bottom: 10px;
-}
+      .post-outer {
+        padding-bottom: 10px;
+      }
 
-.post-outer:first-child {
-  border-top: none;
-}
+      .post-outer:first-child {
+        border-top: none;
+      }
 
-.post-outer:last-child, .inline-ad:last-child {
-  border-bottom: none;
-}
+      .post-outer:last-child, .inline-ad:last-child {
+        border-bottom: none;
+      }
 
-.post-body {
-  position: relative;
-}
+      .post-body {
+        position: relative;
+      }
 
-.post-body img {
-  padding: 8px;
-}
+      .post-body img {
+        padding: 8px;
+      }
 
-h3.post-title, h4 {
-}
+      h3.post-title, h4 {
+      }
 
-h3.post-title a {
-}
+      h3.post-title a {
+      }
 
-h3.post-title a:hover {
-  text-decoration: underline;
-}
+      h3.post-title a:hover {
+        text-decoration: underline;
+      }
 
-.post-header {
-  margin: 0 0 1em;
-}
+      .post-header {
+        margin: 0 0 1em;
+      }
 
-.post-body {
-  line-height: 1.4;
-}
+      .post-body {
+        line-height: 1.4;
+      }
 
-.post-outer h2 {
-}
+      .post-outer h2 {
+      }
 
-.post-footer {
-  margin: 1.5em 0 0;
-}
+      .post-footer {
+        margin: 1.5em 0 0;
+      }
 
-#blog-pager {
-  padding: 15px;
-  font-size: 120%;
-}
+      #blog-pager {
+        padding: 15px;
+        font-size: 120%;
+      }
 
-.blog-feeds, .post-feeds {
-  margin: 1em 0;
-  text-align: center;
-}
+      .blog-feeds, .post-feeds {
+        margin: 1em 0;
+        text-align: center;
+      }
 
-.blog-feeds a, .post-feeds a {
-}
+      .blog-feeds a, .post-feeds a {
+      }
 
-.blog-feeds a:visited, .post-feeds a:visited {
-}
+      .blog-feeds a:visited, .post-feeds a:visited {
+      }
 
-.blog-feeds a:hover, .post-feeds a:hover {
-}
+      .blog-feeds a:hover, .post-feeds a:hover {
+      }
 
-.post-outer .comments {
-  margin-top: 2em;
-}
+      .post-outer .comments {
+        margin-top: 2em;
+      }
 
-/* Comments
------------------------------------------------ */
-.comments .comments-content .icon.blog-author {
-  background-repeat: no-repeat;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9sLFwMeCjjhcOMAAAD+SURBVDjLtZSvTgNBEIe/WRRnm3U8RC1neQdsm1zSBIU9VVF1FkUguQQsD9ITmD7ECZIJSE4OZo9stoVjC/zc7ky+zH9hXwVwDpTAWWLrgS3QAe8AZgaAJI5zYAmc8r0G4AHYHQKVwII8PZrZFsBFkeRCABYiMh9BRUhnSkPTNCtVXYXURi1FpBDgArj8QU1eVXUzfnjv7yP7kwu1mYrkWlU33vs1QNu2qU8pwN0UpKoqokjWwCztrMuBhEhmh8bD5UDqur75asbcX0BGUB9/HAMB+r32hznJgXy2v0sGLBcyAJ1EK3LFcbo1s91JeLwAbwGYu7TP/3ZGfnXYPgAVNngtqatUNgAAAABJRU5ErkJggg==);
-}
+      /* Comments
+      ----------------------------------------------- */
+      .comments .comments-content .icon.blog-author {
+        background-repeat: no-repeat;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9sLFwMeCjjhcOMAAAD+SURBVDjLtZSvTgNBEIe/WRRnm3U8RC1neQdsm1zSBIU9VVF1FkUguQQsD9ITmD7ECZIJSE4OZo9stoVjC/zc7ky+zH9hXwVwDpTAWWLrgS3QAe8AZgaAJI5zYAmc8r0G4AHYHQKVwII8PZrZFsBFkeRCABYiMh9BRUhnSkPTNCtVXYXURi1FpBDgArj8QU1eVXUzfnjv7yP7kwu1mYrkWlU33vs1QNu2qU8pwN0UpKoqokjWwCztrMuBhEhmh8bD5UDqur75asbcX0BGUB9/HAMB+r32hznJgXy2v0sGLBcyAJ1EK3LFcbo1s91JeLwAbwGYu7TP/3ZGfnXYPgAVNngtqatUNgAAAABJRU5ErkJggg==);
+      }
 
-.comments .comments-content .loadmore a {
-}
+      .comments .comments-content .loadmore a {
+      }
 
-.comments .continue {
-}
+      .comments .continue {
+      }
 
-/* Footer
------------------------------------------------ */
-.footer-outer {
-  overflow: hidden;
-}
-
-.footer-fauxborder-left {
-}
-
-/* Mobile
------------------------------------------------ */
-body.mobile {
-}
-
-.mobile .body-fauxcolumn-outer {
-}
-
-*+html body.mobile .main-inner .column-center-inner {
-  margin-top: 0;
-}
-
-.mobile .main-inner .widget {
-  padding: 0 0 15px;
-}
-
-.mobile .main-inner .widget h2 + div,
-.mobile .footer-inner .widget h2 + div {
-  border-top: none;
-  padding-top: 0;
-}
+      /* Footer
+      ----------------------------------------------- */
+      .footer-outer {
+        overflow: hidden;
+      }
 
-.mobile .footer-inner .widget h2 {
-  padding: 0.5em 0;
-  border-bottom: none;
-}
-
-.mobile .main-inner .widget .widget-content {
-  margin: 0;
-  padding: 7px 0 0;
-}
-
-.mobile .main-inner .widget ul,
-.mobile .main-inner .widget #ArchiveList ul.flat {
-  margin: 0 -15px 0;
-}
-
-.mobile .main-inner .widget h2.date-header {
-}
-
-.mobile .date-header span {
-  padding: 0.4em 0;
-}
-
-.mobile .date-outer:first-child {
-  margin-bottom: 0;
-}
-
-.mobile .date-outer {
-  border-width: 0 1px 1px;
-}
-
-.mobile .date-outer:last-child {
-  margin-bottom: 0;
-}
-
-.mobile .main-inner {
-  padding: 0;
-}
-
-.mobile .header-inner .section {
-  margin: 0;
-}
-
-.mobile .post-outer, .mobile .inline-ad {
-  padding: 5px 0;
-}
-
-.mobile .tabs-inner .section {
-  margin: 0 10px;
-}
-
-.mobile .main-inner .widget h2 {
-  margin: 0;
-  padding: 0;
-}
-
-.mobile .main-inner .widget h2.date-header span {
-  padding: 0;
-}
-
-.mobile .main-inner .widget .widget-content {
-  margin: 0;
-  padding: 7px 0 0;
-}
-
-.mobile #blog-pager {
-  border: 1px solid transparent;
-}
-
-.mobile .main-inner .column-left-inner,
-.mobile .main-inner .column-right-inner {
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  -goog-ms-box-shadow: none;
-  box-shadow: none;
-}
-
-.mobile .date-posts {
-  margin: 0;
-  padding: 0;
-}
-
-.mobile .footer-fauxborder-left {
-  margin: 0;
-  border-top: inherit;
-}
-
-.mobile .main-inner .section:last-child .Blog:last-child {
-  margin-bottom: 0;
-}
-
-.mobile-index-contents {
-}
-
-.mobile .mobile-link-button {
-}
-
-.mobile-link-button a:link, .mobile-link-button a:visited {
-}
-
-.mobile .tabs-inner .PageList .widget-content {
-  background: transparent;
-  border-top: 1px solid;
-}
-
-.mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
-}
-]]></b:skin>
+      .footer-fauxborder-left {
+      }
 
+      /* Mobile
+      ----------------------------------------------- */
+      body.mobile {
+      }
+
+      .mobile .body-fauxcolumn-outer {
+      }
+
+      *+html body.mobile .main-inner .column-center-inner {
+        margin-top: 0;
+      }
+
+      .mobile .main-inner .widget {
+        padding: 0 0 15px;
+      }
+
+      .mobile .main-inner .widget h2 + div,
+      .mobile .footer-inner .widget h2 + div {
+        border-top: none;
+        padding-top: 0;
+      }
+
+      .mobile .footer-inner .widget h2 {
+        padding: 0.5em 0;
+        border-bottom: none;
+      }
+
+      .mobile .main-inner .widget .widget-content {
+        margin: 0;
+        padding: 7px 0 0;
+      }
+
+      .mobile .main-inner .widget ul,
+      .mobile .main-inner .widget #ArchiveList ul.flat {
+        margin: 0 -15px 0;
+      }
+
+      .mobile .main-inner .widget h2.date-header {
+      }
+
+      .mobile .date-header span {
+        padding: 0.4em 0;
+      }
+
+      .mobile .date-outer:first-child {
+        margin-bottom: 0;
+      }
+
+      .mobile .date-outer {
+        border-width: 0 1px 1px;
+      }
+
+      .mobile .date-outer:last-child {
+        margin-bottom: 0;
+      }
+
+      .mobile .main-inner {
+        padding: 0;
+      }
+
+      .mobile .header-inner .section {
+        margin: 0;
+      }
+
+      .mobile .post-outer, .mobile .inline-ad {
+        padding: 5px 0;
+      }
+
+      .mobile .tabs-inner .section {
+        margin: 0 10px;
+      }
+
+      .mobile .main-inner .widget h2 {
+        margin: 0;
+        padding: 0;
+      }
+
+      .mobile .main-inner .widget h2.date-header span {
+        padding: 0;
+      }
+
+      .mobile .main-inner .widget .widget-content {
+        margin: 0;
+        padding: 7px 0 0;
+      }
+
+      .mobile #blog-pager {
+        border: 1px solid transparent;
+      }
+
+      .mobile .main-inner .column-left-inner,
+      .mobile .main-inner .column-right-inner {
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        -goog-ms-box-shadow: none;
+        box-shadow: none;
+      }
+
+      .mobile .date-posts {
+        margin: 0;
+        padding: 0;
+      }
+
+      .mobile .footer-fauxborder-left {
+        margin: 0;
+        border-top: inherit;
+      }
+
+      .mobile .main-inner .section:last-child .Blog:last-child {
+        margin-bottom: 0;
+      }
+
+      .mobile-index-contents {
+      }
+
+      .mobile .mobile-link-button {
+      }
+
+      .mobile-link-button a:link, .mobile-link-button a:visited {
+      }
+
+      .mobile .tabs-inner .PageList .widget-content {
+        background: transparent;
+        border-top: 1px solid;
+      }
+
+      .mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
+      }
+      ]]>
+    </b:skin>
     <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='700px'/>
       <b:variable default='0' name='main.column.left.width' type='length' value='0px'/>
@@ -507,6 +508,7 @@ body.mobile {
       <![CDATA[
       body {
         min-width: $(content.width);
+        padding-top: 70px;
       }
 
       .content-outer, .content-fauxcolumn-outer, .region-inner {
@@ -564,262 +566,58 @@ body.mobile {
       ]]>
     </b:template-skin>
     <b:include data='blog' name='google-analytics'/>
-  </head>
+  &lt;/head&gt;&lt;!--<head/>--&gt;
 
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
 
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top navbar-shrink"> 
     <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header page-scroll">
-              <a class="navbar-brand page-scroll" href="/dev/index.html"><img src='http://csbncounter.org/dev/img/branding/navLogo.png' alt='CSB N-Counter Logo' /></a>
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-          </div>
-
-          <!-- New NAV -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-                  <li class="hidden">
-                      <a href="#page-top"></a>
-                  </li>
-                  <li>
-                      <a class="page-scroll activePage" href="/dev/index.html">News</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll" href="/dev/inspired.html">Get Inspired</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll" href="/dev/informed.html">Get Informed</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll" href="/dev/involved.html">Get Involved</a>
-                  </li>
-              </ul>
-          </div>
-          <!-- /.navbar-collapse -->
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <a class="navbar-brand page-scroll" href="/dev/index.html"><img src='http://csbncounter.org/dev/img/branding/navLogo.png' alt='CSB N-Counter Logo' /></a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
       </div>
-      <!-- /.container-fluid -->
+
+      <!-- New NAV -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li>
+            <a class="page-scroll activePage" href="http://csbncounter.blogspot.com">News</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="http://csbncounter.org/dev/inspired.html">Get Inspired</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="http://csbncounter.org/dev/informed.html">Get Informed</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="http://csbncounter.org/dev/involved.html">Get Involved</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
   </nav>
 
-  <div class='body-fauxcolumns'>
-    <div class='fauxcolumn-outer body-fauxcolumn-outer'>
-    <div class='cap-top'>
-      <div class='cap-left'/>
-      <div class='cap-right'/>
-    </div>
-    <div class='fauxborder-left'>
-    <div class='fauxborder-right'/>
-    <div class='fauxcolumn-inner'>
-    </div>
-    </div>
-    <div class='cap-bottom'>
-      <div class='cap-left'/>
-      <div class='cap-right'/>
-    </div>
-    </div>
-  </div>
-
   <div class='content'>
-  <div class='content-fauxcolumns'>
-    <div class='fauxcolumn-outer content-fauxcolumn-outer'>
-    <div class='cap-top'>
-      <div class='cap-left'/>
-      <div class='cap-right'/>
-    </div>
-    <div class='fauxborder-left'>
-    <div class='fauxborder-right'/>
-    <div class='fauxcolumn-inner'>
-    </div>
-    </div>
-    <div class='cap-bottom'>
-      <div class='cap-left'/>
-      <div class='cap-right'/>
-    </div>
-    </div>
-  </div>
-
   <div class='content-outer'>
-  <div class='content-cap-top cap-top'>
-    <div class='cap-left'/>
-    <div class='cap-right'/>
-  </div>
   <div class='fauxborder-left content-fauxborder-left'>
-  <div class='fauxborder-right content-fauxborder-right'/>
   <div class='content-inner'>
 
-    <header>
-    <div class='header-outer'>
-    <div class='header-cap-top cap-top'>
-      <div class='cap-left'/>
-      <div class='cap-right'/>
-    </div>
-    <div class='fauxborder-left header-fauxborder-left'>
-    <div class='fauxborder-right header-fauxborder-right'/>
-    <div class='region-inner header-inner'>
-      <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
-        <b:widget id='Header1' locked='true' title='N-Counter 2016: News (Header)' type='Header'>
-          <b:includable id='main'>
-
-  <b:if cond='data:useImage'>
-    <b:if cond='data:imagePlacement == &quot;BEHIND&quot;'>
-      <!--
-      Show image as background to text. You can't really calculate the width
-      reliably in JS because margins are not taken into account by any of
-      clientWidth, offsetWidth or scrollWidth, so we don't force a minimum
-      width if the user is using shrink to fit.
-      This results in a margin-width's worth of pixels being cropped. If the
-      user is not using shrink to fit then we expand the header.
-      -->
-      <b:if cond='data:mobile'>
-        <div id='header-inner'>
-          <div class='titlewrapper' style='background: transparent'>
-            <h1 class='title' style='background: transparent; border-width: 0px'>
-              <b:include name='title'/>
-            </h1>
-          </div>
-          <b:include name='description'/>
-        </div>
-      <b:else/>
-        <div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;                      + &quot;background-position: &quot;                      + data:backgroundPositionStyleStr + &quot;; &quot;                      + data:widthStyleStr                      + &quot;min-height: &quot; + data:height                      + &quot;_height: &quot; + data:height                      + &quot;background-repeat: no-repeat; &quot;' id='header-inner'>
-          <div class='titlewrapper' style='background: transparent'>
-            <h1 class='title' style='background: transparent; border-width: 0px'>
-              <b:include name='title'/>
-            </h1>
-          </div>
-          <b:include name='description'/>
-        </div>
-      </b:if>
-    <b:else/>
-      <!--Show the image only-->
-      <div id='header-inner'>
-        <a expr:href='data:blog.homepageUrl' style='display: block'>
-          <img expr:alt='data:title' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_headerimg&quot;' expr:src='data:sourceUrl' expr:width='data:width' style='display: block'/>
-        </a>
-        <!--Show the description-->
-        <b:if cond='data:imagePlacement == &quot;BEFORE_DESCRIPTION&quot;'>
-          <b:include name='description'/>
-        </b:if>
-      </div>
-    </b:if>
-  <b:else/>
-    <!--No header image -->
-    <div id='header-inner'>
-      <div class='titlewrapper'>
-        <h1 class='title'>
-          <b:include name='title'/>
-        </h1>
-      </div>
-      <b:include name='description'/>
-    </div>
-  </b:if>
-</b:includable>
-          <b:includable id='description'>
-  <div class='descriptionwrapper'>
-    <p class='description'><span><data:description/></span></p>
-  </div>
-</b:includable>
-          <b:includable id='title'>
-  <b:if cond='data:blog.url == data:blog.homepageUrl'>
-    <data:title/>
-  <b:else/>
-    <a expr:href='data:blog.homepageUrl'><data:title/></a>
-  </b:if>
-</b:includable>
-        </b:widget>
-      </b:section>
-    </div>
-    </div>
-    <div class='header-cap-bottom cap-bottom'>
-      <div class='cap-left'/>
-      <div class='cap-right'/>
-    </div>
-    </div>
-    </header>
-
-    <div class='tabs-outer'>
-    <div class='tabs-cap-top cap-top'>
-      <div class='cap-left'/>
-      <div class='cap-right'/>
-    </div>
-    <div class='fauxborder-left tabs-fauxborder-left'>
-    <div class='fauxborder-right tabs-fauxborder-right'/>
-    <div class='region-inner tabs-inner'>
-      <b:section class='tabs' id='crosscol' maxwidgets='1' showaddelement='yes'/>
-      <b:section class='tabs' id='crosscol-overflow' showaddelement='no'/>
-    </div>
-    </div>
-    <div class='tabs-cap-bottom cap-bottom'>
-      <div class='cap-left'/>
-      <div class='cap-right'/>
-    </div>
-    </div>
-
     <div class='main-outer'>
-    <div class='main-cap-top cap-top'>
-      <div class='cap-left'/>
-      <div class='cap-right'/>
-    </div>
-
     <div class='fauxborder-left main-fauxborder-left'>
-    <div class='fauxborder-right main-fauxborder-right'/>
     <div class='region-inner main-inner'>
-
       <div class='columns fauxcolumns'>
-
-        <div class='fauxcolumn-outer fauxcolumn-center-outer'>
-        <div class='cap-top'>
-          <div class='cap-left'/>
-          <div class='cap-right'/>
-        </div>
-        <div class='fauxborder-left'>
-        <div class='fauxborder-right'/>
-        <div class='fauxcolumn-inner'>
-        </div>
-        </div>
-        <div class='cap-bottom'>
-          <div class='cap-left'/>
-          <div class='cap-right'/>
-        </div>
-        </div>
-
-        <div class='fauxcolumn-outer fauxcolumn-left-outer'>
-        <div class='cap-top'>
-          <div class='cap-left'/>
-          <div class='cap-right'/>
-        </div>
-        <div class='fauxborder-left'>
-        <div class='fauxborder-right'/>
-        <div class='fauxcolumn-inner'>
-        </div>
-        </div>
-        <div class='cap-bottom'>
-          <div class='cap-left'/>
-          <div class='cap-right'/>
-        </div>
-        </div>
-
-        <div class='fauxcolumn-outer fauxcolumn-right-outer'>
-        <div class='cap-top'>
-          <div class='cap-left'/>
-          <div class='cap-right'/>
-        </div>
-        <div class='fauxborder-left'>
-        <div class='fauxborder-right'/>
-        <div class='fauxcolumn-inner'>
-        </div>
-        </div>
-        <div class='cap-bottom'>
-          <div class='cap-left'/>
-          <div class='cap-right'/>
-        </div>
-        </div>
-
         <!-- corrects IE6 width calculation -->
         <div class='columns-inner'>
 
@@ -1186,7 +984,6 @@ body.mobile {
     <div class='mobile-desktop-link'>
       <a class='home-link' expr:href='data:desktopLinkUrl'><data:desktopLinkMsg/></a>
     </div>
-
   </div>
   <div class='clear'/>
 </b:includable>
@@ -1293,8 +1090,6 @@ body.mobile {
       <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'><data:olderPageTitle/></a>
       </span>
     </b:if>
-
-    <a class='home-link' expr:href='data:blog.homepageUrl'><data:homeMsg/></a>
 
     <b:if cond='data:mobileLinkUrl'>
       <div class='blog-mobile-link'>
@@ -1757,7 +1552,7 @@ body.mobile {
         document.body.className = document.body.className.replace(&#39;loading&#39;, &#39;&#39;);
       }, 10);
   </script>
-</body>
+&lt;!--</body>--&gt; &lt;/body&gt;
 
 <macro:includable id='sections' var='col'>
   <macro:if cond='data:col.num == 0'>
@@ -1878,28 +1673,28 @@ body.mobile {
   <div class="container">
     <div class="row, footer-distributed" >
 
-    <!-- Footer-1 Social Media -->  
+      <!-- Footer-1 Social Media -->  
       <div class="footer-1">
-         <ul class="list-inline social-buttons socialFooterCentering">
-            <li><a href="http://www.twitter.com/csbncounter" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com/CSBMinistries?fref=ts" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://instagram.com/csbncounter/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="https://plus.google.com/u/0/102403965119926049149/about" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-          </ul>
+        <ul class="list-inline social-buttons socialFooterCentering">
+          <li><a href="http://www.twitter.com/csbncounter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.facebook.com/CSBMinistries?fref=ts" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://instagram.com/csbncounter/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://plus.google.com/u/0/102403965119926049149/about" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+        </ul>
       </div> <!-- footer-1 -->
   
       <!-- Footer-2 News Letter Signup -->  
       <div class="footer-2">
-         <p class="newsletterFooterCentering"><a href="http://visitor.r20.constantcontact.com/d.jsp?llr=bvu45aeab&amp;p=oi&amp;m=1103839089313&amp;sit=skhh77pfb&amp;f=ea01a16c-54b9-4770-b28e-b348b7d91f16" target="_blank" class="newsLetter">News Letter Sign Up</a> </p>
+        <p class="newsletterFooterCentering"><a href="http://visitor.r20.constantcontact.com/d.jsp?llr=bvu45aeab&amp;p=oi&amp;m=1103839089313&amp;sit=skhh77pfb&amp;f=ea01a16c-54b9-4770-b28e-b348b7d91f16" target="_blank" class="newsLetter">News Letter Sign Up</a> </p>
       </div> <!-- Footer-2 -->  
   
       <!-- Footer-3 Contact Information -->  
       <div class="footer-3">
-         <p class="thirdFooterCentering">
+        <p class="thirdFooterCentering">
           <a href="mailto:info@csbncounter.org?Subject=Website Contact" target="_top">info@csbncounter.org</a>
           <br/>
           <a href="https://www.google.com/maps?espv=2&amp;biw=1363&amp;bih=1140&amp;q=200+Chapel+Rd,+Geigertown,+PA+19523&amp;bav=on.2,or.r_cp.&amp;bvm=bv.87611401,d.cWc&amp;ion=1&amp;um=1&amp;ie=UTF-8&amp;sa=X&amp;ei=LCr9VKmIG_W_sQSVlIHQDw&amp;ved=0CAYQ_AUoAQ" target="_blank">Event Location</a>
-         </p>    
+        </p>    
       </div> <!-- Footer-3 -->  
   
       <!-- Footer-4 Image -->  
