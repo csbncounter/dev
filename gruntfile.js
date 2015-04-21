@@ -22,10 +22,8 @@ module.exports = function(grunt) {
         src: 'blogger/csbncounter.css',
         dest: 'blogger/csbncounter.css',
         options: {
-          process: function (content, srcpath) {
-            return content
-              .replace(/\/?dev\//g, 'http://csbncounter.org/dev/')
-              .replace(/\.\.\//g, 'http://csbncounter.org/dev/');
+          process: function(content, srcpath) {
+            return content.replace(/\/?dev\/|\.\.\//g, '//csbncounter.org/dev/');
           }
         }
       }

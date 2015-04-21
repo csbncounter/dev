@@ -3,7 +3,9 @@
     "window"     : true,
     "document"   : true,
     "$"          : true,
-    "jQuery"     : true
+    "jQuery"     : true,
+    "module"     : true,
+    "require"    : true
   },
 
   "bitwise"       : true,
