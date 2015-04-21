@@ -11,8 +11,7 @@ module.exports = function(grunt) {
         src: [
           'css/bootstrap.min.css',
           'css/agency.css',
-          'css/ncounter.css',
-          'font-awesome/css/font-awesome.css'
+          'css/ncounter.css'
         ],
         dest: 'blogger/csbncounter.css'
       }
