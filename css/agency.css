@@ -250,6 +250,12 @@ fieldset[disabled] .btn-xl.active {
     color: #f0644b;
 }
 
+.navbar-default .nav li .activePage:hover,
+.navbar-default .nav li .activePage:focus {
+    color: #fff;
+    background-color: #f0644b;
+}
+
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0;
     color: #fff;
