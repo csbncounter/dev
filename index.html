@@ -140,53 +140,7 @@
             </div> <!-- end header -->
             
             <!-- Blog Section --> 
-            <div class="row">
-                <!-- 1st blog element -->  
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Round Icons</h4>
-                        <p class="text-muted">Graphic Design</p>
-                    </div>
-                </div>
-                <!-- 2nd blog element -->  
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/startup-framework.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Startup Framework</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <!-- 3rd blog element -->  
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Treehouse</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-
+            <div id="portfolio-items" class="row"></div>
         </div> <!-- / container -->
     </section>
 
@@ -271,12 +225,11 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-		<!-- script for random images ** ONLY on index.html -->
-		<script language="Javascript" type="text/javascript" src="js/newsImages.js"></script>
+    <script src="js/underscore.min.js"></script>
+	<!-- script for random images ** ONLY on index.html -->
+	<script language="Javascript" type="text/javascript" src="js/newsImages.js"></script>
     <!-- Resizes the picture per window resize.  - Ben --> 
-		<script language="Javascript" type="text/javascript" src="js/fullScreenPicture.js"></script>
-		
-		
+	<script language="Javascript" type="text/javascript" src="js/fullScreenPicture.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -286,13 +239,66 @@
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
 
-	  <!-- Scrolling JS - Ben -->
-		<script src="js/smoothScroll.js"></script>
+    <!-- Scrolling JS - Ben -->
+	<script src="js/smoothScroll.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
-    
 
+    <!-- Trick for embedding "html" that isn't parsed into the DOM -->
+    <script id="portfolio-item-tpl" type="text/html">
+        <div class="col-md-4 col-sm-6 portfolio-item">
+            <a href="<%- href %>" class="portfolio-link">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content">
+                        <i class="fa fa-plus fa-3x"></i>
+                    </div>
+                </div>
+                <img src="<%- image %>" class="img-responsive" alt="">
+            </a>
+            <div class="portfolio-caption">
+                <h4><%- title %></h4>
+                <p class="text-muted"><%- date %></p>
+            </div>
+        </div>
+    </script>
+    <script>
+        // Grab template from the trick script tag.
+        var rawTemplate = $('#portfolio-item-tpl').html();
+
+        // Compile the template into a Javacript function.
+        // See http://underscorejs.org/#template
+        var newsItemTpl = _.template(rawTemplate);
+
+        // Dummy data.  This will be replaced with data fetched from the Google Blogger API.
+        var newsItems = [{
+            title: 'Post One',
+            date: 'April 22, 2015',
+            image: 'img/excited.jpg',
+            href: 'inspired.html'
+        }, {
+            title: 'Post Two',
+            date: 'April 12, 2015',
+            image: 'img/inspired.jpg',
+            href: 'informed.html'
+        }, {
+            title: 'Post Three',
+            date: 'March 22, 2015',
+            image: 'img/involved.jpg',
+            href: 'involved.html'
+        }];
+
+        // Buffer the html for each portfolio item into an array.
+        var newsItemsHtml = [];
+        for (var i = 0; i < newsItems.length; i++) {
+            var newsItem = newsItems[i];
+            var newsItemHtml = newsItemTpl(newsItem);
+            newsItemsHtml.push(newsItemHtml);
+        }
+
+        // Attach html for all portfolios at once.
+        $('#portfolio-items').html(newsItemsHtml.join(''));
+    </script>
 </body>
 
 </html>
