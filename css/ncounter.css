@@ -40,7 +40,7 @@
 
 .inspired{
 		background-attachment: /*fixed,*/ scroll;
-    background-image: url(/dev/img/inspired.jpg);
+    background-image: url(/img/inspired.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -51,7 +51,7 @@
 
 .excited{
 		background-attachment: /*fixed,*/ scroll;
-    background-image: url(/dev/img/excited.jpg);
+    background-image: url(/img/excited.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -62,7 +62,7 @@
 
 .involved{
 		background-attachment: /*fixed,*/ scroll;
-    background-image: url(/dev/img/involved.jpg);
+    background-image: url(/img/involved.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
