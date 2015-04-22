@@ -511,7 +511,7 @@
       <![CDATA[
       body {
         min-width: $(content.width);
-        padding-top: 70px;
+        padding-top: 100px;
       }
 
       .content-outer, .content-fauxcolumn-outer, .region-inner {
@@ -570,6 +570,9 @@
       #layout .region-inner {
         min-width: 0;
         width: auto;
+      }
+      .navbar {
+        background: #344259;
       }
       .content-footer {
         padding: 100px;
@@ -1659,19 +1662,19 @@
     <div class="row, footer-distributed" >
 
       <!-- Footer-1 Social Media -->  
-      <div class="footer-1">
+      <!--div class="footer-1">
         <ul class="list-inline social-buttons socialFooterCentering">
           <li><a href="http://www.twitter.com/csbncounter" target="_blank"><i class="fa fa-twitter"></i></a></li>
           <li><a href="https://www.facebook.com/CSBMinistries?fref=ts" target="_blank"><i class="fa fa-facebook"></i></a></li>
           <li><a href="https://instagram.com/csbncounter/" target="_blank"><i class="fa fa-instagram"></i></a></li>
           <li><a href="https://plus.google.com/u/0/102403965119926049149/about" target="_blank"><i class="fa fa-google-plus"></i></a></li>
         </ul>
-      </div> <!-- footer-1 -->
+      </div--> <!-- footer-1 -->
   
       <!-- Footer-2 News Letter Signup -->  
-      <div class="footer-2">
+      <!--div class="footer-2">
         <p class="newsletterFooterCentering"><a href="http://visitor.r20.constantcontact.com/d.jsp?llr=bvu45aeab&amp;p=oi&amp;m=1103839089313&amp;sit=skhh77pfb&amp;f=ea01a16c-54b9-4770-b28e-b348b7d91f16" target="_blank" class="newsLetter">News Letter Sign Up</a> </p>
-      </div> <!-- Footer-2 -->  
+      </div--> <!-- Footer-2 -->  
   
       <!-- Footer-3 Contact Information -->  
       <div class="footer-3">
