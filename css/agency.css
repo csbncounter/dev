@@ -6,24 +6,24 @@
 
 @font-face {
 	font-family:"N-Counter Heading";
-	src: url('/dev/fonts/BebasNeue.eot')format('embedded-opentype'), url('/dev/fonts/BebasNeue.woff')format('woff'), url('/dev/fonts/BebasNeue.ttf')format('truetype');
+	src: url('/fonts/BebasNeue.eot')format('embedded-opentype'), url('/fonts/BebasNeue.woff')format('woff'), url('/fonts/BebasNeue.ttf')format('truetype');
 }
 
 @font-face {
 	font-family: "N-Counter Paragraph";
 	font-weight: 400;
-	src: url('/dev/fonts/SourceSansPro-Regular.eot')format('embedded-opentype'), url('/dev/fonts/SourceSansPro-Regular.woff')format('woff'), url('/dev/fonts/SourceSansPro-Regular.ttf')format('truetype');
+	src: url('/fonts/SourceSansPro-Regular.eot')format('embedded-opentype'), url('/fonts/SourceSansPro-Regular.woff')format('woff'), url('/fonts/SourceSansPro-Regular.ttf')format('truetype');
 }
 @font-face {
 	font-family: "N-Counter Paragraph";
 	font-weight: 300;
 	font-style: italic;
-	src: url('/dev/fonts/SourceSansPro-italic.eot')format('embedded-opentype'), url('/dev/fonts/SourceSansPro-italic.woff')format('woff'), url('/dev/fonts/SourceSansPro-italic.ttf')format('truetype');
+	src: url('/fonts/SourceSansPro-italic.eot')format('embedded-opentype'), url('/fonts/SourceSansPro-italic.woff')format('woff'), url('/fonts/SourceSansPro-italic.ttf')format('truetype');
 }
 @font-face {
 	font-family: "N-Counter Paragraph";
 	font-weight: 500;
-	src: url('/dev/fonts/SourceSansPro-Semibold.eot')format('embedded-opentype'), url('/dev/fonts/SourceSansPro-Semibold.woff')format('woff'), url('/dev/fonts/SourceSansPro-Semibold.ttf')format('truetype');
+	src: url('/fonts/SourceSansPro-Semibold.eot')format('embedded-opentype'), url('/fonts/SourceSansPro-Semibold.woff')format('woff'), url('/fonts/SourceSansPro-Semibold.ttf')format('truetype');
 }
 
 /* modified body CSS to match N-Counter branding specs */
@@ -313,7 +313,7 @@ header {
     text-align: center;
     color: #fff;
    /* background-attachment: scroll;
-    background-image: url(/dev/img/index.jpg);
+    background-image: url(/img/index.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
