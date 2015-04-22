@@ -37,6 +37,10 @@
 	bottom:50px;
 }
 
+/* video margin */
+.embed-responsive{
+	margin-bottom:30px;
+}
 
 .inspired{
 		background-attachment: /*fixed,*/ scroll;
