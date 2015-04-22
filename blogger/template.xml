@@ -5,7 +5,7 @@
     <meta expr:content='data:blog.isMobile         ? &quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0&quot;         : &quot;width=1100&quot;' name='viewport'/>
     <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
-    <link rel="stylesheet" href="http://csbncounter.org/dev/blogger/csbncounter.css" />
+    <link rel="stylesheet" href="http://dev.csbncounter.org/blogger/csbncounter.css" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
     <b:skin>
       <![CDATA[/*
@@ -587,11 +587,12 @@
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-default navbar-fixed-top navbar-shrink"> 
+  <nav class="navbar navbar-default navbar-fixed-top"> 
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header page-scroll">
-        <a class="navbar-brand page-scroll" href="http://csbncounter.org/dev/index.html"><img src='http://csbncounter.org/dev/img/branding/navLogo.png' alt='CSB N-Counter Logo' /></a>
+        <!--<a class="navbar-brand page-scroll" href="http://dev.csbncounter.org/index.html"><img src='http://dev.csbncounter.org/img/branding/navLogo.png' alt='CSB N-Counter Logo' /></a>-->
+        <a class="navbar-brand page-scroll"><img src='http://dev.csbncounter.org/img/branding/navLogo.png' alt='CSB N-Counter Logo' /></a>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -609,15 +610,15 @@
           <li>
             <a class="page-scroll activePage" href="http://news.csbncounter.org">News</a>
           </li>
-          <li>
-            <a class="page-scroll" href="http://csbncounter.org/dev/inspired.html">Get Inspired</a>
+          <!--li>
+            <a class="page-scroll" href="http://dev.csbncounter.org/inspired.html">Get Inspired</a>
           </li>
           <li>
-            <a class="page-scroll" href="http://csbncounter.org/dev/informed.html">Get Informed</a>
+            <a class="page-scroll" href="http://dev.csbncounter.org/informed.html">Get Informed</a>
           </li>
           <li>
-            <a class="page-scroll" href="http://csbncounter.org/dev/involved.html">Get Involved</a>
-          </li>
+            <a class="page-scroll" href="http://dev.csbncounter.org/involved.html">Get Involved</a>
+          </li-->
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -1683,13 +1684,12 @@
   
       <!-- Footer-4 Image -->  
       <div class="footer-4">
-        <p><a href="http://www.csbministries.org" target="_blank"><img alt="CSB Ministries logo" src="http://csbncounter.org/dev/img/csb_logo.png" width="150" height="auto"/></a> </p>
+        <p><a href="http://www.csbministries.org" target="_blank"><img alt="CSB Ministries logo" src="http://dev.csbncounter.org/img/csb_logo.png" width="150" height="auto"/></a> </p>
       </div> <!-- Footer-4 -->  
   
     </div> <!-- row -->    
   </div> <!--container--> 
 </footer>
 
-<script src="http://csbncounter.org/dev/js/jquery.js"></script>
-<script src="http://csbncounter.org/dev/js/bootstrap.min.js"></script>
+<script src="http://dev.csbncounter.org/blogger/csbncounter.js"></script>
 </html>

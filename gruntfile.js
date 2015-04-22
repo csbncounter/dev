@@ -14,6 +14,16 @@ module.exports = function(grunt) {
           'css/ncounter.css'
         ],
         dest: 'blogger/csbncounter.css'
+      },
+      bloggerJs: {
+        src: [
+          'js/jquery.js',
+          'js/bootstrap.js',
+          'js/jquery.easing.min.js',
+          'js/classie.js',
+          'js/cbpAnimatedHeader.js'
+        ],
+        dest: 'blogger/csbncounter.js'
       }
     },
 
@@ -23,7 +33,7 @@ module.exports = function(grunt) {
         dest: 'blogger/csbncounter.css',
         options: {
           process: function(content, srcpath) {
-            return content.replace(/\/?dev\/|\.\.\//g, '//csbncounter.org/dev/');
+            return content.replace(/(url\(['"]?)(?:\/|\.\.\/)/g, '$1//dev.csbncounter.org/');
           }
         }
       }
@@ -35,14 +45,24 @@ module.exports = function(grunt) {
           'blogger/csbncounter.css': 'blogger/csbncounter.css'
         }
       }
+    },
+
+    uglify: {
+      bloggerJs: {
+        files: {
+          'blogger/csbncounter.js': 'blogger/csbncounter.js'
+        }
+      }
     }
   });
 
-  grunt.registerTask('blogger-css', 'Build CSS for Blogger', [
+  grunt.registerTask('blogger-assets', 'Build assets for Blogger', [
     'concat:bloggerCss',
     'copy:bloggerCss',
-    'cssmin:bloggerCss'
+    'cssmin:bloggerCss',
+    'concat:bloggerJs',
+    'uglify:bloggerJs'
   ]);
 
-  grunt.registerTask('default', 'Default task is blogger-css', ['blogger-css']);
+  grunt.registerTask('default', 'Default task is blogger-assets', ['blogger-assets']);
 };
