@@ -53,10 +53,22 @@ module.exports = function(grunt) {
           'blogger/csbncounter.js': 'blogger/csbncounter.js'
         }
       }
+    },
+
+    connect: {
+      // http://localhost:8000
+      staticServer: {
+        options: {
+          keepalive: true,
+          port: 8000,
+          base: '.',
+          open: true
+        }
+      }
     }
   });
 
-  grunt.registerTask('blogger-assets', 'Build assets for Blogger', [
+  grunt.registerTask('blogger', 'Build assets for Blogger', [
     'concat:bloggerCss',
     'copy:bloggerCss',
     'cssmin:bloggerCss',
@@ -64,5 +76,7 @@ module.exports = function(grunt) {
     'uglify:bloggerJs'
   ]);
 
-  grunt.registerTask('default', 'Default task is blogger-assets', ['blogger-assets']);
+  grunt.registerTask('dev', 'Start development mode', ['connect']);
+
+  grunt.registerTask('default', 'Default task is dev', ['dev']);
 };
