@@ -113,6 +113,18 @@
 }
 
 
+/*Block Quote... */
+.blockquote{
+	border-left-width:0px;
+}
+
+.fa-quote-left{
+	color:#F0644B;
+}
+
+.fa-quote-right{
+	color:#F0644B;
+}
 
 /* - FOOTER MODIFICATIONS -
 	 - cite: http://tutorialzine.com/2015/01/freebie-5-responsive-footer-templates/
