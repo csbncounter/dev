@@ -116,6 +116,9 @@
 /*Block Quote... */
 blockquote{
 	border-left: 0px;
+}
+
+.blockquote-reverse{
 	border-right: 0px;
 }
 
