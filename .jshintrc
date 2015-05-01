@@ -3,9 +3,11 @@
     "window"     : true,
     "document"   : true,
     "$"          : true,
+    "_"          : true,
     "jQuery"     : true,
     "module"     : true,
-    "require"    : true
+    "require"    : true,
+    "console"    : true
   },
 
   "bitwise"       : true,

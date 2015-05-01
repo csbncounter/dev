@@ -112,12 +112,6 @@
         line-height: 16px;
       }
 
-      .tabs-inner .widget li:last-child a {
-      }
-
-      .tabs-inner .widget li.selected a, .tabs-inner .widget li a:hover {
-      }
-
       /* Widgets
       ----------------------------------------------- */
       .main-inner .section {
@@ -125,17 +119,9 @@
         padding: 0;
       }
 
-      .main-inner .column-left-outer,
-      .main-inner .column-right-outer {
-      }
-
       #layout .main-inner .column-left-outer,
       #layout .main-inner .column-right-outer {
         margin-top: 0;
-      }
-
-      .main-inner .column-left-inner,
-      .main-inner .column-right-inner {
       }
 
       #layout .main-inner .column-left-inner,
@@ -143,45 +129,18 @@
         margin-top: 0;
       }
 
-      .sidebar .widget {
-      }
-
-      .sidebar .widget a:link {
-      }
-
-      .sidebar .widget a:visited {
-      }
-
-      .sidebar .widget a:hover {
-      }
-
-      .sidebar .widget h2 {
-      }
-
       .main-inner .widget {
         margin: 20px -16px;
-      }
-
-      .main-inner .widget h2 {
       }
 
       .footer-inner .widget h2 {
         padding: 0 0 .4em;
       }
 
-      .main-inner .widget h2 + div, .footer-inner .widget h2 + div {
-      }
-
-      .main-inner .widget .widget-content {
-      }
-
       .main-inner .widget ul, .main-inner .widget #ArchiveList ul.flat {
         padding: 0;
 
         list-style: none;
-      }
-
-      .main-inner .widget #ArchiveList {
       }
 
       .main-inner .widget ul li, .main-inner .widget #ArchiveList ul.flat li {
@@ -226,9 +185,6 @@
         list-style: none;
       }
 
-      .widget .zippy {
-      }
-
       /* Posts
       ----------------------------------------------- */
       body .main-inner .Blog {
@@ -268,14 +224,8 @@
         margin-top: 0;
       }
 
-      .date-outer:last-child {
-      }
-
       .date-posts {
         clear: both;
-      }
-
-      .post-outer, .inline-ad {
       }
 
       .post-outer {
@@ -298,12 +248,6 @@
         padding: 8px;
       }
 
-      h3.post-title, h4 {
-      }
-
-      h3.post-title a {
-      }
-
       h3.post-title a:hover {
         text-decoration: underline;
       }
@@ -320,10 +264,6 @@
         padding-bottom: 50px;
       }
 
-      .post-outer:last-child {
-        padding-bottom: 0;
-      }
-
       .post-footer {
         margin: 1.5em 0 0;
       }
@@ -338,15 +278,6 @@
         text-align: center;
       }
 
-      .blog-feeds a, .post-feeds a {
-      }
-
-      .blog-feeds a:visited, .post-feeds a:visited {
-      }
-
-      .blog-feeds a:hover, .post-feeds a:hover {
-      }
-
       .post-outer .comments {
         margin-top: 2em;
       }
@@ -358,29 +289,14 @@
         background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9sLFwMeCjjhcOMAAAD+SURBVDjLtZSvTgNBEIe/WRRnm3U8RC1neQdsm1zSBIU9VVF1FkUguQQsD9ITmD7ECZIJSE4OZo9stoVjC/zc7ky+zH9hXwVwDpTAWWLrgS3QAe8AZgaAJI5zYAmc8r0G4AHYHQKVwII8PZrZFsBFkeRCABYiMh9BRUhnSkPTNCtVXYXURi1FpBDgArj8QU1eVXUzfnjv7yP7kwu1mYrkWlU33vs1QNu2qU8pwN0UpKoqokjWwCztrMuBhEhmh8bD5UDqur75asbcX0BGUB9/HAMB+r32hznJgXy2v0sGLBcyAJ1EK3LFcbo1s91JeLwAbwGYu7TP/3ZGfnXYPgAVNngtqatUNgAAAABJRU5ErkJggg==);
       }
 
-      .comments .comments-content .loadmore a {
-      }
-
-      .comments .continue {
-      }
-
       /* Footer
       ----------------------------------------------- */
       .footer-outer {
         overflow: hidden;
       }
 
-      .footer-fauxborder-left {
-      }
-
       /* Mobile
       ----------------------------------------------- */
-      body.mobile {
-      }
-
-      .mobile .body-fauxcolumn-outer {
-      }
-
       *+html body.mobile .main-inner .column-center-inner {
         margin-top: 0;
       }
@@ -485,21 +401,9 @@
         margin-bottom: 0;
       }
 
-      .mobile-index-contents {
-      }
-
-      .mobile .mobile-link-button {
-      }
-
-      .mobile-link-button a:link, .mobile-link-button a:visited {
-      }
-
       .mobile .tabs-inner .PageList .widget-content {
         background: transparent;
         border-top: 1px solid;
-      }
-
-      .mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
       }
       ]]>
     </b:skin>

@@ -255,56 +255,70 @@
     <!-- Trick for embedding "html" that isn't parsed into the DOM -->
     <script id="portfolio-item-tpl" type="text/html">
         <div class="col-md-4 col-sm-6 portfolio-item">
-            <a href="<%- href %>" class="portfolio-link">
-                <div class="portfolio-hover">
-                    <div class="portfolio-hover-content">
-                        <i class="fa fa-plus fa-3x"></i>
-                    </div>
-                </div>
-                <img src="<%- image %>" class="img-responsive" alt="">
+            <a href="<%- url %>" class="portfolio-link">
+                <div class="portfolio-hover"></div>
+                <div style="background-image: url(<%- image %>); background-size: <%- imageSize %>;" class="portfolio-item-bg"></div>
             </a>
             <div class="portfolio-caption">
-                <h4><%- title %></h4>
-                <p class="text-muted"><%- date %></p>
+                <h4><a href="<%- url %>"><%- title %></a></h4>
+                <p class="text-muted"><%- published %></p>
             </div>
         </div>
     </script>
     <script>
-        // Grab template from the trick script tag.
+        var monthNames = [
+            'January', 'February', 'March', 'April', 'May', 'June', 'July',
+            'August', 'September', 'October', 'November', 'December'
+        ];
+        function prettyDate(rawDate) {
+            if (!rawDate) { return ''; }
+            var dateTime = new Date(Date.parse(rawDate));
+            var month = monthNames[dateTime.getMonth()];
+            var day = dateTime.getDate();
+            var year = dateTime.getFullYear();
+            return month + ' ' + day + ', ' + year;
+        }
+
+        // Grab template from dummy script tag
         var rawTemplate = $('#portfolio-item-tpl').html();
 
         // Compile the template into a Javacript function.
         // See http://underscorejs.org/#template
         var newsItemTpl = _.template(rawTemplate);
 
-        // Dummy data.  This will be replaced with data fetched from the Google Blogger API.
-        var newsItems = [{
-            title: 'Post One',
-            date: 'April 22, 2015',
-            image: 'img/excited.jpg',
-            href: 'inspired.html'
-        }, {
-            title: 'Post Two',
-            date: 'April 12, 2015',
-            image: 'img/inspired.jpg',
-            href: 'informed.html'
-        }, {
-            title: 'Post Three',
-            date: 'March 22, 2015',
-            image: 'img/involved.jpg',
-            href: 'involved.html'
-        }];
+        $.get('https://www.googleapis.com/blogger/v3/blogs/4421389846568223521/posts?orderBy=published&fields=items(published%2Curl%2Ctitle%2Ccontent)&key=AIzaSyCMVIWKm-FtKOiStNcVwEQYWvJF-1jfVkc')
+            .done(function(data) {
+                // Massage the data received from Blogger API
+                var newsItems = _.map(data.items, function(item) {
+                    var content = item.content || '';
+                    // Default image
+                    var image = 'img/default-news-image.png';
+                    var imageSize = 'cover';
+                    var match;
+                    // If the blog post contains an image, use the first one
+                    if ((match = content.match(/<img[^>]+src="(.+?)"/))) {
+                        image = match[1];
+                        imageSize = 'contain';
+                    }
+                    item.image = image;
+                    item.imageSize = imageSize;
+                    item.published = prettyDate(item.published);
+                    delete item.content;
+                    return item;
+                });
 
-        // Buffer the html for each portfolio item into an array.
-        var newsItemsHtml = [];
-        for (var i = 0; i < newsItems.length; i++) {
-            var newsItem = newsItems[i];
-            var newsItemHtml = newsItemTpl(newsItem);
-            newsItemsHtml.push(newsItemHtml);
-        }
+                // Buffer the html for each news item into an array.
+                var newsItemsHtml = [];
+                for (var i = 0; i < newsItems.length; i++) {
+                    var newsItem = newsItems[i];
+                    // Combine template and data into actual HTML
+                    var newsItemHtml = newsItemTpl(newsItem);
+                    newsItemsHtml.push(newsItemHtml);
+                }
 
-        // Attach html for all portfolios at once.
-        $('#portfolio-items').html(newsItemsHtml.join(''));
+                // Attach html for all portfolios at once.
+                $('#portfolio-items').html(newsItemsHtml.join(''));
+            });
     </script>
 </body>
 
