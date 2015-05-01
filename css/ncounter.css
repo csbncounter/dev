@@ -115,7 +115,8 @@
 
 /*Block Quote... */
 blockquote{
-	border: 0px;
+	border-left: 0px;
+	border-right: 0px;
 }
 
 .fa-quote-left{
