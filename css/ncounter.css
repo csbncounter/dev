@@ -134,12 +134,28 @@ blockquote{
 
 
 /* Informed Portfolio Spacing Modification */
-.col-md-4, 
-.col-sm-6{
+.col-md-4Image, 
+.col-sm-6Image{
+	position: relative;
+  min-height: 1px;
 	padding-right: 1px;
 	padding-left: 1px;
 }
 
+@media (min-width: 992px) {
+	.col-md-4Image, 
+	.col-sm-6Image{
+		 float: left;
+	}
+	
+	.col-md-6Image {
+    width: 50%;
+  }
+  
+  .col-md-4Image{
+    width: 33.33333333%;
+	}
+}
 /* - FOOTER MODIFICATIONS -
 	 - cite: http://tutorialzine.com/2015/01/freebie-5-responsive-footer-templates/
  */
