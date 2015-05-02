@@ -132,6 +132,14 @@ blockquote{
 	color:#F0644B;
 }
 
+
+/* Informed Portfolio Spacing Modification */
+.col-md-4, 
+.col-sm-6{
+	padding-right: 1px;
+	padding-left: 1px;
+}
+
 /* - FOOTER MODIFICATIONS -
 	 - cite: http://tutorialzine.com/2015/01/freebie-5-responsive-footer-templates/
  */
