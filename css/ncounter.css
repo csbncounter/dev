@@ -147,7 +147,7 @@ blockquote{
 	min-height: 1px;
 }
 
-@media (max-width: 1200px){
+@media (min-width: 1200px){
 	.portfolio-layout{
 		width: 50%;
 	}
