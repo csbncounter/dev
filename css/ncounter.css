@@ -135,11 +135,8 @@ blockquote{
 
 /* informed image portfolio */
 .informed-image-portfolio{
-	/*height: 289px;
-	width: 386px;*/
-	max-width:33%
-	height:auto;
-	width:auto;
+	height: 289px;
+	width: 386px;
 	background-size: cover;
 	background-position: center center;
 	margin:2px;	
