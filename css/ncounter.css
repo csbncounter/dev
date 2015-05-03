@@ -143,8 +143,10 @@ blockquote{
 }
 
 .portfolio-layout{
+	display: block;
 	position: relative;
 	min-height: 1px;
+	max-width: 390px;
 }
 
 @media (min-width: 1200px){
