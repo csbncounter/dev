@@ -133,6 +133,15 @@ blockquote{
 }
 
 
+/* informed image portfolio */
+.informed-image-portfolio{
+	height: 289px;
+	width: 386px;
+	background-size: cover;
+	background-position: center center;
+	
+}
+
 /* Informed Portfolio Spacing Modification */
 .col-md-4Image, 
 .col-sm-6Image{
