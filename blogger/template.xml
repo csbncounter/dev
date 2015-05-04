@@ -1580,19 +1580,19 @@
   
       <!-- Footer-2 News Letter Signup -->  
       <div class="footer-2">
-         <p class="newsletterFooterCentering"><a href="http://visitor.r20.constantcontact.com/d.jsp?llr=bvu45aeab&p=oi&m=1103839089313&sit=skhh77pfb&f=ea01a16c-54b9-4770-b28e-b348b7d91f16" title="Newsletter signup link" target="_blank" class="newsLetter">Newsletter Signup</a> </p>
+         <p class="newsletterFooterCentering"><a href="http://visitor.r20.constantcontact.com/d.jsp?llr=bvu45aeab&amp;p=oi&amp;m=1103839089313&amp;sit=skhh77pfb&amp;f=ea01a16c-54b9-4770-b28e-b348b7d91f16" title="Newsletter signup link" target="_blank" class="newsLetter">Newsletter Signup</a> </p>
       </div> <!-- Footer-2 -->  
   
       <!-- Footer-3 Contact Information -->  
       <div class="footer-3">
         <a href="mailto:info@csbncounter.org?Subject=Website Contact" target="_top">info@csbncounter.org</a>
-        <br>
-        <a href="https://www.google.com/maps?espv=2&biw=1363&bih=1140&q=200+Chapel+Rd,+Geigertown,+PA+19523&bav=on.2,or.r_cp.&bvm=bv.87611401,d.cWc&ion=1&um=1&ie=UTF-8&sa=X&ei=LCr9VKmIG_W_sQSVlIHQDw&ved=0CAYQ_AUoAQ" target="_blank">Event Location</a>
+        <br/>
+        <a href="https://www.google.com/maps?espv=2&amp;biw=1363&amp;bih=1140&amp;q=200+Chapel+Rd,+Geigertown,+PA+19523&amp;bav=on.2,or.r_cp.&amp;bvm=bv.87611401,d.cWc&amp;ion=1&amp;um=1&amp;ie=UTF-8&amp;sa=X&amp;ei=LCr9VKmIG_W_sQSVlIHQDw&amp;ved=0CAYQ_AUoAQ" target="_blank">Event Location</a>
       </div> <!-- Footer-3 -->  
   
       <!-- Footer-4 Image -->  
       <div class="footer-4">
-        <a href="http://www.csbministries.org" title="CSB Ministries Home Website" target="_blank"><img alt="CSB Ministries logo" src="img/csb_logo-corporate.gif"></a>
+        <a href="http://www.csbministries.org" title="CSB Ministries Home Website" target="_blank"><img alt="CSB Ministries logo" src="img/csb_logo-corporate.gif"></img></a>
       </div> <!-- Footer-4 -->  
 
     </div> <!-- row -->    
