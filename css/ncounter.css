@@ -64,6 +64,8 @@ p{
 	margin-bottom: 20px;
 }
 
+/* Heading Padding to achieve the 75px that the section-subheading provides. */
+
 /* Video Text Padding */
 .video-text-padding{
 	padding-left: 2px;
