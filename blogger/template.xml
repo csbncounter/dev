@@ -5,7 +5,7 @@
     <meta expr:content='data:blog.isMobile         ? &quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0&quot;         : &quot;width=1100&quot;' name='viewport'/>
     <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
-    <link rel="stylesheet" href="http://dev.csbncounter.org/blogger/csbncounter.css" />
+    <link rel="stylesheet" href="http://csbncounter.org/blogger/csbncounter.css" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
     <b:skin>
       <![CDATA[/*
@@ -498,8 +498,8 @@
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header page-scroll">
-        <!--<a class="navbar-brand page-scroll" href="http://dev.csbncounter.org/index.html"><img src='http://dev.csbncounter.org/img/branding/navLogo.png' alt='CSB N-Counter Logo' /></a>-->
-        <a class="navbar-brand page-scroll"><img src='http://dev.csbncounter.org/img/branding/navLogo.png' alt='CSB N-Counter Logo' /></a>
+        <!--<a class="navbar-brand page-scroll" href="http://csbncounter.org/index.html"><img src='http://csbncounter.org/img/branding/navLogo.png' alt='CSB N-Counter Logo' /></a>-->
+        <a class="navbar-brand page-scroll"><img src='http://csbncounter.org/img/branding/navLogo.png' alt='CSB N-Counter Logo' /></a>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -515,17 +515,20 @@
             <a href="#page-top"></a>
           </li>
           <li>
+            <a class="page-scroll" href="http://csbncounter.org/inspired.html">Home</a>
+          </li>
+          <li>
             <a class="page-scroll activePage" href="http://news.csbncounter.org">News</a>
           </li>
-          <!--li>
-            <a class="page-scroll" href="http://dev.csbncounter.org/inspired.html">Get Inspired</a>
+          <li>
+            <a class="page-scroll" href="http://csbncounter.org/inspired.html">Get Inspired</a>
           </li>
           <li>
-            <a class="page-scroll" href="http://dev.csbncounter.org/informed.html">Get Informed</a>
+            <a class="page-scroll" href="http://csbncounter.org/informed.html">Get Informed</a>
           </li>
           <li>
-            <a class="page-scroll" href="http://dev.csbncounter.org/involved.html">Get Involved</a>
-          </li-->
+            <a class="page-scroll" href="http://csbncounter.org/involved.html">Get Involved</a>
+          </li>
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -1565,38 +1568,36 @@
   <div class="container">
     <div class="row, footer-distributed" >
 
-      <!-- Footer-1 Social Media -->  
-      <!--div class="footer-1">
-        <ul class="list-inline social-buttons socialFooterCentering">
-          <li><a href="http://www.twitter.com/csbncounter" target="_blank"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="https://www.facebook.com/CSBMinistries?fref=ts" target="_blank"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://instagram.com/csbncounter/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="https://plus.google.com/u/0/102403965119926049149/about" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-        </ul>
-      </div--> <!-- footer-1 -->
+    <!-- Footer-1 Social Media -->  
+      <div class="footer-1">
+         <ul class="list-inline social-buttons socialFooterCentering">
+            <li><a href="http://www.twitter.com/csbncounter" title="Twitter Social Media Link" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/events/1751932415033325/" title="Facebook Social Media Link" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://instagram.com/csbncounter/" title="Instagram Social Media Link" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://plus.google.com/u/0/102403965119926049149/about" title="Google + Social Media Link" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+          </ul>
+      </div> <!-- footer-1 -->
   
       <!-- Footer-2 News Letter Signup -->  
-      <!--div class="footer-2">
-        <p class="newsletterFooterCentering"><a href="http://visitor.r20.constantcontact.com/d.jsp?llr=bvu45aeab&amp;p=oi&amp;m=1103839089313&amp;sit=skhh77pfb&amp;f=ea01a16c-54b9-4770-b28e-b348b7d91f16" target="_blank" class="newsLetter">News Letter Sign Up</a> </p>
-      </div--> <!-- Footer-2 -->  
+      <div class="footer-2">
+         <p class="newsletterFooterCentering"><a href="http://visitor.r20.constantcontact.com/d.jsp?llr=bvu45aeab&p=oi&m=1103839089313&sit=skhh77pfb&f=ea01a16c-54b9-4770-b28e-b348b7d91f16" title="Newsletter signup link" target="_blank" class="newsLetter">Newsletter Signup</a> </p>
+      </div> <!-- Footer-2 -->  
   
       <!-- Footer-3 Contact Information -->  
       <div class="footer-3">
-        <p class="thirdFooterCentering">
-          <a href="mailto:info@csbncounter.org?Subject=Website Contact" target="_top">info@csbncounter.org</a>
-          <br/>
-          <a href="https://www.google.com/maps?espv=2&amp;biw=1363&amp;bih=1140&amp;q=200+Chapel+Rd,+Geigertown,+PA+19523&amp;bav=on.2,or.r_cp.&amp;bvm=bv.87611401,d.cWc&amp;ion=1&amp;um=1&amp;ie=UTF-8&amp;sa=X&amp;ei=LCr9VKmIG_W_sQSVlIHQDw&amp;ved=0CAYQ_AUoAQ" target="_blank">Event Location</a>
-        </p>    
+        <a href="mailto:info@csbncounter.org?Subject=Website Contact" target="_top">info@csbncounter.org</a>
+        <br>
+        <a href="https://www.google.com/maps?espv=2&biw=1363&bih=1140&q=200+Chapel+Rd,+Geigertown,+PA+19523&bav=on.2,or.r_cp.&bvm=bv.87611401,d.cWc&ion=1&um=1&ie=UTF-8&sa=X&ei=LCr9VKmIG_W_sQSVlIHQDw&ved=0CAYQ_AUoAQ" target="_blank">Event Location</a>
       </div> <!-- Footer-3 -->  
   
       <!-- Footer-4 Image -->  
       <div class="footer-4">
-        <p><a href="http://www.csbministries.org" target="_blank"><img alt="CSB Ministries logo" src="http://dev.csbncounter.org/img/csb_logo.png" width="150" height="auto"/></a> </p>
+        <a href="http://www.csbministries.org" title="CSB Ministries Home Website" target="_blank"><img alt="CSB Ministries logo" src="img/csb_logo-corporate.gif"></a>
       </div> <!-- Footer-4 -->  
-  
+
     </div> <!-- row -->    
   </div> <!--container--> 
 </footer>
 
-<script src="http://dev.csbncounter.org/blogger/csbncounter.js"></script>
+<script src="http://csbncounter.org/blogger/csbncounter.js"></script>
 </html>
