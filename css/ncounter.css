@@ -64,7 +64,11 @@
 	margin-bottom: 20px;
 }
 
-
+/* Video Text Padding */
+.video-text-padding{
+	padding-left: 2px;
+	padding-right: 2px;
+}
 
 .inspired{
 		background-attachment: /*fixed,*/ scroll;
