@@ -5,10 +5,9 @@
     <meta expr:content='data:blog.isMobile         ? &quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0&quot;         : &quot;width=1100&quot;' name='viewport'/>
     <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
-    <link rel="stylesheet" href="http://csbncounter.org/blogger/csbncounter.css" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
-    <b:skin>
-      <![CDATA[/*
+    <link href='http://csbncounter.org/dist/blogger.css' rel='stylesheet'/>
+    <b:skin><![CDATA[
+      /*
       /* Content
       ----------------------------------------------- */
       html body .content-outer {
@@ -416,8 +415,8 @@
         background: transparent;
         border-top: 1px solid;
       }
-      ]]>
-    </b:skin>
+      
+    ]]></b:skin>
     <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='700px'/>
       <b:variable default='0' name='main.column.left.width' type='length' value='0px'/>
@@ -504,12 +503,12 @@
       ]]>
     </b:template-skin>
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-62661933-2', 'auto');
-    ga('send', 'pageview');
+    })(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);
+    ga(&#39;create&#39;, &#39;UA-62661933-2&#39;, &#39;auto&#39;);
+    ga(&#39;send&#39;, &#39;pageview&#39;);
   </script>
   <b:include data='blog' name='google-analytics'/>
   &lt;/head&gt;&lt;!--<head/>--&gt;
@@ -517,39 +516,39 @@
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-default navbar-fixed-top navbar-shrink"> 
-    <div class="container">
+  <nav class='navbar navbar-default navbar-fixed-top navbar-shrink'> 
+    <div class='container'>
       <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header page-scroll">
-        <a class="navbar-brand page-scroll" href="http://csbncounter.org"><img src='http://csbncounter.org/img/branding/navLogo.png' alt='CSB N-Counter Logo' /></a>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+      <div class='navbar-header '>
+        <a class='navbar-brand ' href='http://csbncounter.org'><img alt='CSB N-Counter Logo' src='http://csbncounter.org/img/branding/navLogo.png'/></a>
+        <button class='navbar-toggle' data-target='#bs-example-navbar-collapse-1' data-toggle='collapse' type='button'>
+          <span class='sr-only'>Toggle navigation</span>
+          <span class='icon-bar'/>
+          <span class='icon-bar'/>
+          <span class='icon-bar'/>
         </button>
       </div>
 
       <!-- New NAV -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="hidden">
-            <a href="#page-top"></a>
+      <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+        <ul class='nav navbar-nav navbar-right'>
+          <li class='hidden'>
+            <a href='#page-top'/>
           </li>
           <li>
-            <a class="page-scroll" href="http://csbncounter.org">Home</a>
+            <a class='' href='http://csbncounter.org'>Home</a>
           </li>
           <li>
-            <a class="page-scroll" href="http://csbncounter.org/inspired.html">Get Inspired</a>
+            <a class='' href='http://csbncounter.org/inspired.html'>Get Inspired</a>
           </li>
           <li>
-            <a class="page-scroll" href="http://csbncounter.org/informed.html">Get Informed</a>
+            <a class='' href='http://csbncounter.org/informed.html'>Get Informed</a>
           </li>
           <li>
-            <a class="page-scroll" href="http://csbncounter.org/involved.html">Get Involved</a>
+            <a class='' href='http://csbncounter.org/involved.html'>Get Involved</a>
           </li>
           <li>
-            <a class="page-scroll activePage" href="http://news.csbncounter.org">News</a>
+            <a class=' activePage' href='http://news.csbncounter.org'>News</a>
           </li>
         </ul>
       </div>
@@ -562,8 +561,7 @@
     <div class='main-outer'>
     <div class='fauxborder-left main-fauxborder-left'>
     <div class='region-inner main-inner'>
-      <h2 class="section-heading">N-Counter News</h2>
-      <p class="section-intro">Part of our news campaign is to highlight regional Camp-O-Ramas in 2015. If your regional camping event for Battalions is not listed here, please let us know at <a href="mailto:info@csbncounter.org">info@csbncounter.org</a>!</p>
+      <h2 class='section-heading'>N-Counter News</h2>
       <div class='columns fauxcolumns'>
         <!-- corrects IE6 width calculation -->
         <div class='columns-inner'>
@@ -578,7 +576,6 @@
 
       <b:include data='top' name='status-message'/>
 
-      <data:defaultAdStart/>
       <b:loop values='data:posts' var='post'>
         <b:if cond='data:post.isDateStart and not data:post.isFirstPost'>
           &lt;/div&gt;&lt;/div&gt;
@@ -596,22 +593,17 @@
           <b:include data='post' name='post'/>
           <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
         </div>
+
+        <!-- Ad -->
         <b:if cond='data:post.includeAd'>
-          <b:if cond='data:post.isFirstPost'>
-            <data:defaultAdEnd/>
-          <b:else/>
-            <data:adEnd/>
-          </b:if>
           <div class='inline-ad'>
             <data:adCode/>
           </div>
-          <data:adStart/>
         </b:if>
       </b:loop>
       <b:if cond='data:numPosts != 0'>
         &lt;/div&gt;&lt;/div&gt;
       </b:if>
-      <data:adEnd/>
     </div>
 
     <!-- navigation -->
@@ -624,8 +616,8 @@
     <b:include name='mobile-main'/>
   </b:if>
 
-  <b:if cond='data:top.showDummy'>
-    <data:top.dummyBootstrap/>
+  <b:if cond='data:top.showPlusOne'>
+    <data:top.googlePlusBootstrap/>
   </b:if>
 
 </b:includable>
@@ -839,6 +831,14 @@
       </b:loop>
     </div>
   </b:if>
+</b:includable>
+              <b:includable id='feedLinksBody' var='links'>
+  <div class='feed-links'>
+  <data:feedLinksMsg/>
+  <b:loop values='data:links' var='f'>
+     <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'><data:f.name/> (<data:f.feedType/>)</a>
+  </b:loop>
+  </div>
 </b:includable>
               <b:includable id='iframe_comments' var='post'>
 
@@ -1162,6 +1162,9 @@
     </span>
   </b:if>
 </b:includable>
+              <b:includable id='shareButtons' var='post'>
+  <b:if cond='data:top.showEmailButton'><a class='goog-inline-block share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'><span class='share-button-link-text'><data:top.emailThisMsg/></span></a></b:if><b:if cond='data:top.showBlogThisButton'><a class='goog-inline-block share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'><span class='share-button-link-text'><data:top.blogThisMsg/></span></a></b:if><b:if cond='data:top.showTwitterButton'><a class='goog-inline-block share-button sb-twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToTwitterMsg/></span></a></b:if><b:if cond='data:top.showFacebookButton'><a class='goog-inline-block share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToFacebookMsg/></span></a></b:if><b:if cond='data:top.showPinterestButton'><a class='goog-inline-block share-button sb-pinterest' expr:href='data:post.sharePostUrl + &quot;&amp;target=pinterest&quot;' expr:title='data:top.shareToPinterestMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToPinterestMsg/></span></a></b:if><b:if cond='data:top.showPlusOne'><div class='goog-inline-block google-plus-share-container'><data:post.googlePlusShareTag/></div></b:if>
+</b:includable>
               <b:includable id='status-message'>
   <b:if cond='data:navMessage'>
   <div class='status-msg-wrap'>
@@ -1325,6 +1328,7 @@
           }
         }
         if (replybox && (commentId !== replyParent)) {
+          replybox.src = '';
           document.getElementById(domId).insertBefore(replybox, null);
           replybox.src = replyUrlParts[0]
               + (commentId ? '&parentID=' + commentId : '')
@@ -1511,6 +1515,44 @@
   </macro:if>
 </macro:includable>
 
+
+
+<footer id='footer' rel='relativeanchor'>
+  <div class='container'>
+    <div class='row, footer-distributed'>
+
+    <!-- Footer-1 Social Media -->  
+      <div class='footer-1'>
+         <ul class='list-inline social-buttons socialFooterCentering'>
+            <li><a href='http://www.twitter.com/csbncounter' target='_blank' title='Twitter Social Media Link'><i class='fa fa-twitter'/></a></li>
+            <li><a href='https://www.facebook.com/events/1751932415033325/' target='_blank' title='Facebook Social Media Link'><i class='fa fa-facebook'/></a></li>
+            <li><a href='https://instagram.com/csbncounter/' target='_blank' title='Instagram Social Media Link'><i class='fa fa-instagram'/></a></li>
+            <li><a href='https://plus.google.com/u/0/102403965119926049149/about' target='_blank' title='Google + Social Media Link'><i class='fa fa-google-plus'/></a></li>
+          </ul>
+      </div> <!-- footer-1 -->
+  
+      <!-- Footer-2 News Letter Signup -->  
+      <div class='footer-2'>
+         <p class='newsletterFooterCentering'><a class='newsLetter' href='http://visitor.r20.constantcontact.com/d.jsp?llr=bvu45aeab&amp;p=oi&amp;m=1103839089313&amp;sit=skhh77pfb&amp;f=ea01a16c-54b9-4770-b28e-b348b7d91f16' target='_blank' title='Newsletter signup link'>Newsletter Signup</a> </p>
+      </div> <!-- Footer-2 -->  
+  
+      <!-- Footer-3 Contact Information -->  
+      <div class='footer-3'>
+        <a href='mailto:info@csbncounter.org?Subject=Website Contact' target='_top'>info@csbncounter.org</a>
+        <br/>
+        <a href='https://www.google.com/maps?espv=2&amp;biw=1363&amp;bih=1140&amp;q=200+Chapel+Rd,+Geigertown,+PA+19523&amp;bav=on.2,or.r_cp.&amp;bvm=bv.87611401,d.cWc&amp;ion=1&amp;um=1&amp;ie=UTF-8&amp;sa=X&amp;ei=LCr9VKmIG_W_sQSVlIHQDw&amp;ved=0CAYQ_AUoAQ' target='_blank'>Event Location</a>
+      </div> <!-- Footer-3 -->  
+  
+      <!-- Footer-4 Image -->  
+      <div class='footer-4'>
+        <a href='http://www.csbministries.org' target='_blank' title='CSB Ministries Home Website'><img alt='CSB Ministries logo' src='//csbncounter.org/img/csb_logo-corporate.gif'/></a>
+      </div> <!-- Footer-4 -->  
+
+    </div> <!-- row -->    
+  </div> <!--container--> 
+</footer>
+
+<script src='http://csbncounter.org/dist/blogger.js'/>
 <b:section-contents id='footer-1'>
   <b:widget id='BlogArchive1' locked='false' title='Previous Posts' type='BlogArchive'>
     <b:includable id='main'>
@@ -1537,16 +1579,18 @@
   </ul>
 </b:includable>
     <b:includable id='interval' var='intervalData'>
-  <b:loop values='data:intervalData' var='i'>
-      <ul class='hierarchy'>
-        <li expr:class='&quot;archivedate &quot; + data:i.expclass'>
-          <b:include data='i' name='toggle'/>
-          <a class='post-count-link' expr:href='data:i.url'><data:i.name/></a>
-            <span class='post-count' dir='ltr'>(<data:i.post-count/>)</span>
-          <b:include cond='data:i.data' data='i.data' name='interval'/>
-          <b:include cond='data:i.posts' data='i.posts' name='posts'/>
-        </li>
-      </ul>
+  <b:loop values='data:intervalData' var='interval'>
+    <ul class='hierarchy'>
+      <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
+        <b:include cond='data:interval.toggleId' data='interval' name='toggle'/>
+        <a class='post-count-link' expr:href='data:interval.url'>
+          <data:interval.name/>
+        </a>
+        <span class='post-count' dir='ltr'>(<data:interval.post-count/>)</span>
+        <b:include cond='data:interval.data' data='interval.data' name='interval'/>
+        <b:include cond='data:interval.posts' data='interval.posts' name='posts'/>
+      </li>
+    </ul>
   </b:loop>
 </b:includable>
     <b:includable id='menu' var='data'>
@@ -1559,67 +1603,23 @@
 </b:includable>
     <b:includable id='posts' var='posts'>
   <ul class='posts'>
-    <b:loop values='data:posts' var='i'>
-      <li><a expr:href='data:i.url'><data:i.title/></a></li>
+    <b:loop values='data:posts' var='post'>
+      <li><a expr:href='data:post.url'><data:post.title/></a></li>
     </b:loop>
   </ul>
 </b:includable>
     <b:includable id='toggle' var='interval'>
-  <b:if cond='data:interval.toggleId'>
-  <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
-    <a class='toggle' href='javascript:void(0)'>
-      <span class='zippy toggle-open'>&#9660;&#160;</span>
-    </a>
-  <b:else/>
-    <a class='toggle' href='javascript:void(0)'>
-      <span class='zippy'>
-        <b:if cond='data:blog.languageDirection == &quot;rtl&quot;'>
-          &#9668;&#160;
-        <b:else/>
-          &#9658;&#160;
-        </b:if>
-      </span>
-    </a>
-  </b:if>
- </b:if>
+  <a class='toggle' href='javascript:void(0)'>
+    <span expr:class='&quot;zippy&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; toggle-open&quot; : &quot;&quot;)'>
+      <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
+        &#9660;&#160;
+      <b:elseif cond='data:blog.languageDirection == &quot;rtl&quot;'/>
+        &#9668;&#160;
+      <b:else/>
+        &#9658;&#160;
+      </b:if>
+    </span>
+  </a>
 </b:includable>
   </b:widget>
-</b:section-contents>
-
-<footer  id="footer" rel="relativeanchor">
-  <div class="container">
-    <div class="row, footer-distributed" >
-
-    <!-- Footer-1 Social Media -->  
-      <div class="footer-1">
-         <ul class="list-inline social-buttons socialFooterCentering">
-            <li><a href="http://www.twitter.com/csbncounter" title="Twitter Social Media Link" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com/events/1751932415033325/" title="Facebook Social Media Link" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://instagram.com/csbncounter/" title="Instagram Social Media Link" target="_blank"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="https://plus.google.com/u/0/102403965119926049149/about" title="Google + Social Media Link" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-          </ul>
-      </div> <!-- footer-1 -->
-  
-      <!-- Footer-2 News Letter Signup -->  
-      <div class="footer-2">
-         <p class="newsletterFooterCentering"><a href="http://visitor.r20.constantcontact.com/d.jsp?llr=bvu45aeab&amp;p=oi&amp;m=1103839089313&amp;sit=skhh77pfb&amp;f=ea01a16c-54b9-4770-b28e-b348b7d91f16" title="Newsletter signup link" target="_blank" class="newsLetter">Newsletter Signup</a> </p>
-      </div> <!-- Footer-2 -->  
-  
-      <!-- Footer-3 Contact Information -->  
-      <div class="footer-3">
-        <a href="mailto:info@csbncounter.org?Subject=Website Contact" target="_top">info@csbncounter.org</a>
-        <br/>
-        <a href="https://www.google.com/maps?espv=2&amp;biw=1363&amp;bih=1140&amp;q=200+Chapel+Rd,+Geigertown,+PA+19523&amp;bav=on.2,or.r_cp.&amp;bvm=bv.87611401,d.cWc&amp;ion=1&amp;um=1&amp;ie=UTF-8&amp;sa=X&amp;ei=LCr9VKmIG_W_sQSVlIHQDw&amp;ved=0CAYQ_AUoAQ" target="_blank">Event Location</a>
-      </div> <!-- Footer-3 -->  
-  
-      <!-- Footer-4 Image -->  
-      <div class="footer-4">
-        <a href="http://www.csbministries.org" title="CSB Ministries Home Website" target="_blank"><img alt="CSB Ministries logo" src="//csbncounter.org/img/csb_logo-corporate.gif"></img></a>
-      </div> <!-- Footer-4 -->  
-
-    </div> <!-- row -->    
-  </div> <!--container--> 
-</footer>
-
-<script src="http://csbncounter.org/blogger/csbncounter.js"></script>
-</html>
+</b:section-contents></html>

@@ -6,31 +6,10 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
-    concat: {
-      bloggerCss: {
-        src: [
-          'css/bootstrap.min.css',
-          'css/agency.css',
-          'css/ncounter.css'
-        ],
-        dest: 'blogger/csbncounter.css'
-      },
-      bloggerJs: {
-        src: [
-          'js/jquery.js',
-          'js/bootstrap.js',
-          'js/jquery.easing.min.js',
-          'js/classie.js',
-          'js/cbpAnimatedHeader.js'
-        ],
-        dest: 'blogger/csbncounter.js'
-      }
-    },
-
     copy: {
       bloggerCss: {
-        src: 'blogger/csbncounter.css',
-        dest: 'blogger/csbncounter.css',
+        src: 'dist/common.css',
+        dest: 'dist/blogger.css',
         options: {
           process: function(content, srcpath) {
             // Convert CSS paths to protocol-relative URLs with full domain name
@@ -39,21 +18,69 @@ module.exports = function(grunt) {
             return content.replace(/(url\(['"]?)(?:\/|\.\.\/)/g, '$1//csbncounter.org/');
           }
         }
+      },
+      bloggerJs: {
+        src: 'dist/common.js',
+        dest: 'dist/blogger.js',
+      },
+      cssSourceMap: {
+        src: 'dist/common.css.map',
+        dest: 'dist/common.css.map',
+        options: {
+          process: function(content, srcpath) {
+            var headingEnd = content.indexOf(';');
+            var heading = content.slice(0, headingEnd);
+            // Prepend "../" to sourcemap URLs
+            var search = /^([^;]*"sources":\[.*?")(?=\w)([^"\]]+"[^\[]*\])/;
+            var match;
+            while (match = heading.match(search)) {
+              heading = heading.replace(search, '$1../$2');
+            }
+            return heading + content.slice(headingEnd, content.length);
+          }
+        }
       }
     },
 
     cssmin: {
-      bloggerCss: {
+      options: {
+        sourceMap: true
+      },
+      all: {
         files: {
-          'blogger/csbncounter.css': 'blogger/csbncounter.css'
+          'dist/common.css': [
+            'vendor/bootstrap/bootstrap.css',
+            'vendor/font-awesome/font-awesome.css',
+            'css/theme.css',
+            'css/main.css',
+            'css/footer.css'
+          ]
         }
       }
     },
 
     uglify: {
-      bloggerJs: {
+      options: {
+        sourceMap: true
+      },
+      all: {
         files: {
-          'blogger/csbncounter.js': 'blogger/csbncounter.js'
+          'dist/common.js': [
+            'vendor/jquery/jquery.js',
+            'vendor/jquery.easing/jquery.easing.js',
+            'vendor/bootstrap/bootstrap.js',
+            'js/theme/classie.js',
+            'js/theme/cbpAnimatedHeader.js',
+            'js/newsImages.js',
+            'js/smoothScroll.js'
+          ],
+          'dist/landing.js': [
+            'vendor/es6-promise/es6-promise.js',
+            'vendor/underscore/underscore.js',
+            'js/jquery-promise-shim.js',
+            'js/landing/newsImages.js',
+            'js/landing/current-news.js'
+          ]
         }
       }
     },
@@ -65,21 +92,58 @@ module.exports = function(grunt) {
           keepalive: true,
           port: 8000,
           base: '.',
-          open: true
+          open: true,
+          livereload: true
         }
+      }
+    },
+
+    watch: {
+      css: {
+        files: [
+          'css/**/*.css'
+        ],
+        tasks: ['cssmin', 'copy:cssSourceMap']
+      },
+      js: {
+        files: [
+          'js/**/*.js'
+        ],
+        tasks: ['uglify']
+      },
+      livereload: {
+        files: [
+          'dist/*.css',
+          'dist/*.js',
+          '*.html'
+        ],
+        options: {
+          livereload: true,
+          spawn: false
+        }
+      }
+    },
+
+    concurrent: {
+      options: {
+        logConcurrentOutput: true
+      },
+      dev: {
+        tasks: ['connect', 'watch']
       }
     }
   });
 
-  grunt.registerTask('blogger', 'Build assets for Blogger', [
-    'concat:bloggerCss',
-    'copy:bloggerCss',
-    'cssmin:bloggerCss',
-    'concat:bloggerJs',
-    'uglify:bloggerJs'
+  grunt.registerTask('build', 'Build assets', [
+    'cssmin',
+    'uglify',
+    'copy'
   ]);
 
-  grunt.registerTask('dev', 'Start development mode', ['connect']);
+  grunt.registerTask('dev', 'Start development mode', [
+    'build',
+    'concurrent'
+  ]);
 
   grunt.registerTask('default', 'Default task is dev', ['dev']);
 };
