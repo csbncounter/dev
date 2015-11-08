@@ -1,0 +1,104 @@
+{{!
+  navClass: function (navName) {
+    if (navName === this.page) {
+      return 'activePage';
+    }
+  }
+}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="N-Counter 2016 is a national event where Battalion units will be able to come together and experience an amazing weekend of activities, community, and fellowship.">
+  <meta name="keywords" content="N-Counter 2016, Register, Weekend Event, CSB Ministries, Get Excited, Get Inspired, Get Involved,">
+  <meta name="author" content="Towson Web Team">
+    
+  <title>{{#if pageName}}{{pageName}} - {{/if}}N-Counter 2016</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <link href="dist/common.css" rel="stylesheet">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-62661933-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body id="page-top" class="index">
+  <nav class="navbar navbar-default navbar-fixed-top"> 
+    <div class="container">
+      <div class="navbar-header ">
+        <a class="navbar-brand " href="/index.html"><img src='img/branding/navLogo.png' alt='CSB N-Counter Logo'></a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li>
+            <a class="{{navClass "home"}}" href="/index.html">Home</a>
+          </li>
+          <li>
+            <a class="{{navClass "inspired"}}" href="/inspired.html">Get Inspired</a>
+          </li>
+          <li>
+            <a class="{{navClass "informed"}}" href="/informed.html">Get Informed</a>
+          </li>
+          <li>
+            <a class="{{navClass "involved"}}" href="/involved.html">Get Involved</a>
+          </li>
+          <li>
+            <a class="{{navClass "news"}}" href="http://news.csbncounter.org">News</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  {{#> content}}
+  {{/content}}
+
+  <footer  id="footer" rel="relativeanchor">
+    <div class="container">
+      <div class="row, footer-distributed" >
+        <div class="footer-1">
+           <ul class="list-inline social-buttons socialFooterCentering">
+              <li><a href="http://www.twitter.com/csbncounter" title="Twitter Social Media Link" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://www.facebook.com/events/1751932415033325/" title="Facebook Social Media Link" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://instagram.com/csbncounter/" title="Instagram Social Media Link" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://plus.google.com/u/0/102403965119926049149/about" title="Google + Social Media Link" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-2">
+           <p class="newsletterFooterCentering"><a href="http://visitor.r20.constantcontact.com/d.jsp?llr=bvu45aeab&p=oi&m=1103839089313&sit=skhh77pfb&f=ea01a16c-54b9-4770-b28e-b348b7d91f16" title="Newsletter signup link" target="_blank" class="newsLetter">Newsletter Signup</a> </p>
+        </div>
+        <div class="footer-3">
+          <a href="mailto:info@csbncounter.org?Subject=Website Contact" target="_top">info@csbncounter.org</a>
+          <br>
+          <a href="https://www.google.com/maps?espv=2&biw=1363&bih=1140&q=200+Chapel+Rd,+Geigertown,+PA+19523&bav=on.2,or.r_cp.&bvm=bv.87611401,d.cWc&ion=1&um=1&ie=UTF-8&sa=X&ei=LCr9VKmIG_W_sQSVlIHQDw&ved=0CAYQ_AUoAQ" target="_blank">Event Location</a>
+        </div> 
+        <div class="footer-4">
+          <a href="http://www.csbministries.org" title="CSB Ministries Home Website" target="_blank"><img alt="CSB Ministries logo" src="img/csb_logo-corporate.gif"></a>
+        </div>
+      </div>  
+    </div>
+  </footer>
+
+  <script src="dist/common.js"></script>
+  {{#> script}}
+  {{/script}}
+</body>

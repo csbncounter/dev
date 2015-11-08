@@ -2,9 +2,18 @@ module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt);
 
+  grunt.loadTasks('tasks');
+
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
+
+    buildHtml: {
+      all: {
+        src: '',
+        dist: ''
+      }
+    },
 
     copy: {
       bloggerCss: {
@@ -91,7 +100,7 @@ module.exports = function(grunt) {
         options: {
           keepalive: true,
           port: 8000,
-          base: '.',
+          base: '',
           open: true,
           livereload: true
         }
@@ -99,6 +108,12 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      hbs: {
+        files: [
+          '*.hbs'
+        ],
+        tasks: ['buildHtml']
+      },
       css: {
         files: [
           'css/**/*.css'
@@ -135,6 +150,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('build', 'Build assets', [
+    'buildHtml',
     'cssmin',
     'uglify',
     'copy'
