@@ -8,17 +8,23 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
+    clean: {
+      dist: ['dist', 'tempJs']
+    },
+
     buildHtml: {
       all: {
-        src: '',
-        dist: ''
+        src: 'src',
+        dist: 'dist',
+        partials: 'src/partials',
+        ext: 'hbs'
       }
     },
 
     copy: {
       bloggerCss: {
-        src: 'dist/common.css',
-        dest: 'dist/blogger.css',
+        src: 'dist/css/common.css',
+        dest: 'dist/css/blogger.css',
         options: {
           process: function(content, srcpath) {
             // Convert CSS paths to protocol-relative URLs with full domain name
@@ -29,25 +35,36 @@ module.exports = function(grunt) {
         }
       },
       bloggerJs: {
-        src: 'dist/common.js',
-        dest: 'dist/blogger.js',
+        src: 'dist/js/common.js',
+        dest: 'dist/js/blogger.js',
       },
       cssSourceMap: {
-        src: 'dist/common.css.map',
-        dest: 'dist/common.css.map',
+        src: 'dist/css/common.css.map',
+        dest: 'dist/css/common.css.map',
         options: {
+          // Prepend "../" to sourcemap URLs
           process: function(content, srcpath) {
             var headingEnd = content.indexOf(';');
             var heading = content.slice(0, headingEnd);
-            // Prepend "../" to sourcemap URLs
             var search = /^([^;]*"sources":\[.*?")(?=\w)([^"\]]+"[^\[]*\])/;
-            var match;
-            while (match = heading.match(search)) {
+            while (search.test(heading)) {
               heading = heading.replace(search, '$1../$2');
             }
             return heading + content.slice(headingEnd, content.length);
           }
         }
+      },
+      img: {
+        expand: true,
+        cwd: 'src/img/',
+        src: '**/*',
+        dest: 'dist/img/'
+      },
+      fonts: {
+        expand: true,
+        cwd: 'src/fonts/',
+        src: '**/*',
+        dest: 'dist/fonts/'
       }
     },
 
@@ -57,12 +74,12 @@ module.exports = function(grunt) {
       },
       all: {
         files: {
-          'dist/common.css': [
-            'vendor/bootstrap/bootstrap.css',
-            'vendor/font-awesome/font-awesome.css',
-            'css/theme.css',
-            'css/main.css',
-            'css/footer.css'
+          'dist/css/common.css': [
+            'src/vendor/bootstrap/bootstrap.css',
+            'src/vendor/font-awesome/font-awesome.css',
+            'src/css/theme.css',
+            'src/css/main.css',
+            'src/css/footer.css'
           ]
         }
       }
@@ -74,21 +91,20 @@ module.exports = function(grunt) {
       },
       all: {
         files: {
-          'dist/common.js': [
-            'vendor/jquery/jquery.js',
-            'vendor/jquery.easing/jquery.easing.js',
-            'vendor/bootstrap/bootstrap.js',
-            'js/theme/classie.js',
-            'js/theme/cbpAnimatedHeader.js',
-            'js/newsImages.js',
-            'js/smoothScroll.js'
+          'dist/js/common.js': [
+            'src/vendor/underscore/underscore.js',
+            'src/vendor/jquery/jquery.js',
+            'src/vendor/jquery.easing/jquery.easing.js',
+            'src/vendor/bootstrap/bootstrap.js',
+            'src/js/theme/classie.js',
+            'src/js/theme/cbpAnimatedHeader.js',
+            'src/js/smoothScroll.js'
           ],
-          'dist/landing.js': [
-            'vendor/es6-promise/es6-promise.js',
-            'vendor/underscore/underscore.js',
-            'js/jquery-promise-shim.js',
-            'js/landing/newsImages.js',
-            'js/landing/current-news.js'
+          'dist/js/landing.js': [
+            'src/vendor/es6-promise/es6-promise.js',
+            'src/js/jquery-promise-shim.js',
+            'src/js/landing/newsImages.js',
+            'src/js/landing/current-news.js'
           ]
         }
       }
@@ -100,37 +116,43 @@ module.exports = function(grunt) {
         options: {
           keepalive: true,
           port: 8000,
-          base: '',
+          base: ['src', 'dist'],
           open: true,
           livereload: true
         }
       }
     },
 
+    shell: {
+      sourceMaps: {
+        command: 'cd dist && rm -f src && ln -s ../src src'
+      }
+    },
+
     watch: {
       hbs: {
         files: [
-          '*.hbs'
+          'src/**/*.hbs'
         ],
         tasks: ['buildHtml']
       },
       css: {
         files: [
-          'css/**/*.css'
+          'src/css/**/*.css'
         ],
         tasks: ['cssmin', 'copy:cssSourceMap']
       },
       js: {
         files: [
-          'js/**/*.js'
+          'src/js/**/*.js'
         ],
         tasks: ['uglify']
       },
       livereload: {
         files: [
-          'dist/*.css',
-          'dist/*.js',
-          '*.html'
+          'dist/css/*.css',
+          'dist/js/*.js',
+          'dist/**/*.html'
         ],
         options: {
           livereload: true,
@@ -150,6 +172,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('build', 'Build assets', [
+    'clean',
     'buildHtml',
     'cssmin',
     'uglify',
@@ -158,6 +181,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('dev', 'Start development mode', [
     'build',
+    'shell:sourceMaps',
     'concurrent'
   ]);
 

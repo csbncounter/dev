@@ -58,7 +58,6 @@
 
   ncounter.fetchRenderNews = function(templateSelector, newsSelector) {
     var newsItemTpl = getTemplate(templateSelector);
-
     fetchPosts()
       .then(buildNewsItemsHtml.bind(null, newsItemTpl))
       .then(function (newsItemsHtml) {

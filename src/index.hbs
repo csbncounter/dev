@@ -4,26 +4,6 @@
 }}
 
 {{#> layout}}
-{{#*inline "script"}}
-<script src="dist/landing.js"></script>
-<script id="portfolio-item-tpl" type="text/html">
-  <div class="col-md-4 col-sm-6 portfolio-item">
-    <a href="<%- url %>" class="portfolio-link">
-      <div class="portfolio-hover"></div>
-      <div style="background-image: url(<%- image %>); background-size: <%- imageSize %>;" class="portfolio-item-bg"></div>
-    </a>
-    <div class="portfolio-caption">
-      <h4><a href="<%- url %>"><%- title %></a></h4>
-      <p class="text-muted"><%- published %></p>
-    </div>
-  </div>
-</script>
-<script>
-  ncounter.setRandomBgImage('header');
-  ncounter.fetchRenderNews('#portfolio-item-tpl', '#portfolio-items');
-</script>
-{{/inline}}
-
 {{#*inline "content"}}
 <header>
   <div class="opacity"></div>
@@ -116,5 +96,25 @@
     </div>
   </div>
 </section>
+{{/inline}}
+
+{{#*inline "script"}}
+<script src="/js/landing.js"></script>
+<script id="portfolio-item-tpl" type="text/html">
+  <div class="col-md-4 col-sm-6 portfolio-item">
+    <a href="<%- url %>" class="portfolio-link">
+      <div class="portfolio-hover"></div>
+      <div style="background-image: url(<%- image %>); background-size: <%- imageSize %>;" class="portfolio-item-bg"></div>
+    </a>
+    <div class="portfolio-caption">
+      <h4><a href="<%- url %>"><%- title %></a></h4>
+      <p class="text-muted"><%- published %></p>
+    </div>
+  </div>
+</script>
+<script>
+  ncounter.setRandomBgImage('header');
+  ncounter.fetchRenderNews('#portfolio-item-tpl', '#portfolio-items');
+</script>
 {{/inline}}
 {{/layout}}
