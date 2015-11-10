@@ -79,7 +79,7 @@ p{
   -o-background-size: cover;
 }
 
-.excited{
+.informed {
     background-attachment: /*fixed,*/ scroll;
   background-image: url(/img/excited.jpg);
   background-position: center center;

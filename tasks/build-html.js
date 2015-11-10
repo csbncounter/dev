@@ -16,14 +16,14 @@ function registerPartials(partialFiles) {
     var partialTemplate = Handlebars.compile(partialString);
     Handlebars.registerPartial(partialName, partialTemplate);
 
-    var frontMatter = getFrontMatter(partialString);
+    var frontMatter = parseFrontMatter(partialString);
     for (name in frontMatter) {
       Handlebars.registerHelper(name, frontMatter[name]);
     }
   });
 }
 
-function getFrontMatter(templateString) {
+function parseFrontMatter(templateString) {
   var frontMatter = {};
 
   var frontMatterMatch = templateString.match(frontMatterMatcher);
@@ -31,31 +31,36 @@ function getFrontMatter(templateString) {
     try {
       frontMatter = eval('({' + frontMatterMatch[1] + '})');
     } catch (err) {
-      console.error('Bad frontMatter.');
+      console.error('Bad frontMatter.', err);
     }
   }
 
   return frontMatter;
 }
 
-function getDestPath(src, dist, templateFile) {
+function toDestPath(src, dist, templateFile) {
   var pathParts = path.parse(templateFile);
   var destPath = path.join(dist, pathParts.dir.substring(src.length), pathParts.name + '.html');
 
   return destPath;
 }
 
-function processTemplateFile(src, dist, templateFile) {
+function renderTemplateFile(src, dist, templateFile) {
   var templateString = fs.readFileSync(templateFile).toString();
 
   var template = Handlebars.compile(templateString); 
-  var html = template(getFrontMatter(templateString));
-  var htmlPath = getDestPath(src, dist, templateFile);
+  var html = template(parseFrontMatter(templateString));
+  var htmlPath = toDestPath(src, dist, templateFile);
 
   try {
     fs.mkdirSync(path.parse(htmlPath).dir);
-  } catch (err) {}
+  } catch (err) {
+    if (err.code !== 'EEXIST') {
+      throw err;
+    }
+  }
   fs.writeFileSync(htmlPath, html);
+  return htmlPath;
 }
 
 module.exports = function(grunt) {
@@ -71,16 +76,28 @@ module.exports = function(grunt) {
     var hbsFileGlob = path.join(src, '**/*.' + ext);
     var notPartialReg = new RegExp('^(?!' + partialsPath + '/)');
 
-    glob(path.join(partialsPath, '*.' + ext), function (err, partialFiles) {
-      registerPartials(partialFiles);
+    try {      
+      glob(path.join(partialsPath, '*.' + ext), function (err, partialFiles) {
+        if (err) { throw err; }
+        registerPartials(partialFiles);
 
-      glob(hbsFileGlob, function (er, hbsFiles) {
-        _.filter(hbsFiles, function (hbsFile) {
-          return notPartialReg.test(hbsFile);
-        })
-          .forEach(processTemplateFile.bind(null, src, dist));
-        done();
+        glob(hbsFileGlob, function (err, hbsFiles) {
+          if (err) { throw err; }
+          var changedFiles = _.chain(hbsFiles)
+            .filter(function (hbsFile) {
+              return notPartialReg.test(hbsFile);
+            })
+            .map(renderTemplateFile.bind(null, src, dist))
+            .map(function (file) {
+              return file.substring(dist.length, file.length);
+            })
+            .value();
+          // grunt.task.run('triggerReload:files=' + changedFiles.join(','));
+          done();
+        });
       });
-    });
+    } catch (err) {
+      done(err);
+    }
   });
 }

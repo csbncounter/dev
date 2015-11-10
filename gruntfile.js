@@ -39,20 +39,39 @@ module.exports = function(grunt) {
         dest: 'dist/js/blogger.js',
       },
       cssSourceMap: {
-        src: 'dist/css/common.css.map',
-        dest: 'dist/css/common.css.map',
         options: {
           // Prepend "../" to sourcemap URLs
           process: function(content, srcpath) {
-            var headingEnd = content.indexOf(';');
-            var heading = content.slice(0, headingEnd);
+            var sourcesEnd = content.indexOf(',"names":');
+            var sources = content.slice(0, sourcesEnd);
             var search = /^([^;]*"sources":\[.*?")(?=\w)([^"\]]+"[^\[]*\])/;
-            while (search.test(heading)) {
-              heading = heading.replace(search, '$1../$2');
+            while (search.test(sources)) {
+              sources = sources.replace(search, '$1../$2');
             }
-            return heading + content.slice(headingEnd, content.length);
+            return sources + content.slice(sourcesEnd, content.length);
           }
-        }
+        },
+        files: [
+          { src: 'dist/css/common.css.map', dest: 'dist/css/common.css.map' }
+        ]
+      },
+      jsSourceMap: {
+        options: {
+          // Prepend "../" to sourcemap URLs
+          process: function(content, srcpath) {
+            var sourcesEnd = content.indexOf(';');
+            var sources = content.slice(0, sourcesEnd);
+            var search = /^([^;]*"sources":\[.*?")(?:\.\.\/\.\.\/)([^"\]]+"[^\[]*\])/;
+            while (search.test(sources)) {
+              sources = sources.replace(search, '$1../$2');
+            }
+            return sources + content.slice(sourcesEnd, content.length);
+          }
+        },
+        files: [
+          { src: 'dist/js/landing.js.map', dest: 'dist/js/landing.js.map' },
+          { src: 'dist/js/common.js.map', dest: 'dist/js/common.js.map' }
+        ]
       },
       img: {
         expand: true,
@@ -92,8 +111,8 @@ module.exports = function(grunt) {
       all: {
         files: {
           'dist/js/common.js': [
-            'src/vendor/underscore/underscore.js',
             'src/vendor/jquery/jquery.js',
+            'src/vendor/underscore/underscore.js',
             'src/vendor/jquery.easing/jquery.easing.js',
             'src/vendor/bootstrap/bootstrap.js',
             'src/js/theme/classie.js',
@@ -116,7 +135,7 @@ module.exports = function(grunt) {
         options: {
           keepalive: true,
           port: 8000,
-          base: ['src', 'dist'],
+          base: ['dist'],
           open: true,
           livereload: true
         }
@@ -132,31 +151,33 @@ module.exports = function(grunt) {
     watch: {
       hbs: {
         files: [
+          'src/*.hbs',
           'src/**/*.hbs'
         ],
         tasks: ['buildHtml']
       },
       css: {
         files: [
+          'src/css/*.css',
           'src/css/**/*.css'
         ],
         tasks: ['cssmin', 'copy:cssSourceMap']
       },
       js: {
         files: [
+          'src/js/*.js',
           'src/js/**/*.js'
         ],
         tasks: ['uglify']
       },
-      livereload: {
+      dist: {
         files: [
-          'dist/css/*.css',
           'dist/js/*.js',
+          'dist/css/*.css',
           'dist/**/*.html'
         ],
         options: {
-          livereload: true,
-          spawn: false
+          livereload: true
         }
       }
     },
