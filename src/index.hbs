@@ -18,14 +18,15 @@
     </div>
   </div>
 </header>
+<div id="content-start" rel="relativeanchor">
 
-<section id="content-start" rel="relativeanchor">
+<section>
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading">N-Counter 2016</h2>
-        <h3 class="section-subheading text-muted">The Multi-Regional Battalion Event <br> April 29 - May 1, 2016 at High Point Camp near Birdsboro, PA</h3>
-        <div id="n-counter-video" class="strong-statement">The purpose of N-Counter is to glorify God through fellowship, discipleship, and the experience of CSB Battalion across regions.</div>
+        <h3 class="section-subheading text-muted">The Multi-Regional Battalion Event</h3>
+        <div id="n-counter-video" class="ncounter-purpose strong-statement">The purpose of N-Counter is to glorify God through fellowship, discipleship, and the experience of CSB Battalion across regions.</div>
       </div>
     </div>
     <div class="embed-responsive embed-responsive-16by9">
@@ -60,43 +61,13 @@
       </div>
     </div>
     <div id="portfolio-items" class="row"></div>
+    <div class="news-show-more news-show-more-wrapper">
+      <button class="theme-button">Show Older Posts</button>
+    </div>
   </div>
 </section>
 
-<section id="stayConnected">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading">Stay Connected</h2>
-        <h3 class="section-subheading text-muted">Don’t miss a beat!  Stay up to date on developing news.</h3>
-      </div>
-    </div>
-    <div class="col-md-12 text-center joinUsSpacing">
-      <p class="text-muted strong-statement">Our newsletter is the official place to receive the latest information.  Sign up now for monthly access to critical details, timelines for registration, and for prayer requests.</p>
-      <p class="joinUsNewsletter" rel="relativeanchor">
-        <a href="http://visitor.r20.constantcontact.com/d.jsp?llr=bvu45aeab&p=oi&m=1103839089313&sit=skhh77pfb&f=ea01a16c-54b9-4770-b28e-b348b7d91f16" title="Newsletter Signup" target="_blank" class="newsLetter">Newsletter Signup</a>
-      </p>
-    </div>
-    <div class="row text-center">
-      <div class="col-md-3 joinUsSpacing">
-        <p class="social-buttons"><a href="http://www.twitter.com/csbncounter" title="Twitter Link" target="_blank"><i class="fa fa-twitter fa-4x"></i></a> </p>
-        <p class="text-muted">Add N-Counter excitement and news tidbits to your daily feed.</p>
-      </div>
-      <div class="col-md-3 joinUsSpacing">
-        <p class="social-buttons"><a href="https://www.facebook.com/events/1751932415033325/" title="Facebook Link" target="_blank"><i class="fa fa-facebook fa-4x"></i></a> </p>
-        <p class="text-muted">A great place to share with your friends for conversation, news, memories from 2011, and excitement for 2016.</p>
-      </div>
-      <div class="col-md-3 joinUsSpacing">
-        <p class="social-buttons"><a href="https://instagram.com/csbncounter/" title="Instragram Link" target="_blank"><i class="fa fa-instagram fa-4x"></i></a> </p>
-        <p class="text-muted">Pictures and video; perhaps the best way to capture N-Counter.</p>
-      </div>
-      <div class="col-md-3 joinUsSpacing">
-        <p class="social-buttons"><a href="https://plus.google.com/u/0/102403965119926049149/about" title="Google + Link" target="_blank"><i class="fa fa-google-plus fa-4x"></i></a></p>
-        <p class="text-muted">We haven’t forgotten you, Google+.</p>
-      </div>  
-    </div>
-  </div>
-</section>
+  {{> stayConnected}}
 {{/inline}}
 
 {{#*inline "script"}}
@@ -115,7 +86,25 @@
 </script>
 <script>
   ncounter.setRandomBgImage('header');
-  ncounter.fetchRenderNews('#portfolio-item-tpl', '#portfolio-items');
+  ncounter.news.fetchShowFirstPage('#portfolio-item-tpl', '#portfolio-items')
+    .then(function (hasMore) {
+      if (hasMore) {
+        $('.news-show-more-wrapper').show()
+      } else {
+        $('.news-show-more-wrapper').hide()
+      }
+    });
+
+  $('.news-show-more').click(function () {
+    ncounter.news.fetchShowNextPage()
+      .then(function (hasMore) {
+        if (hasMore) {
+          $('.news-show-more-wrapper').show()
+        } else {
+          $('.news-show-more-wrapper').hide()
+        }
+      });
+  });
 </script>
 {{/inline}}
 {{/layout}}

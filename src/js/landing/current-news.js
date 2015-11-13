@@ -23,7 +23,7 @@
         var posts = _.map(response.items, function(post) {
           var content = post.content || '';
           // Default image
-          var image = 'img/default-news-image.png';
+          var image = '/img/default-news-image.png';
           var imageSize = 'cover';
           var match;
           // If the blog post contains an image, use the first one
@@ -43,10 +43,12 @@
       });
   }
 
-  function buildNewsItemsHtml(newsItemTpl, posts) {
+  function buildNewsItemsHtml(newsItemTpl, posts, start, length) {
+    var totalLength = Math.min(start + length, posts.length);
+
     // Buffer the html for each news item into an array.
     var newsItemsFragments = [];
-    for (var i = 0; i < posts.length; i++) {
+    for (var i = start; i < totalLength; i++) {
       var post = posts[i];
       // Combine template and data into actual HTML
       var newsItemFragment = newsItemTpl(post);
@@ -56,12 +58,50 @@
     return newsItemsFragments.join('');
   }
 
-  ncounter.fetchRenderNews = function(templateSelector, newsSelector) {
-    var newsItemTpl = getTemplate(templateSelector);
-    fetchPosts()
-      .then(buildNewsItemsHtml.bind(null, newsItemTpl))
-      .then(function (newsItemsHtml) {
-        $(newsSelector).html(newsItemsHtml);
-      });
+  ncounter.news = {
+
+    fetchShowFirstPage: function(templateSelector, newsSelector) {
+      this.page = 0;
+      this.newsSelector = newsSelector;
+      this.newsItemTpl = getTemplate(templateSelector);
+      this.fetchingNewsPosts = fetchPosts();
+
+      return this.fetchingNewsPosts
+        .then(function (posts) {
+          var start = 0;
+          var length = 6;
+          var hasMore = posts.length > start + length;
+          return [buildNewsItemsHtml(this.newsItemTpl, posts, 0, 6), hasMore];
+        }.bind(this))
+        .then(function (result) {
+          var newsItemsHtml = result[0];
+          var hasMore = result[1];
+          $(this.newsSelector).html(newsItemsHtml);
+          return hasMore;
+        }.bind(this))
+        .catch(function (err) {
+          setTimeout(function () { throw err; });
+        });
+    },
+
+    fetchShowNextPage: function () {
+
+      return this.fetchingNewsPosts
+        .then(function (posts) {
+          var start = ++this.page * 6;
+          var length = 6;
+          var hasMore = posts.length > start + length;
+          return [buildNewsItemsHtml(this.newsItemTpl, posts, start, length), hasMore];
+        }.bind(this))
+        .then(function (result) {
+          var newsItemsHtml = result[0];
+          var hasMore = result[1];
+          $(this.newsSelector).append(newsItemsHtml);
+          return hasMore;
+        }.bind(this))
+        .catch(function (err) {
+          setTimeout(function () { throw err; });
+        });
+    }
   }
 })(window.$, window._, window.ncounter ? window.ncounter : window.ncounter = {});

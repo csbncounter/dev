@@ -36,17 +36,20 @@
   bottom: 50px;
 }
 
+.ncounter-purpose {
+  margin-bottom: 40px;
+}
+
 /* video margin */
 .embed-responsive {
-  margin-top: 75px;
-  margin-bottom: 75px;
+   margin-bottom: 50px; 
 }
 
 
 .speaker-text-align {
-  margin-top:75px;
+/*  margin-top:75px;
   margin-bottom:75px;
-}
+*/}
 
 /* This is used on inspired.html to allow for newspaper look */
 .newspaper-padding {
@@ -69,69 +72,78 @@ p{
 }
 
 .inspired{
-    background-attachment: /*fixed,*/ scroll;
   background-image: url(/img/inspired.jpg);
   background-position: center center;
   background-repeat: none;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
 }
 
 .informed {
-    background-attachment: /*fixed,*/ scroll;
   background-image: url(/img/excited.jpg);
   background-position: center center;
   background-repeat: none;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
 }
 
 .involved{
-    background-attachment: /*fixed,*/ scroll;
   background-image: url(/img/involved.jpg);
   background-position: center center;
   background-repeat: none;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
+}
+
+.register {
+  background-image: url(/img/register.jpg);
+  background-position: center center;
+  background-repeat: none;
+  background-size: cover;
+}
+
+.register .opacity {
+  display: none;
 }
 
 .activePage{
   background-color: #f0644b;
 }
 
-.newsLetter {
+.theme-button {
+  display: inline-block;
   -webkit-border-radius: 4;
   -moz-border-radius: 4;
   border-radius: 4px;
   color: #ffffff;
   font-size: 14px;
   background: #f0644b;
+  border: none;
   padding: 10px 22px 10px 22px;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.newsLetter:hover {
+.theme-button:hover {
   background-color: #d85a43;
   text-decoration: none;
   color: #ffffff;
 }
 
-.joinUsNewsletter{
-  margin: 50px;
+.theme-button:focus {
+  outline: 0;
+}
+
+.join-us-newsletter-button{
+  margin-bottom: 30px;
 }
 
 /* corrects the spacing in the Join Us Campaigns */
-.joinUsSpacing{
-  margin-bottom:30px;
+.join-us-methods{
+  margin: 50px auto 0;
 }
 
+.joins-us-newsletter {
+  max-width: 600px;
+  margin-bottom: 30px;
+}
 
 /*Block Quote...  Removes grey border*/
 blockquote{
@@ -174,15 +186,15 @@ blockquote{
 @media (min-width: 992px) {
   .col-md-4Image, 
   .col-sm-6Image{
-     float: left;
+    float: left;
   }
   
   .col-md-6Image {
-  width: 50%;
+    width: 50%;
   }
   
   .col-md-4Image{
-  width: 33.33333333%;
+    width: 33.33333333%;
   }
 }
 
@@ -191,5 +203,10 @@ blockquote{
   margin-left: auto;
   margin-right: auto;
   font-size: 18px;
+  text-align: center;
+}
+
+.news-show-more-wrapper {
+  margin-top: 20px;
   text-align: center;
 }

@@ -60,7 +60,6 @@ function renderTemplateFile(src, dist, templateFile) {
     }
   }
   fs.writeFileSync(htmlPath, html);
-  return htmlPath;
 }
 
 module.exports = function(grunt) {
@@ -87,12 +86,7 @@ module.exports = function(grunt) {
             .filter(function (hbsFile) {
               return notPartialReg.test(hbsFile);
             })
-            .map(renderTemplateFile.bind(null, src, dist))
-            .map(function (file) {
-              return file.substring(dist.length, file.length);
-            })
-            .value();
-          // grunt.task.run('triggerReload:files=' + changedFiles.join(','));
+            .each(renderTemplateFile.bind(null, src, dist));
           done();
         });
       });
