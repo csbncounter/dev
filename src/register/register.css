@@ -8,3 +8,7 @@
 .register .opacity {
   display: none;
 }
+
+.first-heading {
+  margin-top: 0;
+}
