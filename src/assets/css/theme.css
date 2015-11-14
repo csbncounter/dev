@@ -1,0 +1,213 @@
+/*!
+ * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+@font-face {
+  font-family:"N-Counter Heading";
+  src: url('../fonts/BebasNeue.eot')format('embedded-opentype'), url('../fonts/BebasNeue.woff')format('woff'), url('../fonts/BebasNeue.ttf')format('truetype');
+}
+
+@font-face {
+  font-family: "N-Counter Paragraph";
+  font-weight: 400;
+  src: url('../fonts/SourceSansPro-Regular.eot')format('embedded-opentype'), url('../fonts/SourceSansPro-Regular.woff')format('woff'), url('../fonts/SourceSansPro-Regular.ttf')format('truetype');
+}
+@font-face {
+  font-family: "N-Counter Paragraph";
+  font-weight: 300;
+  font-style: italic;
+  src: url('../fonts/SourceSansPro-italic.eot')format('embedded-opentype'), url('../fonts/SourceSansPro-italic.woff')format('woff'), url('../fonts/SourceSansPro-italic.ttf')format('truetype');
+}
+@font-face {
+  font-family: "N-Counter Paragraph";
+  font-weight: 500;
+  src: url('../fonts/SourceSansPro-Semibold.eot')format('embedded-opentype'), url('../fonts/SourceSansPro-Semibold.woff')format('woff'), url('../fonts/SourceSansPro-Semibold.ttf')format('truetype');
+}
+
+/* modified body CSS to match N-Counter branding specs */
+body {
+  overflow-x: hidden;
+  font-family: "N-Counter Paragraph";
+  font-size: 15px;
+  webkit-tap-highlight-color: #fed136;
+}
+
+.text-muted {
+  color: #777;
+}
+
+.text-primary {
+  color: #fed136;
+}
+
+img::selection {
+  background: 0 0;
+}
+
+img::-moz-selection {
+  background: 0 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.75;
+}
+
+p.large {
+  font-size: 16px;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+  outline: 0;
+}
+
+a {
+  color: #f0644b;
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+  color: #d85a43;
+}
+
+/*Modified header CSS to match N-Counter branding Specs */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  font-family: "N-Counter Heading";
+  color: #334259;
+  line-height:120%;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.img-centered {
+  margin: 0 auto;
+}
+
+.bg-darkest-gray {
+  background-color: #222;
+}
+
+.btn-primary {
+  border-color: #f0644b;
+  text-transform: uppercase;
+  font-family: "N-Counter Heading";
+  font-weight: 700;
+  color: #fff;
+  background-color: #f0644b;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  border-color: #d85a43;
+  color: #fff;
+  background-color: #d85a43;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  border-color: #d85a43;
+  background-color: #d85a43;
+}
+
+.btn-primary .badge {
+  color: #f0644b;
+  background-color: #fff;
+}
+
+.btn-xl {
+  padding: 20px 40px;
+  border-color: #f0644b;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: "N-Counter Heading";
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #f0644b;
+}
+
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+  border-color: #d85a43;
+  color: #fff;
+  background-color: #d85a43;
+}
+
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+  background-image: none;
+}
+
+.btn-xl.disabled,
+.btn-xl[disabled],
+fieldset[disabled] .btn-xl,
+.btn-xl.disabled:hover,
+.btn-xl[disabled]:hover,
+fieldset[disabled] .btn-xl:hover,
+.btn-xl.disabled:focus,
+.btn-xl[disabled]:focus,
+fieldset[disabled] .btn-xl:focus,
+.btn-xl.disabled:active,
+.btn-xl[disabled]:active,
+fieldset[disabled] .btn-xl:active,
+.btn-xl.disabled.active,
+.btn-xl[disabled].active,
+fieldset[disabled] .btn-xl.active {
+  border-color: #f0644b;
+  background-color: #f0644b;
+}
+
+.btn-xl .badge {
+  color: #f0644b;
+  background-color: #fff;
+}
+
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn:active:focus {
+  outline: 0;
+}

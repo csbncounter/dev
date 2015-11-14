@@ -1,0 +1,10 @@
+.register {
+  background-image: url(/assets/img/register.jpg);
+  background-position: center center;
+  background-repeat: none;
+  background-size: cover;
+}
+
+.register .opacity {
+  display: none;
+}

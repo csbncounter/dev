@@ -23,7 +23,7 @@
         var posts = _.map(response.items, function(post) {
           var content = post.content || '';
           // Default image
-          var image = '/img/default-news-image.png';
+          var image = '/assets/img/default-news-image.png';
           var imageSize = 'cover';
           var match;
           // If the blog post contains an image, use the first one

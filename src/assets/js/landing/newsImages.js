@@ -2,13 +2,13 @@
 
   ncounter.setRandomBgImage = function (containerSelector) {
     var imageUrls = [
-      '/img/landing/frisbee.jpg',
-      '/img/landing/group.jpg',
-      '/img/landing/meteor.jpg',
-      '/img/landing/prayer.jpg',
-      '/img/landing/rifle.jpg',
-      '/img/landing/boating.jpg',
-      '/img/landing/flyFishing.jpg'
+      '/assets/img/landing/frisbee.jpg',
+      '/assets/img/landing/group.jpg',
+      '/assets/img/landing/meteor.jpg',
+      '/assets/img/landing/prayer.jpg',
+      '/assets/img/landing/rifle.jpg',
+      '/assets/img/landing/boating.jpg',
+      '/assets/img/landing/flyFishing.jpg'
     ];
 
     var imageUrlIndex = Math.floor(Math.random() * imageUrls.length);

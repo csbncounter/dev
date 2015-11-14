@@ -9,9 +9,9 @@
   <div class="opacity"></div>
   <div class="container">
     <div class="intro-text">
-      <img class="landingPageLogo" src='img/branding/NCounterLogoBlue_200px.png' alt='CSB N-Counter Logo'>
+      <img class="landingPageLogo" src="/assets/img/branding/NCounterLogoBlue_200px.png" alt="CSB N-Counter Logo">
       <br><br><br><br><br>
-      <div class="exploreButton opacityRaiser">  
+      <div class="exploreButton">  
         <h3 style="color:#fff;">Explore!</h3>
         <a href="#content-start" rel="relativeanchor" title="Navigate through the rest of the page" ><i class="fa fa-arrow-down fa-4x opacityRaiser"></i></a>
       </div>
@@ -20,65 +20,64 @@
 </header>
 <div id="content-start" rel="relativeanchor">
 
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading">N-Counter 2016</h2>
-        <h3 class="section-subheading text-muted">The Multi-Regional Battalion Event</h3>
-        <div id="n-counter-video" class="ncounter-purpose strong-statement">The purpose of N-Counter is to glorify God through fellowship, discipleship, and the experience of CSB Battalion across regions.</div>
-      </div>
-    </div>
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GBrkLl1Kq-w?rel=0" allowfullscreen=""></iframe>
-    </div>
-    <div class="row text-center">
-      <div class="col-md-4">
-        <a href="/inspired.html"><img alt="Inspired Page Image" src="/img/inspired_thumb.jpg"></a>
-        <h3 class="service-heading"><a href='/inspired.html'>Get Inspired</a></h3>
-        <p class="text-muted">Many can recall the initial N-Counter of 2011 and how it gave them an unprecedented experience with 29 Brigade units from 7 states.  Come see what they shared and get inspired!</p>
-      </div>
-      <div class="col-md-4">
-        <a href="/excited.html"><img alt="Excited Page Image" src="/img/excited_thumb.jpg"></a>
-        <h3 class="service-heading"><a href='/informed.html'>Get Informed</a></h3>
-        <p class="text-muted">We already have tremendous plans for 2016.  More CSB Battalion units, more people and more activities!  You’ll see the details develop here!</p>
-      </div>
-      <div class="col-md-4">
-        <a href="/involved.html"><img alt="Involved Page Image" src="/img/involved_thumb.jpg"></a>
-        <h3 class="service-heading"><a href='/involved.html'>Get Involved</a></h3>
-        <p class="text-muted">We believe your Battalion has something to share, as well as much to gain by attending, N-Counter 2016!  Make it part of your calendar planning for April 29-May 1, 2016!  Find out how you can join the effort and prepare today to be with us in 2016!</p>
+  {{#> pageSection heading="N-Counter 2016" subheading="The Multi-Regional Battalion Event"}}
+  {{#* inline "content"}}
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GBrkLl1Kq-w?rel=0" allowfullscreen=""></iframe>
       </div>
     </div>
   </div>
-</section>
-
-<section id="portfolio" class="bg-tan">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading">N-Counter Current News </h2>
-        <h3 class="section-subheading text-muted">Latest Announcements, Prayer Requests, and Event Details</h3>
+  <div class="row">
+    <div class="home__callout col-md-4">
+      <div class="home__callout-top">
+        <a href="/inspired.html"><img alt="Inspired Page Image" src="/assets/img/inspired_thumb.jpg"></a>
+        <h3 class="home__callout-heading"><a href='/inspired.html'>Get Inspired</a></h3>
       </div>
+      <p class="text-muted">Many can recall the initial N-Counter of 2011 and how it gave them an unprecedented experience with 29 Brigade units from 7 states.  Come see what they shared and get inspired!</p>
     </div>
-    <div id="portfolio-items" class="row"></div>
-    <div class="news-show-more news-show-more-wrapper">
+    <div class="home__callout col-md-4">
+      <div class="home__callout-top">
+        <a href="/excited.html"><img alt="Excited Page Image" src="/assets/img/excited_thumb.jpg"></a>
+        <h3 class="home__callout-heading"><a href='/informed.html'>Get Informed</a></h3>
+      </div>
+      <p class="text-muted">We already have tremendous plans for 2016.  More CSB Battalion units, more people and more activities!  You’ll see the details develop here!</p>
+    </div>
+    <div class="home__callout col-md-4">
+      <div class="home__callout-top">
+        <a href="/involved.html"><img alt="Involved Page Image" src="/assets/img/involved_thumb.jpg"></a>
+        <h3 class="home__callout-heading"><a href='/involved.html'>Get Involved</a></h3>
+      </div>
+      <p class="text-muted">We believe your Battalion has something to share, as well as much to gain by attending, N-Counter 2016!  Make it part of your calendar planning for April 29-May 1, 2016!  Find out how you can join the effort and prepare today to be with us in 2016!</p>
+    </div>
+  </div>
+  {{/inline}}    
+  {{/pageSection}}
+
+  {{#> pageSection heading="N-Counter Current News" subheading="Latest Announcements, Prayer Requests, and Event Details"}}
+  {{#* inline "content"}}
+  <div id="news" class="row"></div>
+  <div class="row">
+    <div class="col-sm-12 news-show-more news-show-more-wrapper">
       <button class="theme-button">Show Older Posts</button>
     </div>
   </div>
-</section>
+  {{/inline}}    
+  {{/pageSection}}
 
   {{> stayConnected}}
 {{/inline}}
 
 {{#*inline "script"}}
-<script src="/js/landing.js"></script>
-<script id="portfolio-item-tpl" type="text/html">
-  <div class="col-md-4 col-sm-6 portfolio-item">
-    <a href="<%- url %>" class="portfolio-link">
-      <div class="portfolio-hover"></div>
-      <div style="background-image: url(<%- image %>); background-size: <%- imageSize %>;" class="portfolio-item-bg"></div>
+<script src="/assets/js/landing.js"></script>
+<script id="news-item-tpl" type="text/html">
+  <div class="col-md-4 col-sm-6 news-item">
+    <a href="<%- url %>" class="news-link">
+      <div class="news-hover"></div>
+      <div style="background-image: url(<%- image %>); background-size: <%- imageSize %>;" class="news-item-bg"></div>
     </a>
-    <div class="portfolio-caption">
+    <div class="news-caption">
       <h4><a href="<%- url %>"><%- title %></a></h4>
       <p class="text-muted"><%- published %></p>
     </div>
@@ -86,7 +85,7 @@
 </script>
 <script>
   ncounter.setRandomBgImage('header');
-  ncounter.news.fetchShowFirstPage('#portfolio-item-tpl', '#portfolio-items')
+  ncounter.news.fetchShowFirstPage('#news-item-tpl', '#news')
     .then(function (hasMore) {
       if (hasMore) {
         $('.news-show-more-wrapper').show()

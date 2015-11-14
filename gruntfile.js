@@ -16,15 +16,15 @@ module.exports = function(grunt) {
       all: {
         src: 'src',
         dist: 'dist',
-        partials: 'src/partials',
+        partials: 'src/_partials',
         ext: 'hbs'
       }
     },
 
     copy: {
       bloggerCss: {
-        src: 'dist/css/common.css',
-        dest: 'dist/css/blogger.css',
+        src: 'dist/assets/css/all.css',
+        dest: 'dist/assets/css/blogger.css',
         options: {
           process: function(content, srcpath) {
             // Convert CSS paths to protocol-relative URLs with full domain name
@@ -35,8 +35,8 @@ module.exports = function(grunt) {
         }
       },
       bloggerJs: {
-        src: 'dist/js/common.js',
-        dest: 'dist/js/blogger.js',
+        src: 'dist/assets/js/common.js',
+        dest: 'dist/assets/js/blogger.js',
       },
       cssSourceMap: {
         options: {
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
           }
         },
         files: [
-          { src: 'dist/css/common.css.map', dest: 'dist/css/common.css.map' }
+          { src: 'dist/assets/css/all.css.map', dest: 'dist/assets/css/all.css.map' }
         ]
       },
       jsSourceMap: {
@@ -69,21 +69,21 @@ module.exports = function(grunt) {
           }
         },
         files: [
-          { src: 'dist/js/landing.js.map', dest: 'dist/js/landing.js.map' },
-          { src: 'dist/js/common.js.map', dest: 'dist/js/common.js.map' }
+          { src: 'dist/assets/js/landing.js.map', dest: 'dist/assets/js/landing.js.map' },
+          { src: 'dist/assets/js/common.js.map', dest: 'dist/assets/js/common.js.map' }
         ]
       },
       img: {
         expand: true,
-        cwd: 'src/img/',
+        cwd: 'src/assets/img/',
         src: '**/*',
-        dest: 'dist/img/'
+        dest: 'dist/assets/img/'
       },
       fonts: {
         expand: true,
-        cwd: 'src/fonts/',
+        cwd: 'src/assets/fonts/',
         src: '**/*',
-        dest: 'dist/fonts/'
+        dest: 'dist/assets/fonts/'
       }
     },
 
@@ -93,12 +93,14 @@ module.exports = function(grunt) {
       },
       all: {
         files: {
-          'dist/css/common.css': [
-            'src/vendor/bootstrap/bootstrap.css',
-            'src/vendor/font-awesome/font-awesome.css',
-            'src/css/theme.css',
-            'src/css/main.css',
-            'src/css/footer.css'
+          'dist/assets/css/all.css': [
+            'src/assets/vendor/bootstrap/bootstrap.css',
+            'src/assets/vendor/font-awesome/font-awesome.css',
+            'src/assets/css/theme.css',
+            'src/assets/css/main.css',
+            'src/assets/css/footer.css',
+            'src/index.css',
+            'src/!(assets)/**/*.css'
           ]
         }
       }
@@ -110,20 +112,20 @@ module.exports = function(grunt) {
       },
       all: {
         files: {
-          'dist/js/common.js': [
-            'src/vendor/jquery/jquery.js',
-            'src/vendor/underscore/underscore.js',
-            'src/vendor/jquery.easing/jquery.easing.js',
-            'src/vendor/bootstrap/bootstrap.js',
-            'src/js/theme/classie.js',
-            'src/js/theme/cbpAnimatedHeader.js',
-            'src/js/smoothScroll.js'
+          'dist/assets/js/common.js': [
+            'src/assets/vendor/jquery/jquery.js',
+            'src/assets/vendor/underscore/underscore.js',
+            'src/assets/vendor/jquery.easing/jquery.easing.js',
+            'src/assets/vendor/bootstrap/bootstrap.js',
+            'src/assets/js/theme/classie.js',
+            'src/assets/js/theme/cbpAnimatedHeader.js',
+            'src/assets/js/smoothScroll.js'
           ],
-          'dist/js/landing.js': [
-            'src/vendor/es6-promise/es6-promise.js',
-            'src/js/jquery-promise-shim.js',
-            'src/js/landing/newsImages.js',
-            'src/js/landing/current-news.js'
+          'dist/assets/js/landing.js': [
+            'src/assets/vendor/es6-promise/es6-promise.js',
+            'src/assets/js/jquery-promise-shim.js',
+            'src/assets/js/landing/newsImages.js',
+            'src/assets/js/landing/current-news.js'
           ]
         }
       }
@@ -151,29 +153,26 @@ module.exports = function(grunt) {
     watch: {
       hbs: {
         files: [
-          'src/*.hbs',
           'src/**/*.hbs'
         ],
         tasks: ['buildHtml']
       },
       css: {
         files: [
-          'src/css/*.css',
-          'src/css/**/*.css'
+          'src/**/*.css'
         ],
         tasks: ['cssmin', 'copy:cssSourceMap']
       },
       js: {
         files: [
-          'src/js/*.js',
-          'src/js/**/*.js'
+          'src/assets/js/**/*.js'
         ],
         tasks: ['uglify']
       },
       dist: {
         files: [
-          'dist/js/*.js',
-          'dist/css/*.css',
+          'dist/assets/js/*.js',
+          'dist/assets/css/*.css',
           'dist/**/*.html'
         ],
         options: {

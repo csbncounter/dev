@@ -1,0 +1,38 @@
+section {
+  padding: 60px 0;
+}
+
+section:nth-of-type(even) {
+  background-color: #FBF6EA;
+}
+
+.section-heading {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+
+.section-heading:last-child {
+  margin-bottom: 40px;
+}
+
+.section-subheading {
+  margin-bottom: 30px;
+  text-transform: none;
+  font-family: "N-Counter Heading";
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+@media(min-width:768px) {
+  section {
+    padding: 80px 0;
+  }
+  .section-heading:last-child {
+    margin-bottom: 50px;
+  }
+  .section-subheading {
+    margin-bottom: 40px;
+  }
+}
