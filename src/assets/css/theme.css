@@ -211,3 +211,7 @@ fieldset[disabled] .btn-xl.active {
 .btn:active:focus {
   outline: 0;
 }
+
+.bg-tan {
+  background-color: #FBF6EA;
+}
