@@ -9,6 +9,10 @@
   text-align: justify;
 }
 
+.join-us-methods p {
+  line-height: 1.6;
+}
+
 .social-buttons {
   text-align: center;
 }

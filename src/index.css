@@ -9,8 +9,13 @@
 }
 
 .home__callout {
-  margin-bottom: 50px;
+  max-width: 400px;
+  margin: 0 auto 50px;
   text-align: justify;
+}
+
+.home__callout p {
+  line-height: 1.6;
 }
 
 @media (min-width: 992px) {
