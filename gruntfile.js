@@ -154,11 +154,11 @@ module.exports = function(grunt) {
       },
       deploy: {
         command: [
-          'sed -Ei "" "/^\s*dist\s*/d" .gitignore',
           'git reset',
+          'sed -Ei "" "/^\s*dist\s*/d" .gitignore',
           'git add dist',
           'git commit -m "dist"',
-          'git subtree push -f --prefix dist origin gh-pages',
+          'git push origin `git subtree split --prefix dist master`:gh-pages --force',
           'git reset HEAD~1',
           'echo "dist" >> .gitignore'
         ].join(' && ')
