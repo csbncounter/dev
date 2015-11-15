@@ -151,6 +151,17 @@ module.exports = function(grunt) {
     shell: {
       sourceMaps: {
         command: 'cd dist && rm -f src && ln -s ../src src'
+      },
+      deploy: {
+        command: [
+          'sed -Ei "" "/^\s*dist\s*/d" .gitignore',
+          'git reset',
+          'git add dist',
+          'git commit -m "dist"',
+          'git subtree push -f --prefix dist origin gh-pages',
+          'git reset HEAD~1',
+          'echo "dist" >> .gitignore'
+        ].join(' && ')
       }
     },
 
@@ -208,6 +219,8 @@ module.exports = function(grunt) {
     'shell:sourceMaps',
     'concurrent'
   ]);
+
+  grunt.registerTask('deploy', 'Deploy to Github pages', ['shell:deploy']);
 
   grunt.registerTask('default', 'Default task is dev', ['dev']);
 };

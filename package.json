@@ -1,6 +1,11 @@
 {
   "name": "csbncounter",
   "version": "0.0.1",
+  "scripts": {
+    "build": "grunt build",
+    "dev": "grunt dev",
+    "deploy": "grunt deploy"
+  },
   "devDependencies": {
     "camelize": "^1.0.0",
     "glob": "^5.0.15",
