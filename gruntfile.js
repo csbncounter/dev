@@ -30,7 +30,7 @@ module.exports = function(grunt) {
             // Convert CSS paths to protocol-relative URLs with full domain name
             // - url(http://csbncounter.org/path) => url(//csbncounter.org/path)
             // - ../path => //csbncounter.org/path
-            return content.replace(/(url\(['"]?)(?:\/|\.\.\/)/g, '$1//csbncounter.org/');
+            return content.replace(/(url\(['"]?)(?:\/assets\/|\.\.\/|)/g, '$1//csbncounter.org/assets/');
           }
         }
       },
@@ -84,6 +84,10 @@ module.exports = function(grunt) {
         cwd: 'src/assets/fonts/',
         src: '**/*',
         dest: 'dist/assets/fonts/'
+      },
+      cname: {
+        src: 'CNAME',
+        dest: 'dist/CNAME'
       }
     },
 

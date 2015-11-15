@@ -5,7 +5,7 @@
     <meta expr:content='data:blog.isMobile         ? &quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0&quot;         : &quot;width=1100&quot;' name='viewport'/>
     <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
-    <link href='http://csbncounter.org/dist/blogger.css' rel='stylesheet'/>
+    <link href='http://csbncounter.org/assets/css/blogger.css' rel='stylesheet'/>
     <b:skin><![CDATA[
       /*
       /* Content
@@ -520,7 +520,7 @@
     <div class='container'>
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class='navbar-header '>
-        <a class='navbar-brand ' href='http://csbncounter.org'><img alt='CSB N-Counter Logo' src='http://csbncounter.org/img/branding/navLogo.png'/></a>
+        <a class='navbar-brand ' href='http://csbncounter.org'><img alt='CSB N-Counter Logo' src='http://csbncounter.org/assets/img/branding/navLogo.png'/></a>
         <button class='navbar-toggle' data-target='#bs-example-navbar-collapse-1' data-toggle='collapse' type='button'>
           <span class='sr-only'>Toggle navigation</span>
           <span class='icon-bar'/>
@@ -539,13 +539,16 @@
             <a class='' href='http://csbncounter.org'>Home</a>
           </li>
           <li>
-            <a class='' href='http://csbncounter.org/inspired.html'>Get Inspired</a>
+            <a class='' href='http://csbncounter.org/inspire/'>Inspire</a>
           </li>
           <li>
-            <a class='' href='http://csbncounter.org/informed.html'>Get Informed</a>
+            <a class='' href='http://csbncounter.org/inform/'>Inform</a>
           </li>
           <li>
-            <a class='' href='http://csbncounter.org/involved.html'>Get Involved</a>
+            <a class='' href='http://csbncounter.org/involve/'>Involve</a>
+          </li>
+          <li>
+            <a class='' href='http://csbncounter.org/register/'>Register</a>
           </li>
           <li>
             <a class=' activePage' href='http://news.csbncounter.org'>News</a>
@@ -1552,7 +1555,7 @@
   </div> <!--container--> 
 </footer>
 
-<script src='http://csbncounter.org/dist/blogger.js'/>
+<script src='http://csbncounter.org/assets/js/blogger.js'/>
 <b:section-contents id='footer-1'>
   <b:widget id='BlogArchive1' locked='false' title='Previous Posts' type='BlogArchive'>
     <b:includable id='main'>
