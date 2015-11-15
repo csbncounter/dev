@@ -220,7 +220,7 @@ module.exports = function(grunt) {
     'concurrent'
   ]);
 
-  grunt.registerTask('deploy', 'Deploy to Github pages', ['shell:deploy']);
+  grunt.registerTask('deploy', 'Deploy to Github pages', ['build', 'shell:deploy']);
 
   grunt.registerTask('default', 'Default task is dev', ['dev']);
 };
