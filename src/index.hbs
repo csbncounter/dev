@@ -1,6 +1,27 @@
 {{!
   page: 'home',
-  pageName: ''
+  pageName: '',
+  callouts: [{
+    href: '/inspire/',
+    img: '/assets/img/inspired_thumb.jpg',
+    title: 'Get Inspired',
+    text: 'Come reminisce on 2011 with us, see what 29 Battalion units from 7 states experienced, and become inspired for what 2016 could bring!'
+  }, {
+    href: '/inform/',
+    img: '/assets/img/informed_thumb.jpg',
+    title: 'Get Informed',
+    text: 'We already have tremendous plans for 2016&mdash;more CSB Battalion units, more people and more activities!  See the details develop here.'
+  }, {
+    href: '/involve/',
+    img: '/assets/img/involved_thumb.jpg',
+    title: 'Get Involved',
+    text: 'Whether you belong to a Battalion or have friends in one, your prayer and financial support is critical to the N-Counter mission of discipleship.'
+  }, {
+    href: '/register/',
+    img: '/assets/img/register_thumb.jpg',
+    title: 'Register Your Unit',
+    text: 'Battalion Unit Registration is now open. Captains, reserve a spot for your unit today!'
+  }]
 }}
 
 {{#> layout}}
@@ -31,42 +52,17 @@
     </div>
   </div>
   <div class="row home__callouts">
+    {{#each callouts}}
     <div class="home__callout col-md-3 col-sm-6">
       <div class="home__callout-top">
-        <a href="/inspire/"><img alt="Inspired Page Image" src="/assets/img/inspired_thumb.jpg"></a>
-        <h3 class="home__callout-heading"><a href='/inspire/'>Get Inspired</a></h3>
+        <a href="{{href}}"><img alt="Inspired Page Image" src="{{img}}"></a>
+        <h3 class="home__callout-heading"><a href='{{href}}'>{{title}}</a></h3>
       </div>
       <p class="text-muted">
-        Come reminisce on 2011 with us, see what 29 Battalion units from 7 states experienced, and become inspired for what 2016 could bring!
+        {{{text}}}
       </p>
     </div>
-    <div class="home__callout col-md-3 col-sm-6">
-      <div class="home__callout-top">
-        <a href="/inform/"><img alt="Excited Page Image" src="/assets/img/excited_thumb.jpg"></a>
-        <h3 class="home__callout-heading"><a href='/inform/'>Get Informed</a></h3>
-      </div>
-      <p class="text-muted">
-        We already have tremendous plans for 2016&mdash;more CSB Battalion units, more people and more activities!  See the details develop here.
-      </p>
-    </div>
-    <div class="home__callout col-md-3 col-sm-6">
-      <div class="home__callout-top">
-        <a href="/involve/"><img alt="Involved Page Image" src="/assets/img/involved_thumb.jpg"></a>
-        <h3 class="home__callout-heading"><a href='/involve/'>Get Involved</a></h3>
-      </div>
-      <p class="text-muted">
-        Whether you belong to a Battalion or have friends in one, your prayer and financial support is critical to the N-Counter mission of discipleship.
-      </p>
-    </div>
-    <div class="home__callout col-md-3 col-sm-6">
-      <div class="home__callout-top">
-        <a href="/register/"><img alt="Excited Page Image" src="/assets/img/register_thumb.jpg"></a>
-        <h3 class="home__callout-heading"><a href='/register/'>Register Your Unit</a></h3>
-      </div>
-      <p class="text-muted">
-        Battalion Unit Registration is now open. Captains, reserve a spot for your unit today!
-      </p>
-    </div>
+    {{/each}}
   </div>
   {{/inline}}    
   {{/pageSection}}
@@ -84,32 +80,22 @@
 
   {{#> pageSection heading="Stay Connected" subheading="Don’t miss a beat!<br>Stay up to date on developing news."}}
   {{#* inline "content"}}
-    <div class="row">
-      <div class="col-md-12 text-center join-us-newletter">
-        <p class="text-muted strong-statement">Our newsletter is the official place to receive the latest information.  Sign up now for monthly access to critical details, timelines for registration, and for prayer requests.</p>
-        <p class="join-us-newsletter-button" rel="relativeanchor">
-          <a href="http://visitor.r20.constantcontact.com/d.jsp?llr=bvu45aeab&p=oi&m=1103839089313&sit=skhh77pfb&f=ea01a16c-54b9-4770-b28e-b348b7d91f16" title="Newsletter Signup" target="_blank" class="theme-button">Newsletter Signup</a>
-        </p>
-      </div>
+  <div class="row">
+    <div class="col-md-12 text-center join-us-newletter">
+      <p class="text-muted strong-statement">Our newsletter is the official place to receive the latest information.  Sign up now for monthly access to critical details, timelines for registration, and for prayer requests.</p>
+      <p class="join-us-newsletter-button" rel="relativeanchor">
+        <a href="http://visitor.r20.constantcontact.com/d.jsp?llr=bvu45aeab&p=oi&m=1103839089313&sit=skhh77pfb&f=ea01a16c-54b9-4770-b28e-b348b7d91f16" title="Newsletter Signup" target="_blank" class="theme-button">Newsletter Signup</a>
+      </p>
     </div>
-    <div class="row">
-      <div class="col-md-3 col-sm-6 join-us-methods">
-        <p class="social-buttons"><a href="http://www.twitter.com/csbncounter" title="Twitter Link" target="_blank"><i class="fa fa-twitter fa-4x"></i></a> </p>
-        <p class="text-muted">Add N-Counter excitement and news tidbits to your daily feed.</p>
-      </div>
-      <div class="col-md-3 col-sm-6 join-us-methods">
-        <p class="social-buttons"><a href="https://www.facebook.com/events/1751932415033325/" title="Facebook Link" target="_blank"><i class="fa fa-facebook fa-4x"></i></a> </p>
-        <p class="text-muted">A great place to share with your friends for conversation, news, memories from 2011, and excitement for 2016.</p>
-      </div>
-      <div class="col-md-3 col-sm-6 join-us-methods">
-        <p class="social-buttons"><a href="https://instagram.com/csbncounter/" title="Instragram Link" target="_blank"><i class="fa fa-instagram fa-4x"></i></a> </p>
-        <p class="text-muted">Pictures and video; perhaps the best way to capture N-Counter.</p>
-      </div>
-      <div class="col-md-3 col-sm-6 join-us-methods">
-        <p class="social-buttons"><a href="https://plus.google.com/u/0/102403965119926049149/about" title="Google + Link" target="_blank"><i class="fa fa-google-plus fa-4x"></i></a></p>
-        <p class="text-muted">We haven’t forgotten you, Google+.</p>
-      </div>
+  </div>
+  <div class="row">
+    {{#each joinUsMethods}}
+    <div class="col-md-3 col-sm-6 join-us-methods">
+      <p class="social-buttons"><a href="{{href}}" title="{{title}}" target="_blank"><i class="fa {{icon}} fa-4x"></i></a> </p>
+      <p class="text-muted">{{{text}}}</p>
     </div>
+    {{/each}}
+  </div>
   {{/inline}}
   {{/pageSection}}
 {{/inline}}

@@ -3,7 +3,28 @@
     if (navName === this.page) {
       return 'activePage';
     }
-  }
+  },
+  joinUsMethods: [{
+    href: 'http://www.twitter.com/csbncounter',
+    icon: 'fa-twitter',
+    title: 'Twitter Link',
+    text: 'Add N-Counter excitement and news tidbits to your daily feed.'
+  }, {
+    href: 'https://www.facebook.com/events/1751932415033325/',
+    icon: 'fa-facebook',
+    title: 'Facebook Link',
+    text: 'A great place to share with your friends for conversation, news, memories from 2011, and excitement for 2016.'
+  }, {
+    href: 'https://instagram.com/csbncounter/',
+    icon: 'fa-instagram',
+    title: 'Instragram Link',
+    text: 'Pictures and video; perhaps the best way to capture N-Counter.'
+  }, {
+    href: 'https://plus.google.com/u/0/102403965119926049149/about',
+    icon: 'fa-google-plus',
+    title: 'Google + Link',
+    text: 'We haven’t forgotten you, Google+.'
+  }]
 }}
 
 <!DOCTYPE html>
@@ -79,12 +100,11 @@
     <div class="container">
       <div class="row, footer-distributed" >
         <div class="footer-1">
-           <ul class="list-inline social-buttons socialFooterCentering">
-              <li><a href="http://www.twitter.com/csbncounter" title="Twitter Social Media Link" target="_blank"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="https://www.facebook.com/events/1751932415033325/" title="Facebook Social Media Link" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="https://instagram.com/csbncounter/" title="Instagram Social Media Link" target="_blank"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="https://plus.google.com/u/0/102403965119926049149/about" title="Google + Social Media Link" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
+          <ul class="list-inline social-buttons socialFooterCentering">
+            {{#each joinUsMethods}}
+            <li><a href="{{href}}" title="{{title}}" target="_blank"><i class="fa {{icon}}"></i></a></li>
+            {{/each}}
+          </ul>
         </div>
         <div class="footer-2">
            <p class="newsletterFooterCentering"><a href="http://visitor.r20.constantcontact.com/d.jsp?llr=bvu45aeab&p=oi&m=1103839089313&sit=skhh77pfb&f=ea01a16c-54b9-4770-b28e-b348b7d91f16" title="Newsletter signup link" target="_blank" class="theme-button">Newsletter Signup</a> </p>

@@ -14,12 +14,13 @@ function registerPartials(partialFiles) {
 
     var partialString = fs.readFileSync(partialFile).toString();
     var partialTemplate = Handlebars.compile(partialString);
-    Handlebars.registerPartial(partialName, partialTemplate);
+    var partialFrontMatter = parseFrontMatter(partialString);
 
-    var frontMatter = parseFrontMatter(partialString);
-    for (name in frontMatter) {
-      Handlebars.registerHelper(name, frontMatter[name]);
-    }
+    var partial = function (data, options) {
+      var partialData = _.extend(partialFrontMatter, data);
+      return partialTemplate(partialData, options);
+    };
+    Handlebars.registerPartial(partialName, partial);
   });
 }
 
