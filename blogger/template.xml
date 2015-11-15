@@ -425,7 +425,7 @@
       <![CDATA[
       body {
         min-width: $(content.width);
-        padding-top: 100px;
+        padding-top: 70px;
       }
 
       .content-outer, .content-fauxcolumn-outer, .region-inner {
@@ -436,7 +436,7 @@
 
       .region-inner {
         margin: 0 auto;
-        padding: 80px 0 70px
+        padding: 70px 0 50px
       }
 
       .main-inner .columns {
@@ -489,7 +489,10 @@
         background: #344259;
       }
       .content-footer {
-        padding: 100px;
+        padding: 50px 0 60px;
+      }
+      .content-footer h2 {
+        margin-bottom: 40px;
       }
       .content-footer .foot {
         width: $(content.width);
