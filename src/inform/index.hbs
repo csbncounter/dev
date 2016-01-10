@@ -95,21 +95,40 @@
   {{/inline}}    
   {{/pageSection}}
 
-  {{#> pageSection heading="Activities!" subheading="What kind of activity can your Battalion bring?"}}
+  {{#> pageSection heading="Activity Lineup" subheading="Nearly more excitement than can fit in one day!"}}
   {{#* inline "content"}}
-  <div id="news" class="row">
-    {{#each events}}
-    <div class="col-md-4 col-sm-6 news-item">
-      <div class="news-link">
-        <div style="background-image: url({{image}}); background-size:cover;" class="news-item-bg"></div>
-      </div>
-      <div class="news-caption">
-        <h4>{{event}}</h4>
-      </div>
+  <div class="row">
+    <div class="col-sm-12 media" id="activities">
     </div>
-    {{/each}}
   </div>
   {{/inline}}    
   {{/pageSection}}
+{{/inline}}
+
+{{#*inline "script"}}
+<script src="/assets/js/inform.js"></script>
+<script id="activities-tpl" type="text/html">
+  <table class="table table-striped">
+    <tr>
+    <th>Event</th>
+    <th>Unit</th> 
+    <th>Church</th>
+    <th>State</th>
+    </tr>
+    <% for (i in activities) {
+      var activity = activities[i];
+    %>
+      <tr>
+      <td><%- activity.event %></td>
+      <td><%- activity.unit %></td> 
+      <td><%- activity.church %></td>
+      <td><%- activity.state %></td>
+      </tr>
+    <% } %>
+  </table>
+</script>
+<script>
+  ncounter.activities.fetchShow('#activities-tpl', '#activities');
+</script>
 {{/inline}}
 {{/layout}}

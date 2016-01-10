@@ -46,31 +46,13 @@ module.exports = function(grunt) {
             var sources = content.slice(0, sourcesEnd);
             var search = /^([^;]*"sources":\[.*?")(?=\w)([^"\]]+"[^\[]*\])/;
             while (search.test(sources)) {
-              sources = sources.replace(search, '$1../$2');
+              sources = sources.replace(search, '$1../../$2');
             }
             return sources + content.slice(sourcesEnd, content.length);
           }
         },
         files: [
           { src: 'dist/assets/css/all.css.map', dest: 'dist/assets/css/all.css.map' }
-        ]
-      },
-      jsSourceMap: {
-        options: {
-          // Prepend "../" to sourcemap URLs
-          process: function(content, srcpath) {
-            var sourcesEnd = content.indexOf(';');
-            var sources = content.slice(0, sourcesEnd);
-            var search = /^([^;]*"sources":\[.*?")(?:\.\.\/\.\.\/)([^"\]]+"[^\[]*\])/;
-            while (search.test(sources)) {
-              sources = sources.replace(search, '$1../$2');
-            }
-            return sources + content.slice(sourcesEnd, content.length);
-          }
-        },
-        files: [
-          { src: 'dist/assets/js/landing.js.map', dest: 'dist/assets/js/landing.js.map' },
-          { src: 'dist/assets/js/common.js.map', dest: 'dist/assets/js/common.js.map' }
         ]
       },
       img: {
@@ -117,8 +99,10 @@ module.exports = function(grunt) {
       all: {
         files: {
           'dist/assets/js/common.js': [
+            'src/assets/vendor/es6-promise/es6-promise.js',
             'src/assets/vendor/jquery/jquery.js',
             'src/assets/vendor/underscore/underscore.js',
+            'src/assets/js/jquery-promise-shim.js',
             'src/assets/vendor/jquery.easing/jquery.easing.js',
             'src/assets/vendor/bootstrap/bootstrap.js',
             'src/assets/js/theme/classie.js',
@@ -126,10 +110,11 @@ module.exports = function(grunt) {
             'src/assets/js/smoothScroll.js'
           ],
           'dist/assets/js/landing.js': [
-            'src/assets/vendor/es6-promise/es6-promise.js',
-            'src/assets/js/jquery-promise-shim.js',
             'src/assets/js/landing/newsImages.js',
             'src/assets/js/landing/current-news.js'
+          ],
+          'dist/assets/js/inform.js': [
+            'src/assets/js/inform/activities.js'
           ]
         }
       }
