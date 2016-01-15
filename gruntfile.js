@@ -98,7 +98,7 @@ module.exports = function(grunt) {
       },
       all: {
         files: {
-          'dist/assets/js/common.js': [
+          'dist/assets/js/ncounter.js': [
             'src/assets/vendor/es6-promise/es6-promise.js',
             'src/assets/vendor/jquery/jquery.js',
             'src/assets/vendor/underscore/underscore.js',
@@ -107,14 +107,10 @@ module.exports = function(grunt) {
             'src/assets/vendor/bootstrap/bootstrap.js',
             'src/assets/js/theme/classie.js',
             'src/assets/js/theme/cbpAnimatedHeader.js',
-            'src/assets/js/smoothScroll.js'
-          ],
-          'dist/assets/js/landing.js': [
-            'src/assets/js/landing/newsImages.js',
-            'src/assets/js/landing/current-news.js'
-          ],
-          'dist/assets/js/inform.js': [
-            'src/assets/js/inform/activities.js'
+            'src/assets/js/smooth-scroll.js',
+            'src/assets/js/home.js',
+            'src/assets/js/current-news.js',
+            'src/assets/js/live-data.js'
           ]
         }
       }

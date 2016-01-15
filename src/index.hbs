@@ -4,8 +4,8 @@
   callouts: [{
     href: '/inspire/',
     img: '/assets/img/inspired_thumb.jpg',
-    title: 'Get Inspired',
-    text: 'Come reminisce on 2011 with us, see what 29 Battalion units from 7 states experienced, and become inspired for what 2016 could bring!'
+    title: 'Expect Excitement',
+    text: 'Registrations are coming in fast, and the activity lineup is beginning to shape up!  Come see what to expect so far!'
   }, {
     href: '/inform/',
     img: '/assets/img/informed_thumb.jpg',
@@ -33,7 +33,7 @@
       <img class="landingPageLogo" src="/assets/img/branding/NCounterLogoBlue_200px.png" alt="CSB N-Counter Logo">
       <br><br><br><br><br>
       <div class="exploreButton">  
-        <h3 style="color:#fff;">Battalion Unit Registration Has Begun!</h3>
+        <h3 style="color:#fff;">Come See What to Expect!</h3>
         <a href="#content-start" rel="relativeanchor" title="Navigate through the rest of the page" ><i class="fa fa-arrow-down fa-4x opacityRaiser"></i></a>
       </div>
     </div>
@@ -43,14 +43,6 @@
 
   {{#> pageSection heading="N-Counter 2016" subheading="The Multi-Regional Battalion Event"}}
   {{#* inline "content"}}
-  <div class="row">
-    <div class="col-sm-12">
-      <div id="n-counter-video" class="ncounter-purpose strong-statement">The purpose of N-Counter is to glorify God through fellowship, discipleship, and the experience of CSB Battalion across regions.</div>
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GBrkLl1Kq-w?rel=0" allowfullscreen=""></iframe>
-      </div>
-    </div>
-  </div>
   <div class="row home__callouts">
     {{#each callouts}}
     <div class="home__callout col-md-3 col-sm-6">
@@ -78,11 +70,24 @@
   {{/inline}}    
   {{/pageSection}}
 
-  {{#> pageSection heading="Stay Connected" subheading="Don’t miss a beat!<br>Stay up to date on developing news."}}
+  {{#> pageSection heading="Our Purpose" subheading="Is Simple"}}
+  {{#* inline "content"}}
+  <div class="row">
+    <div class="col-sm-12">
+      <div id="n-counter-video" class="ncounter-purpose announcement">The purpose of N-Counter is to glorify God through fellowship, discipleship, and the experience of CSB Battalion across regions.</div>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GBrkLl1Kq-w?rel=0" allowfullscreen=""></iframe>
+      </div>
+    </div>
+  </div>
+  {{/inline}}    
+  {{/pageSection}}
+
+  {{#> pageSection heading="Don’t miss a beat!" subheading="Stay up to date on developing news."}}
   {{#* inline "content"}}
   <div class="row">
     <div class="col-md-12 text-center join-us-newletter">
-      <p class="text-muted strong-statement">Our newsletter is the official place to receive the latest information.  Sign up now for monthly access to critical details, timelines for registration, and for prayer requests.</p>
+      <p class="text-muted announcement">Our newsletter is the official place to receive the latest information.  Sign up now for monthly access to critical details, timelines for registration, and for prayer requests.</p>
       <p class="join-us-newsletter-button" rel="relativeanchor">
         <a href="http://visitor.r20.constantcontact.com/d.jsp?llr=bvu45aeab&p=oi&m=1103839089313&sit=skhh77pfb&f=ea01a16c-54b9-4770-b28e-b348b7d91f16" title="Newsletter Signup" target="_blank" class="theme-button">Newsletter Signup</a>
       </p>
@@ -101,7 +106,6 @@
 {{/inline}}
 
 {{#*inline "script"}}
-<script src="/assets/js/landing.js"></script>
 <script id="news-item-tpl" type="text/html">
   <div class="col-md-4 col-sm-6 news-item">
     <a href="<%- url %>" class="news-link">
@@ -115,7 +119,7 @@
   </div>
 </script>
 <script>
-  ncounter.setRandomBgImage('header');
+  ncounter.home.setRandomBgImage('header');
   ncounter.news.fetchShowFirstPage('#news-item-tpl', '#news')
     .then(function (hasMore) {
       if (hasMore) {

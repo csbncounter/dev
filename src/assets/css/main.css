@@ -97,6 +97,10 @@ p {
 }
 
 .strong-statement {
+  font-size: 18px;
+}
+
+.announcement {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -108,3 +112,17 @@ p {
   margin-top: 20px;
   text-align: center;
 }
+
+.nav-new:after {
+  content: "New!";
+  position: relative;
+  top: -15px;
+  margin-left: 4px;
+  font-size: 0.5em;
+  line-height: 1;
+}
+
+.aside-image {
+  width: 100%;
+}
+

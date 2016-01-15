@@ -40,5 +40,4 @@ var cbpAnimatedHeader = (function() {
 	}
 
 	init();
-
 })();

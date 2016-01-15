@@ -76,6 +76,14 @@ module.exports = function(grunt) {
     var hbsFileGlob = path.join(src, '**/*.' + ext);
     var notPartialReg = new RegExp('^(?!' + partialsPath + '/)');
 
+    try {
+      fs.mkdirSync(dist);
+    } catch (err) {
+      if (err.code !== 'EEXIST') {
+        throw err;
+      }
+    }
+
     try {      
       glob(path.join(partialsPath, '*.' + ext), function (err, partialFiles) {
         if (err) { throw err; }

@@ -1,39 +1,34 @@
 {{!
   page: 'informed',
   pageName: 'Get Informed',
-  events: [{
-    image: '/assets/img/informed/tomahawk-throw.jpg',
-    event: 'Tomahawk Throw'
-  }, {
-    image: '/assets/img/informed/soccer.jpg',
-    event: 'Soccer'
-  }, {
-    image: '/assets/img/informed/fly-fishing.jpg',
-    event: 'Fly Fishing'
-  }, {
-    image: '/assets/img/informed/sling-shot.jpg',
-    event: 'Slingshot'
-  }, {
-    image: '/assets/img/informed/orienteering.jpg',
-    event: 'Orienteering'
-  }, {
-    image: '/assets/img/informed/canoe-and-kayak.jpg',
-    event: 'Canoe & Kayak'
-  }, {
-    image: '/assets/img/informed/ultimate-frisbee.jpg',
-    event: 'Ultimate Frisbee'
-  }, {
-    image: '/assets/img/informed/skeet-shooting.jpg',
-    event: 'Skeet Shooting'
-  }, {
-    image: '/assets/img/informed/lots-of-eating.jpg',
-    event: 'Lots of Eating'
-  }]
 }}
 
 {{#> layout}}
 {{#*inline "content"}}
   {{> pageHeader }}
+
+  {{#> pageSection heading="What is N-Counter?" subheading="Once in a Battalion Career"}}
+  {{#* inline "content"}}
+  <div class="row">
+    <div class="col-md-6 newspaper-padding">
+      <p>
+        Battalions from regions far and wide bring an activity, a skill, a challenge, or a competition to share with the others.  Every young man heads into a non-stop adventure of one new experience after the next together with old friends and new.  Think “everything that is awesome about Battalion” in one place for one weekend.
+      </p>
+      <p>
+        In the evening, all gather under one roof for a passionate worship ceremony followed by an awe-inspiring outdoor torchlight and bonfire event that leaves no one without personally encountering God.  This year the theme is “Press On” based on Philippians 3:12-16.
+      </p>
+      <p>
+        Without any other event to compare to, the only way to get a taste of N-Counter is to see for yourself what is proving to be even bigger in 2016.  Don’t miss this “once in a Battalion career” event.
+      </p>
+    </div>
+    <div class="col-md-6">                   
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pT0FmVqjQ2k?rel=0" allowfullscreen></iframe>
+      </div>
+    </div>     
+  </div>
+  {{/inline}}    
+  {{/pageSection}}
 
   {{#> pageSection heading="Details" subheading="April 29 - May 1, 2016<br>High Point Camp&mdash;Birdsboro, PA"}}
   {{#* inline "content"}}
@@ -55,7 +50,7 @@
   {{/inline}}    
   {{/pageSection}}
 
-  {{#> pageSection heading="Press On" subheading="Philippians 3:12-16"}}
+  {{#> pageSection heading="Press On" subheading="Theme<br>Philippians 3:12-16"}}
   {{#* inline "content"}}
     <div class="row">
       <div class="col-md-6 newspaper-padding">
@@ -94,41 +89,5 @@
   </div>
   {{/inline}}    
   {{/pageSection}}
-
-  {{#> pageSection heading="Activity Lineup" subheading="Nearly more excitement than can fit in one day!"}}
-  {{#* inline "content"}}
-  <div class="row">
-    <div class="col-sm-12 media" id="activities">
-    </div>
-  </div>
-  {{/inline}}    
-  {{/pageSection}}
-{{/inline}}
-
-{{#*inline "script"}}
-<script src="/assets/js/inform.js"></script>
-<script id="activities-tpl" type="text/html">
-  <table class="table table-striped">
-    <tr>
-    <th>Event</th>
-    <th>Unit</th> 
-    <th>Church</th>
-    <th>State</th>
-    </tr>
-    <% for (i in activities) {
-      var activity = activities[i];
-    %>
-      <tr>
-      <td><%- activity.event %></td>
-      <td><%- activity.unit %></td> 
-      <td><%- activity.church %></td>
-      <td><%- activity.state %></td>
-      </tr>
-    <% } %>
-  </table>
-</script>
-<script>
-  ncounter.activities.fetchShow('#activities-tpl', '#activities');
-</script>
 {{/inline}}
 {{/layout}}

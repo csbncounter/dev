@@ -1,0 +1,117 @@
+{{!
+  page: 'inspired',
+  pageName: 'Expect Excitement'
+}}
+
+{{#> layout}}
+{{#*inline "content"}}
+  {{> pageHeader }}
+
+  {{#> pageSection heading="This is really happening!" subheading="Registrations Are Coming in Fast"}}
+  {{#* inline "content"}}
+  <div class="row">
+    <div class="col-md-4">
+      <img class="aside-image" src="/assets/img/activities/tomahawk-throw.jpg" />
+    </div>
+    <div class="col-md-8 newspaper-padding strong-statement" id="registration-stats">
+    </div>
+  </div>
+  {{/inline}}    
+  {{/pageSection}}
+
+  {{#> pageSection heading="Beyond Exciting" subheading="Confirmed Events So Far"}}
+  {{#* inline "content"}}
+  <div class="row">
+    <div id="activities" class="col-sm-12 media"></div>
+  </div>
+  {{/inline}}    
+  {{/pageSection}}
+
+  {{#> pageSection heading="Purposeful Events" subheading="A Battalion Vision for Fun"}}
+  {{#* inline "content"}}
+  <div class="row">
+    <div class="col-md-8 newspaper-padding" id="registration-stats">
+      <p>
+        In addition to the pure enjoyment of camaradie around thrilling events, vision for N-Counter is
+        to have each activity presented in true Battalion style, with a <strong>strong spritual backing</strong>.
+      </p>
+      <p>
+        At the first N-Counter in 2011, we asked units to present their activity along with at least one
+        of several key spiritual elements and to relate the activity to that element.  For N-Counter 2016, we’d like units to focus on a <strong>Character Trait</strong>, linked to a Bible passage.
+      </p>
+      <p>
+        <strong>Everything we do</strong> the weekend of N-Counter 2016 will ultimately glorify God through fellowship,
+        discipleship, and the experience of CSB Battalion across regions, and our activities will be no
+        different.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <img class="aside-image" src="/assets/img/activities/orienteering.jpg"/>
+    </div>
+  </div>
+  {{/inline}}    
+  {{/pageSection}}
+
+  {{#> pageSection heading="Event Suggestions" subheading="Haven't chosen yet?"}}
+  {{#* inline "content"}}
+  <div class="row">
+    <div id="activity-suggestions" class="col-sm-12 media"></div>
+  </div>
+  {{/inline}}    
+  {{/pageSection}}
+{{/inline}}
+{{#*inline "script"}}
+<script id="registration-stats-tpl" type="text/html">
+  <p>
+    So far <strong><%- data.units %> units</strong> from <strong><%- data.states %> states</strong> are bringing <strong><%- data.brigadiers %> Brigadiers</strong> and <strong><%- data.adults %> adults</strong> , totalling <strong><%- data.registered %> participants</strong>, and we are praying for another <strong><%- data.moreUnitsExpected %> units</strong> to register!
+  </p>
+  <p>
+    If you are one of the <%- data.moreUnitsExpected %> who haven't yet registered, <em>now's the time!</em>
+  </p>
+  <p>
+    If you're one of the growing number already planning to be there, <em>we can't wait to see you!</em>
+  </p>
+</script>
+<script id="activities-tpl" type="text/html">
+  <table class="table table-striped">
+    <tr>
+    <th>Event</th>
+    <th>Unit</th> 
+    <th>Church</th>
+    <th>State</th>
+    </tr>
+    <% for (i in data) {
+      var activity = data[i];
+    %>
+      <tr>
+      <td><%- activity.event %></td>
+      <td><%- activity.unit %></td> 
+      <td><%- activity.church %></td>
+      <td><%- activity.state %></td>
+      </tr>
+    <% } %>
+  </table>
+</script>
+<script id="activity-suggestions-tpl" type="text/html">
+  <table class="table table-striped">
+    <tr>
+    <th>Event Suggestion</th>
+    <th>Notes</th> 
+    </tr>
+    <% for (i in data) {
+      var activitySuggestion = data[i];
+    %>
+      <tr>
+      <td><%- activitySuggestion.event %></td>
+      <td><%- activitySuggestion.notes %></td> 
+      </tr>
+    <% } %>
+  </table>
+</script>
+<script>
+  ncounter.liveData.fetchShowActivities('#activities-tpl', '#activities');
+  ncounter.liveData.fetchShowActivitySuggestions('#activity-suggestions-tpl', '#activity-suggestions');
+  ncounter.liveData.fetchShowRegistrationStats('#registration-stats-tpl', '#registration-stats');
+</script>
+{{/inline}}
+{{/layout}}
