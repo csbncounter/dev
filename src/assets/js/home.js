@@ -5,7 +5,7 @@
     '/assets/img/landing/group.jpg',
     '/assets/img/landing/meteor.jpg',
     '/assets/img/landing/prayer.jpg',
-    '/assets/img/landing/rifle.jpg',
+    '/assets/img/landing/worship.jpg',
     '/assets/img/landing/boating.jpg',
     '/assets/img/landing/flyFishing.jpg'
   ];
