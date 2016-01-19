@@ -2,47 +2,50 @@
   page: 'home',
   pageName: '',
   callouts: [{
-    href: '/expect/',
-    img: '/assets/img/expect_thumb.jpg',
-    title: 'Expect Excitement',
-    text: 'Registrations are coming in fast, and the activity lineup is beginning to shape up!  Come see what to expect so far!'
+    href: '/events/',
+    img: '/assets/img/events_thumb.jpg',
+    title: 'Events',
+    text: 'The events lineup is beginning to shape up.  Come see what to expect so far!'
   }, {
-    href: '/inform/',
-    img: '/assets/img/informed_thumb.jpg',
-    title: 'Get Informed',
-    text: 'We already have tremendous plans for 2016&mdash;more CSB Battalion units, more people and more activities!  See the details develop here.'
+    href: '/details/',
+    img: '/assets/img/details_thumb.jpg',
+    title: 'Details',
+    text: 'Find out what N-Counter is all about here.'
   }, {
-    href: '/involve/',
-    img: '/assets/img/involved_thumb.jpg',
-    title: 'Get Involved',
-    text: 'Whether you belong to a Battalion or have friends in one, your prayer and financial support is critical to the N-Counter mission of discipleship.'
+    href: '/support/',
+    img: '/assets/img/support_thumb.jpg',
+    title: 'Support',
+    text: 'Come alongside N-Counter practically, specifically through prayer and financial donations.'
   }, {
     href: '/register/',
     img: '/assets/img/register_thumb.jpg',
-    title: 'Register Your Unit',
-    text: 'Battalion Unit Registration is now open. Captains, reserve a spot for your unit today!'
+    title: 'Register',
+    text: 'Unit Registration is still open, and registration for individuals is coming soon!'
   }]
 }}
 
 {{#> layout}}
 {{#*inline "content"}}
-<header>
-  <div class="opacity"></div>
-  <div class="container">
-    <div class="intro-text">
-      <img class="landingPageLogo" src="/assets/img/branding/NCounterLogoBlue_200px.png" alt="CSB N-Counter Logo">
-      <br><br><br><br><br>
-      <div class="exploreButton">  
-        <h3 style="color:#fff;">Come See What to Expect!</h3>
-        <a href="#content-start" rel="relativeanchor" title="Navigate through the rest of the page" ><i class="fa fa-arrow-down fa-4x opacityRaiser"></i></a>
+  <header>
+    <div class="opacity"></div>
+    <div class="container">
+      <div class="intro-text">
+        <img class="landingPageLogo" src="/assets/img/branding/NCounterLogoBlue_200px.png" alt="CSB N-Counter Logo">
+        <br><br><br><br><br>
+        <div class="exploreButton">  
+          <h3 style="color:#fff;">Come See What to Expect!</h3>
+          <a href="#content-start" rel="relativeanchor" title="Navigate through the rest of the page" ><i class="fa fa-arrow-down fa-4x opacityRaiser"></i></a>
+        </div>
       </div>
     </div>
-  </div>
-</header>
-<div id="content-start" rel="relativeanchor">
+  </header>
+  <div id="content-start" rel="relativeanchor">
 
   {{#> pageSection heading="N-Counter 2016" subheading="The Multi-Regional Battalion Event"}}
   {{#* inline "content"}}
+  <div class="row home__callouts">
+    <div class="col-md-8 col-md-offset-2 newspaper-padding" id="registration-stats"></div>
+  </div>
   <div class="row home__callouts">
     {{#each callouts}}
     <div class="home__callout col-md-3 col-sm-6">
@@ -66,6 +69,29 @@
     <div class="col-sm-12 news-show-more news-show-more-wrapper">
       <button class="theme-button">Show Older Posts</button>
     </div>
+  </div>
+  {{/inline}}    
+  {{/pageSection}}
+
+  {{#> pageSection heading="What is N-Counter?" subheading="Once in a Battalion Career"}}
+  {{#* inline "content"}}
+  <div class="row">
+    <div class="col-md-6 newspaper-padding">
+      <p>
+        Battalions from regions far and wide bring an activity, a skill, a challenge, or a competition to share with the others.  Every young man heads into a non-stop adventure of one new experience after the next together with old friends and new.  Think “everything that is awesome about Battalion” in one place for one weekend.
+      </p>
+      <p>
+        In the evening, all gather under one roof for a passionate worship ceremony followed by an awe-inspiring outdoor torchlight and bonfire event that leaves no one without personally encountering God.  This year the theme is “Press On” based on Philippians 3:12-16.
+      </p>
+      <p>
+        Without any other event to compare to, the only way to get a taste of N-Counter is to see for yourself what is proving to be even bigger in 2016.  Don’t miss this “once in a Battalion career” event.
+      </p>
+    </div>
+    <div class="col-md-6">                   
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pT0FmVqjQ2k?rel=0" allowfullscreen></iframe>
+      </div>
+    </div>     
   </div>
   {{/inline}}    
   {{/pageSection}}
@@ -118,6 +144,11 @@
     </div>
   </div>
 </script>
+<script id="registration-stats-tpl" type="text/html">
+  <p class="announcement">
+    So far <strong><%- data.units %> units</strong> from <strong><%- data.states %> states</strong> are bringing <strong><%- data.brigadiers %> Brigadiers</strong> and <strong><%- data.adults %> adults</strong>, totalling <strong><%- data.registered %> participants</strong>, and more registrations are coming in! <em>If your unit hasn't yet registered, now's the time!</em>
+  </p>
+</script> 
 <script>
   ncounter.home.setRandomBgImage('header');
   ncounter.news.fetchShowFirstPage('#news-item-tpl', '#news')
@@ -128,7 +159,6 @@
         $('.news-show-more-wrapper').hide()
       }
     });
-
   $('.news-show-more').click(function () {
     ncounter.news.fetchShowNextPage()
       .then(function (hasMore) {
@@ -139,6 +169,7 @@
         }
       });
   });
+  ncounter.liveData.fetchShowRegistrationStats('#registration-stats-tpl', '#registration-stats');
 </script>
 {{/inline}}
 {{/layout}}

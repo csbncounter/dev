@@ -40,8 +40,7 @@
           states: entry.gsx$states.$t,
           brigadiers: entry.gsx$brigadiers.$t,
           adults: entry.gsx$adults.$t,
-          registered: entry.gsx$registered.$t,
-          moreUnitsExpected: entry.gsx$moreunitsexpected.$t
+          registered: entry.gsx$registered.$t
         };
       });
   }
