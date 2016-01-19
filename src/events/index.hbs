@@ -1,6 +1,7 @@
 {{!
   page: 'events',
-  pageName: 'Events'
+  pageName: 'Events',
+  pageAction: ''
 }}
 
 {{#> layout}}
@@ -10,7 +11,7 @@
   {{#> pageSection heading="Purposeful Events" subheading="A Battalion Vision for Fun"}}
   {{#* inline "content"}}
   <div class="row">
-    <div class="col-md-8 newspaper-padding" id="registration-stats">
+    <div class="col-md-6 newspaper-padding" id="registration-stats">
       <p>
         In addition to the excitement and camaradie around thrilling events, the vision for N-Counter is to have each event presented in true Battalion style, with a spritual purpose.
       </p>
@@ -22,8 +23,10 @@
         Everything we do the weekend of N-Counter 2016 will ultimately glorify God through fellowship, discipleship, and the experience of CSB Battalion across regions, and our events will be no different.
       </p>
     </div>
-    <div class="col-md-4">
-      <img class="aside-image" src="/assets/img/activities/orienteering.jpg"/>
+    <div class="col-md-6">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6irljryiIuU?rel=0" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
   {{/inline}}    
@@ -39,7 +42,7 @@
 
   {{#> pageSection heading="Event Suggestions" subheading="Haven't chosen yet?"}}
   {{#* inline "content"}}
-  <div class="row">
+  <div lass="row">
     <div id="activity-suggestions" class="col-sm-12 media"></div>
   </div>
   {{/inline}}    
