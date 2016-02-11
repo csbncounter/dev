@@ -418,7 +418,7 @@
       
     ]]></b:skin>
     <b:template-skin>
-      <b:variable default='960px' name='content.width' type='length' value='700px'/>
+      <b:variable default='960px' name='content.width' type='length' value='800px'/>
       <b:variable default='0' name='main.column.left.width' type='length' value='0px'/>
       <b:variable default='310px' name='main.column.right.width' type='length' value='0px'/>
 
@@ -542,13 +542,13 @@
             <a class='' href='http://csbncounter.org'>Home</a>
           </li>
           <li>
-            <a class='' href='http://csbncounter.org/inspire/'>Inspire</a>
+            <a class='nav-new' href='http://csbncounter.org/events/'>Events</a>
           </li>
           <li>
-            <a class='' href='http://csbncounter.org/inform/'>Inform</a>
+            <a class='' href='http://csbncounter.org/details/'>Details</a>
           </li>
           <li>
-            <a class='' href='http://csbncounter.org/involve/'>Involve</a>
+            <a class='' href='http://csbncounter.org/support/'>Support</a>
           </li>
           <li>
             <a class='' href='http://csbncounter.org/register/'>Register</a>
@@ -669,13 +669,13 @@
       <p><data:blogCommentMessage/></p>
       <data:blogTeamBlogMessage/>
       <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
     <b:else/>
       <h4 id='comment-post-message'><data:postCommentMsg/></h4>
       <p><data:blogCommentMessage/></p>
       <data:blogTeamBlogMessage/>
       <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' width='100%'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
     </b:if>
     <data:post.friendConnectJs/>
     <data:post.cmtfpIframe/>
@@ -1193,12 +1193,12 @@
       <p><data:blogCommentMessage/></p>
       <data:blogTeamBlogMessage/>
       <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
     <b:else/>
       <p><data:blogCommentMessage/></p>
       <data:blogTeamBlogMessage/>
       <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' width='100%'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
     </b:if>
     <data:post.friendConnectJs/>
     <data:post.cmtfpIframe/>
