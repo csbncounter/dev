@@ -5,7 +5,6 @@
 
 .paragraph-action {
   padding-top: 10px;
-  padding-bottom: 20px;
   text-align: center;
 }
 
@@ -18,10 +17,6 @@
 .newspaper-padding {
   padding-right: 25px;
   padding-left: 25px;
-}
-
-p {
-  margin-bottom: 20px;
 }
 
 /* Heading Padding to achieve the 75px that the section-subheading provides. */
@@ -110,10 +105,24 @@ p {
   text-align: justify;
 }
 
+.announcement p {
+  line-height: 1.5em;
+}
+
+.short-announcement {
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.5em;
+  text-align: center;
+}
+
 .announcement-table {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 40px;
+  font-size: 16px;
+  text-align: left;
 }
 
 .news-show-more-wrapper {
@@ -140,7 +149,7 @@ p {
 
 .faq {
   font-size: 18px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .faq:last-child {

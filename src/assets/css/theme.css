@@ -55,7 +55,12 @@ a:hover {
 }
 
 p {
-  line-height: 1.75;
+  line-height: 1.75em;
+  margin-bottom: 1.618em;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 dd, dt {

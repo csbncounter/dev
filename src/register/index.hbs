@@ -3,14 +3,14 @@
   pageName: 'Register',
   pageAction: '',
   faqs: [{
-    q: 'I have already registered my unit, but I want to add someone else. What do I do?',
-    a: 'Follow the appropriate registration instructions for the current date.'
+    q: 'I have already registered my Battalion roster, but I want to add someone else. What do I do?',
+    a: 'Submit a new registration according the instructions for the current timeframe, regardless of the Battalion roster submission date.'
   }, {
-    q: 'Can I substitute someone instead of a registered individual?',
-    a: 'This is possible at no charge. Simply <a href="mailto:info@csbncounter.org">email the Registrar</a> as soon as possible.  For last-minute changes, inform the Registrar at check-in.'
+    q: 'Can I substitute an unregistered person for someone already registered?',
+    a: 'Yes, substitutions can be made without penalty. Simply <a href="mailto:info@csbncounter.org">email the Registrar</a> as soon as possible.  For last-minute changes, inform the Registrar at check-in.  (Don\'t forget to bring the substituted permission form!)'
   }, {
-    q: 'I am bringing fewer individuals than I registered. What happens now?',
-    a: 'Following the weekend, $45/person will be refunded for those who did not show.  This is less $30/person for irrecoverable costs.'
+    q: 'I am bringing fewer individuals than I registered. Do I receive a refund?',
+    a: 'Following the weekend, registration cost will be refunded for each person that could not attend after subtracting $30/each in irrecoverable costs.'
   }]
 }}
 
@@ -21,9 +21,9 @@
   {{#> pageSection heading="Individual and Battalion Roster Registration" subheading=""}}
   {{#* inline "content"}}
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">   
-      <p class="announcement">
-        Registration is <strong>now open</strong> for individuals and Battalion rosters.  Depending on the date you register, there may be alternate instructions or a late fee.  Please refer to the grid below, starting with the timeframe based on the current date.
+    <div class="announcement">   
+      <p>
+        Registration is open for individuals and Battalion rosters.  Please refer to the grid below and follow the instructions for the current date.
       </p>
       <table class="table table-striped announcement-table">
         <thead>
@@ -35,12 +35,12 @@
           <tr>
             <td>Through March 25</td>
             <td><a href="https://events.r20.constantcontact.com/register/eventReg?oeidk=a07ec3bqglo1051ed63" target="_blank">Register online</a> for $75/person.</td>
-            <td>Mail payment postmarked April 1. Include church's Certificate of Liability in mailing.</td>
+            <td>Mail single check postmarked April 1. Battalion rosters, include church's Certificate of Liability in mailing.</td>
           </tr>
           <tr>
             <td>March 26 - April 22</td>
             <td><a href="https://events.r20.constantcontact.com/register/eventReg?oeidk=a07ec3bqglo1051ed63" target="_blank">Register online</a> for $85/person ($10 surcharge).</td>
-            <td>Mail payment postmarked April 22. Include church's Certificate of Liability if not already submitted.</td>
+            <td>Mail single check postmarked April 22. Battalion rosters, include church's Certificate of Liability if not already submitted.</td>
           </tr>
           <tr>
             <td>April 23 - April 29</td>
@@ -49,12 +49,12 @@
           </tr>
         </tbody>
       </table>
-      <div class="paragraph-action">
-        <a href="https://events.r20.constantcontact.com/register/eventReg?oeidk=a07ec3bqglo1051ed63" target="_blank" class="theme-button">Register Now</a>
-      </div>
       <p class="announcement">
         <strong>Due at check-in</strong>: Folder of signed <a href="/resources/">permission forms</a>, one for each adult and youth.  For additional questions, please refer to the Registration FAQ.
       </p>
+      <div class="paragraph-action">
+        <a href="https://events.r20.constantcontact.com/register/eventReg?oeidk=a07ec3bqglo1051ed63" target="_blank" class="theme-button">Register Now</a>
+      </div>
     </div>
   </div>
   {{/inline}}    
@@ -63,7 +63,7 @@
   {{#> pageSection heading="Registration FAQ" subheading=""}}
   {{#* inline "content"}}
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">   
+    <div class="announcement">   
       {{#each faqs}}
       <div class="faq">
         <dt class="faq__question">

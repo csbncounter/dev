@@ -4,8 +4,8 @@
   z-index: 2;
 }
 
-.home__callouts {
-  margin-top: 20px;
+.home-callouts-wrapper {
+  margin-bottom: -40px;
 }
 
 .home__callout {

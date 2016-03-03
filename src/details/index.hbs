@@ -28,42 +28,62 @@
   {{/inline}}    
   {{/pageSection}}
 
-  {{#> pageSection heading="Theme" subheading="Press On<br>Philippians 3:12-16"}}
+  {{#> pageSection heading="Confirmed Events" subheading="What to Expect So Far"}}
   {{#* inline "content"}}
-    <div class="row">
-      <div class="col-md-4 newspaper-padding" style="text-align: center; margin-bottom: -20px">
-        <img src="/assets/img/theme-patch.png" style="width: 300px; margin-bottom: 20px"/>
-      </div>
-      <div class="col-md-8 newspaper-padding">
-        <p>
-          <i>Press on</i>.  You'll see it on our brochures, T-shirts and patch emblems.  Dare we trust God to see this challenge working in our lives?
-        </p>
-        <p>
-          Look at what Paul is saying: he presses on toward something, a goal, a mark, a finish. We are pressing on, reaching toward maturity, specifically spiritual maturity.  Yet, none of us is expected to press on alone.  There are always others who are called to press on with us, and we encourage one another, saying, “I am lighting your torch, and we will press on together.”
-        </p>
-      </div>
-    </div>
-  {{/inline}}    
-  {{/pageSection}}
-
-  {{#> pageSection heading="Guest Speaker" subheading="Chuck Stecker"}}
-  {{#* inline "content"}}
-  <div class="row"> 
-    <div class="col-md-6 speaker-text-align newspaper-padding">
-      <p class="video-text-padding">
-        Chuck Stecker returns as our speaker for this event.  In 2011, his message left a lasting impression on youth, collegiate, and leader alike.  He is a board member of CSB Ministries and shows a characteristic ability to relate to us in Brigade as he shares time with us throughout our event.  Chuck communicates and leads extraordinarily well in our unified experience of dedication to Christ and the mission of Christian Service Brigade.
-      </p>
-      <p class="video-text-padding">
-        Chuck uniquely combines several years of business experience, 23 years of military service and over 10 years of full-time ministry equipping, training, empowering and releasing a new generation of leaders. He has a passion to see churches return to truly intergenerational communities and develop the clear pathways that keep young adults actively connected to their churches and see them develop into the leaders that will impact every area of our society.
-      </p>
-    </div>
-    <div class="col-md-6">                   
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yteeZy7vj2I?rel=0" allowfullscreen></iframe>
-      </div>
-    </div>     
+  <div class="row">
+    <div id="activities" class="col-sm-12 media"></div>
   </div>
   {{/inline}}    
   {{/pageSection}}
+
+  {{#> pageSection heading="Event Suggestions" subheading="Haven't chosen yet?"}}
+  {{#* inline "content"}}
+  <div lass="row">
+    <div id="activity-suggestions" class="col-sm-12 media"></div>
+  </div>
+  {{/inline}}    
+  {{/pageSection}}
+{{/inline}}
+{{#*inline "script"}}
+<script id="activities-tpl" type="text/html">
+  <table class="table table-striped">
+    <tr>
+    <th>Event</th>
+    <th>Unit</th> 
+    <th>Church</th>
+    <th>State</th>
+    </tr>
+    <% for (i in data) {
+      var activity = data[i];
+    %>
+      <tr>
+      <td><%- activity.event %></td>
+      <td><%- activity.unit %></td> 
+      <td><%- activity.church %></td>
+      <td><%- activity.state %></td>
+      </tr>
+    <% } %>
+  </table>
+</script>
+<script id="activity-suggestions-tpl" type="text/html">
+  <table class="table table-striped">
+    <tr>
+    <th>Event Suggestion</th>
+    <th>Notes</th> 
+    </tr>
+    <% for (i in data) {
+      var activitySuggestion = data[i];
+    %>
+      <tr>
+      <td><%- activitySuggestion.event %></td>
+      <td><%- activitySuggestion.notes %></td> 
+      </tr>
+    <% } %>
+  </table>
+</script>
+<script>
+  ncounter.liveData.fetchShowActivities('#activities-tpl', '#activities');
+  ncounter.liveData.fetchShowActivitySuggestions('#activity-suggestions-tpl', '#activity-suggestions');
+</script>
 {{/inline}}
 {{/layout}}
