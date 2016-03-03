@@ -67,6 +67,12 @@ module.exports = function(grunt) {
         src: '**/*',
         dest: 'dist/assets/fonts/'
       },
+      doc: {
+        expand: true,
+        cwd: 'src/assets/doc/',
+        src: '**/*',
+        dest: 'dist/assets/doc/'
+      },
       cname: {
         src: 'CNAME',
         dest: 'dist/CNAME'
