@@ -5,22 +5,22 @@
     href: '/events/',
     img: '/assets/img/events_thumb.jpg',
     title: 'Events',
-    text: 'The events lineup is beginning to shape up.  Come see what to expect so far!'
-  }, {
-    href: '/details/',
-    img: '/assets/img/details_thumb.jpg',
-    title: 'Details',
-    text: 'Find out what N-Counter is all about here.'
+    text: 'The events lineup is shaping up.  Come see what to expect!'
   }, {
     href: '/support/',
     img: '/assets/img/support_thumb.jpg',
     title: 'Support',
-    text: 'Come alongside N-Counter practically, specifically through prayer and financial donations.'
+    text: 'Come alongside N-Counter through prayer and financial donations.'
   }, {
     href: '/register/',
     img: '/assets/img/register_thumb.jpg',
     title: 'Register',
-    text: 'Registration for individuals is coming soon!'
+    text: 'Registration for individuals and Battalion rosters is <strong>now open</strong>.'
+  }, {
+    href: '/resources/',
+    img: '/assets/img/resources_thumb.jpg',
+    title: 'Resources',
+    text: 'Come prepared. All the resources you need for N-Counter.'
   }]
 }}
 
@@ -33,7 +33,7 @@
         <img class="landingPageLogo" src="/assets/img/branding/NCounterLogoBlue_200px.png" alt="CSB N-Counter Logo">
         <br><br><br><br><br>
         <div class="exploreButton">  
-          <h3 style="color:#fff;"></h3>
+          <h3 style="color:#fff;">Individual and Battalion Roster<br>Registration Now Open<br/>Due March 25</h3>
           <a href="#content-start" rel="relativeanchor" title="Navigate through the rest of the page" ><i class="fa fa-arrow-down fa-4x opacityRaiser"></i></a>
         </div>
       </div>
@@ -48,7 +48,7 @@
   </div>
   <div class="row home__callouts">
     {{#each callouts}}
-    <div class="home__callout col-md-3 col-sm-6">
+    <div class="home__callout col-md-3 col-sm-4">
       <div class="home__callout-top">
         <a href="{{href}}"><img alt="Inspired Page Image" src="{{img}}"></a>
         <h3 class="home__callout-heading"><a href='{{href}}'>{{title}}</a></h3>
@@ -136,7 +136,7 @@
 </script>
 <script id="registration-stats-tpl" type="text/html">
   <p class="announcement">
-    So far <strong><%- data.units %> units</strong> from <strong><%- data.states %> states</strong> are bringing <strong><%- data.brigadiers %> Brigadiers</strong> and <strong><%- data.adults %> adults</strong>, totalling <strong><%- data.registered %> participants</strong>, and more registrations are coming in! See the <a href="/events">Events</a> page for a complete listing.&nbsp;&nbsp;<em>If your unit hasn't yet registered, now's the time!</em>
+    So far <strong><%- data.units %> units</strong> from <strong><%- data.states %> states</strong> are bringing <strong><%- data.brigadiers %> Brigadiers</strong> and <strong><%- data.adults %> adults</strong>, totalling <strong><%- data.registered %> participants</strong>, and more registrations are coming in! See the <a href="/events">Events</a> page for a complete listing.&nbsp;&nbsp;
   </p>
 </script> 
 <script>

@@ -4,7 +4,8 @@
 }
 
 .paragraph-action {
-  padding-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
   text-align: center;
 }
 
@@ -105,7 +106,14 @@ p {
   margin-left: auto;
   margin-right: auto;
   font-size: 18px;
+  line-height: 1.5em;
   text-align: justify;
+}
+
+.announcement-table {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .news-show-more-wrapper {
@@ -126,3 +134,28 @@ p {
   width: 100%;
 }
 
+.first-heading {
+  margin-top: 0;
+}
+
+.faq {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.faq:last-child {
+  margin-bottom: 0;
+}
+
+.faq__question,
+.faq__answer {
+  display: flex;
+}
+
+.faq__heading {
+  flex: 0 0 25px;
+}
+
+.faq__text {
+  flex: 1 1 auto;
+}

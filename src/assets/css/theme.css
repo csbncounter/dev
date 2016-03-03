@@ -58,6 +58,10 @@ p {
   line-height: 1.75;
 }
 
+dd, dt {
+  line-height: 1.5;
+}
+
 a,
 a:hover,
 a:focus,

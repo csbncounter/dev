@@ -539,22 +539,25 @@
             <a href='#page-top'/>
           </li>
           <li>
-            <a class='' href='http://csbncounter.org'>Home</a>
+            <a href="http://csbncounter.org/">Home</a>
           </li>
           <li>
-            <a class='nav-new' href='http://csbncounter.org/events/'>Events</a>
+            <a href="http://csbncounter.org/events/">Events</a>
           </li>
           <li>
-            <a class='' href='http://csbncounter.org/details/'>Details</a>
+            <a href="http://csbncounter.org/details/">Details</a>
           </li>
           <li>
-            <a class='' href='http://csbncounter.org/support/'>Support</a>
+            <a href="http://csbncounter.org/support/">Support</a>
           </li>
           <li>
-            <a class='' href='http://csbncounter.org/register/'>Register</a>
+            <a class=" nav-new" href="http://csbncounter.org/register/">Register</a>
           </li>
           <li>
-            <a class=' activePage' href='http://news.csbncounter.org'>News</a>
+            <a class=" nav-new" href="http://csbncounter.org/resources/">Resources</a>
+          </li>
+          <li>
+            <a class="activePage" href='http://news.csbncounter.org'>News</a>
           </li>
         </ul>
       </div>
