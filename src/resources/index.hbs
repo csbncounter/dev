@@ -2,6 +2,22 @@
   page: 'resources',
   pageName: 'Resources',
   pageAction: '',
+  resources: [{
+    docUrl: '/assets/doc/2016_N-Counter_Gameplan.pdf',
+    thumbUrl: '/assets/img/resources/doc-thumb-gameplan.png',
+    thumbWidth: 244,
+    description: 'Use the GamePlan to navigate your way to <span style="white-space: nowrap">N-Counter</span> step-by-step.'
+  }, {
+    docUrl: '/assets/doc/2016_N-Counter_Adult_Permission_Form.pdf',
+    thumbUrl: '/assets/img/resources/doc-thumb-adult-permission.png',
+    thumbWidth: 146,
+    description: 'Adult Permission Form (signature required on both pages)'
+  }, {
+    docUrl: '/assets/doc/2016_N-Counter_Youth_Permission_Form.pdf',
+    thumbUrl: '/assets/img/resources/doc-thumb-youth-permission.png',
+    thumbWidth: 146,
+    description: 'Youth Permission Form (single signature required)'
+  }]
 }}
 
 {{#> layout}}
@@ -14,18 +30,12 @@
     <div class="col-md-8 col-md-offset-2">   
       <table class="table table-striped announcement">
         <tbody>
+          {{#each resources}}
           <tr>
-            <td class="resource-thumbnail-column"><a href="/assets/doc/2016_N-Counter_Gameplan.pdf" target="_blank"><img src='/assets/img/resources/doc-thumb-gameplan.png' width=244 /></a></td>
-            <td class="resource-description-column">Use the GamePlan to navigate your way to <span style="white-space: nowrap">N-Counter</span> step-by-step.</td>
+            <td class="resource-thumbnail-column"><a href="{{docUrl}}" target="_blank"><img src='{{thumbUrl}}' width={{thumbWidth}} /></a></td>
+            <td class="resource-description-column">{{{description}}}</td>
           </tr>
-          <tr>
-            <td class="resource-thumbnail-column"><a href="/assets/doc/2016_N-Counter_Adult_Permission_Form.pdf" target="_blank"><img src='/assets/img/resources/doc-thumb-adult-permission.png' width=146 /></a></td>
-            <td class="resource-description-column">Adult Permission Form</td>
-          </tr>
-          <tr>
-            <td class="resource-thumbnail-column"><a href="/assets/doc/2016_N-Counter_Youth_Permission_Form.pdf" target="_blank"><img src='/assets/img/resources/doc-thumb-youth-permission.png' width=146 /></a></td>
-            <td class="resource-description-column">Youth Permission Form</td>
-          </tr>
+          {{/each}}
         </tbody>
       </table>
   </div>

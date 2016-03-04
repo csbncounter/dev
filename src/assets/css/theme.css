@@ -59,10 +59,6 @@ p {
   margin-bottom: 1.618em;
 }
 
-p:last-child {
-  margin-bottom: 0;
-}
-
 dd, dt {
   line-height: 1.5;
 }

@@ -5,6 +5,7 @@
 
 .paragraph-action {
   padding-top: 10px;
+  margin-bottom: 1.618em;
   text-align: center;
 }
 
@@ -100,6 +101,7 @@
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1.618em;
   font-size: 18px;
   line-height: 1.5em;
   text-align: justify;
@@ -110,7 +112,7 @@
 }
 
 .short-announcement {
-  margin-bottom: 30px;
+  margin-bottom: 1.618em;
   font-size: 18px;
   line-height: 1.5em;
   text-align: center;
