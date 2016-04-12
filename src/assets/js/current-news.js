@@ -27,7 +27,7 @@
           var imageSize = 'cover';
           var match;
           // If the blog post contains an image, use the first one
-          if ((match = content.match(/<img[^>]+src="(.+?)"/))) {
+          if ((match = content.match(/<img[^>]+src="(?!.+?\.gif")(.+?)"/))) {
             image = match[1];
             imageSize = 'contain';
           }
