@@ -539,25 +539,25 @@
             <a href='#page-top'/>
           </li>
           <li>
-            <a href="http://csbncounter.org/">Home</a>
+            <a href='http://csbncounter.org/'>Home</a>
           </li>
           <li>
-            <a href="http://csbncounter.org/events/">Events</a>
+            <a href='http://csbncounter.org/about/'>About</a>
           </li>
           <li>
-            <a href="http://csbncounter.org/details/">Details</a>
+            <a href='http://csbncounter.org/details/'>Details</a>
           </li>
           <li>
-            <a href="http://csbncounter.org/support/">Support</a>
+            <a href='http://csbncounter.org/support/'>Support</a>
           </li>
           <li>
-            <a class=" nav-new" href="http://csbncounter.org/register/">Register</a>
+            <a href='http://csbncounter.org/resources/'>Resources</a>
           </li>
           <li>
-            <a class=" nav-new" href="http://csbncounter.org/resources/">Resources</a>
+            <a href='http://csbncounter.org/register/'>Register</a>
           </li>
           <li>
-            <a class="activePage" href='http://news.csbncounter.org'>News</a>
+            <a class='activePage' href='http://news.csbncounter.org'>News</a>
           </li>
         </ul>
       </div>
@@ -577,7 +577,7 @@
         <div class='column-center-outer'>
         <div class='column-center-inner'>
           <b:section class='main' id='main' showaddelement='no'>
-            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' visible='true'>
               <b:includable id='main' var='top'>
   <b:if cond='!data:mobile'>
     <!-- posts -->
@@ -702,7 +702,7 @@
 </b:includable>
               <b:includable id='comment_count_picker' var='post'>
   <b:if cond='data:post.commentSource == 1'>
-    <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.canonicalUrl'>
+    <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.url.canonical.http'>
     </span>
   <b:else/>
     <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
@@ -853,7 +853,7 @@
 
   <b:if cond='data:post.allowIframeComments'>
     <script expr:src='data:post.iframeCommentSrc' type='text/javascript'/>
-    <div class='cmt_iframe_holder' expr:data-href='data:post.canonicalUrl' expr:data-viewtype='data:post.viewType'/>
+    <div class='cmt_iframe_holder' expr:data-href='data:post.url.canonical' expr:data-viewtype='data:post.viewType'/>
 
     <b:if cond='data:post.embedCommentForm == &quot;false&quot;'>
       <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><data:postCommentMsg/></a>
@@ -1002,7 +1002,7 @@
                 <b:if cond='data:top.showTimestamp'>
                   <data:top.timestampLabel/>
                   <b:if cond='data:post.url'>
-                    <meta expr:content='data:post.canonicalUrl' itemprop='url'/>
+                    <meta expr:content='data:post.url.canonical' itemprop='url'/>
                     <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.timestampISO8601' itemprop='datePublished'><data:post.timestamp/></abbr></a>
                   </b:if>
                 </b:if>
@@ -1563,7 +1563,7 @@
 
 <script src='http://csbncounter.org/assets/js/blogger.js'/>
 <b:section-contents id='footer-1'>
-  <b:widget id='BlogArchive1' locked='false' title='Previous Posts' type='BlogArchive'>
+  <b:widget id='BlogArchive1' locked='false' title='Previous Posts' type='BlogArchive' visible='true'>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'>
     <h2><data:title/></h2>
