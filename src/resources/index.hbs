@@ -3,17 +3,17 @@
   pageName: 'Resources',
   pageAction: '',
   resources: [{
-    docUrl: '/assets/doc/2016_N-Counter_Handbook.doc',
+    docUrl: '/assets/doc/2016_N-Counter_Handbook.pdf',
     thumbUrl: '/assets/img/resources/doc-thumb-handbook.png',
     thumbWidth: 244,
     title: 'Handbook',
     description: 'The Handbook is your quick reference guide before and during the event.'
   }, {
-    docUrl: '/assets/doc/2016_N-Counter_Webinar_Questions.docx',
+    docUrl: '/assets/doc/2016_N-Counter_Webinar_Questions.pdf',
     thumbUrl: '/assets/img/resources/doc-thumb-webinar-questions.png',
     thumbWidth: 146,
     title: 'Event Questions and Answers',
-    description: 'During the webinar, Michael English answered many of your practical questions; here\'s a transcript for your reference.'
+    description: 'Michael English answered many of your practical questions during the webinar; here\'s a transcript for your reference.'
   }, {
     docUrl: '/assets/doc/2016_N-Counter_Gameplan.pdf',
     thumbUrl: '/assets/img/resources/doc-thumb-gameplan.png',
@@ -38,6 +38,24 @@
 {{#> layout}}
 {{#*inline "content"}}
   {{> pageHeader }}
+
+  {{#> pageSection heading="Guides and Necessary Documents" subheading=""}}
+  {{#* inline "content"}}
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">   
+      <table class="table table-striped announcement">
+        <tbody>
+          {{#each resources}}
+          <tr>
+            <td class="resource-thumbnail-column"><a href="{{docUrl}}" target="_blank"><img src='{{thumbUrl}}' width={{thumbWidth}} /></a></td>
+            <td class="resource-description-column"><p style="text-align:left;font-weight:bold;margin-bottom:0.618em">{{title}}</p><p>{{{description}}}</p></td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+  </div>
+  {{/inline}}    
+  {{/pageSection}}
 
   {{#> pageSection heading="A Word from Our Hosts" subheading="How hear to prepare from our pre-event webinar" sectionClass="home-callouts-wrapper"}}
   {{#* inline "content"}}
@@ -66,24 +84,6 @@
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fhdQ1vXN074?rel=0" allowfullscreen></iframe>
       </div>
     </div>
-  </div>
-  {{/inline}}    
-  {{/pageSection}}
-
-  {{#> pageSection heading="Guides and Necessary Documents" subheading=""}}
-  {{#* inline "content"}}
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">   
-      <table class="table table-striped announcement">
-        <tbody>
-          {{#each resources}}
-          <tr>
-            <td class="resource-thumbnail-column"><a href="{{docUrl}}" target="_blank"><img src='{{thumbUrl}}' width={{thumbWidth}} /></a></td>
-            <td class="resource-description-column"><p style="text-align:left;font-weight:bold;margin-bottom:0.618em">{{title}}</p><p>{{{description}}}</p></td>
-          </tr>
-          {{/each}}
-        </tbody>
-      </table>
   </div>
   {{/inline}}    
   {{/pageSection}}
