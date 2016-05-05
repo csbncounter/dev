@@ -8,21 +8,10 @@
 {{#*inline "content"}}
   {{> pageHeader }}
 
-  {{#> pageSection heading="Details" subheading="April 29 - May 1, 2016<br>High Point Camp&mdash;Birdsboro, PA"}}
+  {{#> pageSection heading="Location" subheading="April 29 - May 1, 2016<br>High Point Camp&mdash;Birdsboro, PA"}}
   {{#* inline "content"}}
   <div class="row">
-    <div class="col-md-6 newspaper-padding">
-      <p>
-        N-Counter 2016 will take place on the weekend of <strong>April 29 - May 1, 2016</strong> at <strong>High Point Camp</strong> near <strong>Birdsboro, PA</strong>.  Cost per individual is <strong>$85</strong> and includes a T-shirt, a commemorative patch, and all meals--from Friday night snack through Sunday breakfast.  Check in begins at <strong>6:00pm</strong> on Friday. Check out is after dismissal at <strong>11:05am</strong> Sunday.
-      </p>
-      <p>
-        <strong>Online registration is now due</strong>.  Call or write our Registrar Dennis Painter at 302-897-5538 or <a href="mailto:info@csbncounter.org">info@csbncounter.org</a>.
-      </p>
-      <p>
-        Units will camp as a group in either field tenting or cabins. A bath house is in walking distance of both tenting and cabin areas.  Dormitory lodging will be available at an additional <strong>$10</strong>/person for those who require electric or indoor bathroom facilities.  A Saturday only day rate without overnight is available for $40.  See the <a href="/register/">Register</a> page on this website to register now.
-      </p>
-    </div>
-    <div class="col-md-6">                   
+    <div class="col-sm-12">                   
       <div class="embed-responsive embed-responsive-16by9">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6430.408675710726!2d-75.85545314579781!3d40.20704528810586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c664ff717ebf95%3A0xa675e48863fd4d6f!2sHigh+Point+Camp!5e1!3m2!1sen!2sus!4v1453176603949" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
@@ -31,18 +20,10 @@
   {{/inline}}    
   {{/pageSection}}
 
-  {{#> pageSection heading="Confirmed Events" subheading="What to Expect So Far"}}
+  {{#> pageSection heading="Events" subheading="The Fun We Had"}}
   {{#* inline "content"}}
   <div class="row">
     <div id="activities" class="col-sm-12 media"></div>
-  </div>
-  {{/inline}}    
-  {{/pageSection}}
-
-  {{#> pageSection heading="Event Suggestions" subheading="Haven't chosen yet?"}}
-  {{#* inline "content"}}
-  <div lass="row">
-    <div id="activity-suggestions" class="col-sm-12 media"></div>
   </div>
   {{/inline}}    
   {{/pageSection}}
@@ -64,22 +45,6 @@
       <td><%- activity.unit %></td> 
       <td><%- activity.church %></td>
       <td><%- activity.state %></td>
-      </tr>
-    <% } %>
-  </table>
-</script>
-<script id="activity-suggestions-tpl" type="text/html">
-  <table class="table table-striped">
-    <tr>
-    <th>Event Suggestion</th>
-    <th>Notes</th> 
-    </tr>
-    <% for (i in data) {
-      var activitySuggestion = data[i];
-    %>
-      <tr>
-      <td><%- activitySuggestion.event %></td>
-      <td><%- activitySuggestion.notes %></td> 
       </tr>
     <% } %>
   </table>

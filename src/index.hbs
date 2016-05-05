@@ -1,27 +1,6 @@
 {{!
   page: 'home',
-  pageName: '',
-  callouts: [{
-    href: '/details/',
-    img: '/assets/img/details_thumb.jpg',
-    title: 'Details',
-    text: 'Time and place, accommodations, and most of all the events lineup!'
-  }, {
-    href: '/support/',
-    img: '/assets/img/support_thumb.jpg',
-    title: 'Support',
-    text: 'Support N-Counter through prayer and financial donations.'
-  }, {
-    href: '/resources/',
-    img: '/assets/img/resources_thumb.jpg',
-    title: 'Resources',
-    text: 'Guides and necessary forms. All the resources you need for N-Counter.'
-  }, {
-    href: '/register/',
-    img: '/assets/img/register_thumb.jpg',
-    title: 'Register',
-    text: 'Registration for individuals and Battalion rosters is now open.'
-  }]
+  pageName: ''
 }}
 
 {{#> layout}}
@@ -33,7 +12,7 @@
         <img class="landingPageLogo" src="/assets/img/branding/NCounterLogoBlue_200px.png" alt="CSB N-Counter Logo">
         <br><br><br><br><br>
         <div class="exploreButton">  
-          <h3 style="color:#fff;">Special Gathering for Leaders and Alumni<br>Saturday Night at 7pm in the Chapel</h3>
+          <h3 style="color:#fff;">THANK YOU ALL FOR AN INCREDIBLE EVENT<br>Watch the weekend recap!</h3>
           <a href="#content-start" rel="relativeanchor" title="Navigate through the rest of the page" ><i class="fa fa-arrow-down fa-4x opacityRaiser"></i></a>
         </div>
       </div>
@@ -41,42 +20,14 @@
   </header>
   <div id="content-start" rel="relativeanchor">
 
-  {{#> pageSection heading="Special Gathering for Leaders and Alumni" subheading="Saturday Night at 7pm in the Chapel" sectionClass=""}}
-  {{#* inline "content"}}
-  <div class="row">
-    <div class="col-md-7 newspaper-padding">
-      <p class="announcement">
-        If you are a leader, parent or alumni of Christian Service Brigade you are encouraged to attend a special gathering <strong>Saturday night</strong> at <strong>7pm</strong> in the <strong>Chapel</strong>!
-      </p>
-      <p class="announcement">
-        There will be prizes, fellowship and a special session with Christian Service Brigade President Scott Haima.  You'll also have a chance to learn how Brigade is working to better serve our local churches, meet our 2020 Impact Goal, and much more.
-      </p>
-    </div>
-    <div class="col-md-5">                   
-      <img src="assets/img/joel-invites-alumni.jpg" style="width:100%" />
-      <p style="text-align:center;margin-top:1em">Joel Fiscus, VP, Director of Field Staff and Ministry to Men</p>
-    </div>     
-  </div>
-  {{/inline}}    
-  {{/pageSection}}
 
   {{#> pageSection heading="N-Counter 2016" subheading="The Multi-Regional Battalion Event" sectionClass="home-callouts-wrapper"}}
   {{#* inline "content"}}
   <div class="row">
     <div class="col-sm-12 short-announcement" id="registration-stats"></div>
   </div>
-  <div class="row home__callouts">
-    {{#each callouts}}
-    <div class="home__callout col-md-3 col-sm-4">
-      <div class="home__callout-top">
-        <a href="{{href}}"><img alt="Inspired Page Image" src="{{img}}"></a>
-        <h3 class="home__callout-heading"><a href='{{href}}'>{{title}}</a></h3>
-      </div>
-      <p class="text-muted">
-        {{{text}}}
-      </p>
-    </div>
-    {{/each}}
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7VYJA0peTVE?rel=0" allowfullscreen=""></iframe>
   </div>
   {{/inline}}    
   {{/pageSection}}
@@ -90,27 +41,6 @@
     </div>
   </div>
   {{/inline}}    
-  {{/pageSection}}
-
-  {{#> pageSection heading="Don’t miss a beat!" subheading="Stay up to date on developing news." sectionClass=""}}
-  {{#* inline "content"}}
-  <div class="row">
-    <div class="col-md-12 text-center join-us-newletter">
-      <p class="text-muted announcement">Our newsletter is the official place to receive the latest information.  Sign up now for monthly access to critical details, timelines for registration, and for prayer requests.</p>
-      <p class="join-us-newsletter-button" rel="relativeanchor">
-        <a href="http://visitor.r20.constantcontact.com/d.jsp?llr=bvu45aeab&p=oi&m=1103839089313&sit=skhh77pfb&f=ea01a16c-54b9-4770-b28e-b348b7d91f16" title="Newsletter Signup" target="_blank" class="theme-button">Newsletter Signup</a>
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    {{#each joinUsMethods}}
-    <div class="col-md-3 col-sm-6 join-us-methods">
-      <p class="social-buttons"><a href="{{href}}" title="{{title}}" target="_blank"><i class="fa {{icon}} fa-4x"></i></a> </p>
-      <p class="text-muted">{{{text}}}</p>
-    </div>
-    {{/each}}
-  </div>
-  {{/inline}}
   {{/pageSection}}
 {{/inline}}
 
@@ -128,7 +58,17 @@
   </div>
 </script>
 <script id="registration-stats-tpl" type="text/html">
-  <strong><%- data.units %> units</strong> from <strong><%- data.states %> states</strong> are bringing <strong><%- data.registered %> participants</strong>. See the <a href="/events">Details</a> for a complete listing.
+  <div style="text-align:justify;max-width: 700px;margin-left:auto;margin-right:auto;line-height:1.6em">
+  <p>
+    <a href="/events"><strong><%- data.units %> units</strong> from <strong><%- data.states %> states</strong></a> brought <strong><%- data.registered %> registrants</strong>.  We thank all for their participation!
+  </p>
+  <p>
+  Memories are overflowing, especially of the fellowship with brothers in the Lord.  Join us in these memories through the weekend recap video, just a small taste of what we experienced together in April at High Point Camp.
+  </p>
+  <p>
+  Let us now continue to <em>Press On</em> together, as not just a Moment, but a Momentum--a Movement.
+  </p>
+  </div>
 </script> 
 <script>
   ncounter.home.setRandomBgImage('header');
