@@ -1,31 +1,4 @@
-{{!
-  navClass: function (navName) {
-    if (navName === this.page) {
-      return 'activePage';
-    }
-  },
-  joinUsMethods: [{
-    href: 'http://www.twitter.com/csbncounter',
-    icon: 'fa-twitter',
-    title: 'Twitter Link',
-    text: 'Add N-Counter excitement and news tidbits to your daily feed.'
-  }, {
-    href: 'https://www.facebook.com/events/1751932415033325/',
-    icon: 'fa-facebook',
-    title: 'Facebook Link',
-    text: 'A great place to share with your friends for conversation, news, memories from 2011, and excitement for 2016.'
-  }, {
-    href: 'https://instagram.com/csbncounter/',
-    icon: 'fa-instagram',
-    title: 'Instragram Link',
-    text: 'Pictures and video; perhaps the best way to capture N-Counter.'
-  }, {
-    href: 'https://plus.google.com/u/0/102403965119926049149/about',
-    icon: 'fa-google-plus',
-    title: 'Google + Link',
-    text: 'We haven’t forgotten you, Google+.'
-  }]
-}}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +10,7 @@
   <meta name="keywords" content="N-Counter 2016, Register, Weekend Event, CSB Ministries, Get Excited, Get Inspired, Get Involved,">
   <meta name="author" content="Towson Web Team">
     
-  <title>{{#if pageName}}{{pageName}} - {{/if}}N-Counter 2016</title>
+  <title>Details - N-Counter 2016</title>
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
   <link href="/assets/css/all.css" rel="stylesheet">
@@ -71,33 +44,76 @@
             <a href="#page-top"></a>
           </li>
           <li>
-            <a class="{{navClass 'home'}}" href="/">Home</a>
+            <a class="" href="/">Home</a>
           </li>
           <li>
-            <a class="{{navClass 'about'}}" href="/about/">About</a>
+            <a class="" href="/about/">About</a>
           </li>
           <li>
-            <a class="{{navClass 'details'}}" href="/details/">Details</a>
+            <a class="activePage" href="/details/">Details</a>
           </li>
           <li>
-            <a class="{{navClass 'news'}}" href="http://news.csbncounter.org">News</a>
+            <a class="" href="http://news.csbncounter.org">News</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  {{#> content}}
-  {{/content}}
-
+  <header class="details">
+   <div class="opacity"> </div>
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-heading">Details</div>
+        <div class="exploreButton">
+          <h3 style="color:#fff;"></h3>
+          <a href="#content-start" title="Navigate through the rest of the page" rel="relativeanchor">
+            <i class="fa fa-arrow-down fa-4x opacityRaiser"></i>
+          </a>
+        </div>  
+      </div>
+    </div>
+  </header>
+  <div id="content-start" rel="relativeanchor"></div>
+<section>
+  <div class="container ">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2 class="section-heading">Location</h2>
+        <h3 class="section-subheading text-muted">April 29 - May 1, 2016<br>High Point Camp&mdash;Birdsboro, PA</h3>
+      </div>
+    </div>
+  <div class="row">
+    <div class="col-sm-12">                   
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6430.408675710726!2d-75.85545314579781!3d40.20704528810586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c664ff717ebf95%3A0xa675e48863fd4d6f!2sHigh+Point+Camp!5e1!3m2!1sen!2sus!4v1453176603949" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>     
+  </div>
+  </div>
+</section>
+<section>
+  <div class="container ">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2 class="section-heading">Events</h2>
+        <h3 class="section-subheading text-muted">The Fun We Had</h3>
+      </div>
+    </div>
+  <div class="row">
+    <div id="activities" class="col-sm-12 media"></div>
+  </div>
+  </div>
+</section>
   <footer id="footer" rel="relativeanchor">
     <div class="container">
       <div class="row, footer-distributed" >
         <div class="footer-1">
           <ul class="list-inline social-buttons socialFooterCentering">
-            {{#each joinUsMethods}}
-            <li><a href="{{href}}" title="{{title}}" target="_blank"><i class="fa {{icon}}"></i></a></li>
-            {{/each}}
+            <li><a href="http://www.twitter.com/csbncounter" title="Twitter Link" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/events/1751932415033325/" title="Facebook Link" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://instagram.com/csbncounter/" title="Instragram Link" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://plus.google.com/u/0/102403965119926049149/about" title="Google + Link" target="_blank"><i class="fa fa-google-plus"></i></a></li>
           </ul>
         </div>
         <div class="footer-2">
@@ -116,6 +132,28 @@
   </footer>
 
   <script src="/assets/js/ncounter.js"></script>
-  {{#> script}}
-  {{/script}}
+<script id="activities-tpl" type="text/html">
+  <table class="table table-striped">
+    <tr>
+    <th>Event</th>
+    <th>Unit</th> 
+    <th>Church</th>
+    <th>State</th>
+    </tr>
+    <% for (i in data) {
+      var activity = data[i];
+    %>
+      <tr>
+      <td><%- activity.event %></td>
+      <td><%- activity.unit %></td> 
+      <td><%- activity.church %></td>
+      <td><%- activity.state %></td>
+      </tr>
+    <% } %>
+  </table>
+</script>
+<script>
+  ncounter.liveData.fetchShowActivities('#activities-tpl', '#activities');
+  ncounter.liveData.fetchShowActivitySuggestions('#activity-suggestions-tpl', '#activity-suggestions');
+</script>
 </body>
